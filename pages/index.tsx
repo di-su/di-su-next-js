@@ -1,22 +1,15 @@
-// import type { NextPage } from 'next'
-// import Head from 'next/head'
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-// import styles from '../styles/Home.module.css'
 import Link from "next/link";
+import { frontMatter } from "../ts/interfaces/interfaces";
 
 interface Post {
   posts: [
     {
       slug: string;
-      frontMatter: {
-        title: string;
-        description: string;
-        date: string;
-        thumbnailUrl: string;
-      };
+      frontMatter: frontMatter;
     }
   ];
 }

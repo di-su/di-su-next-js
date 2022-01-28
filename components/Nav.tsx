@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <nav className="nav p-3 border-bottom">
       <Link href="/" passHref>
-        <h2 className="pointer">Ebenezer Don</h2>
+        <h2 className="pointer">Di Su</h2>
       </Link>
       <Link href="/bio" passHref>
         <p className="ms-5 pointer lead my-auto">Bio</p>
