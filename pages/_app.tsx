@@ -1,5 +1,5 @@
 import Nav from "../components/Nav";
-// import "../styles/globals.css";
+import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           crossOrigin="anonymous"
         />
       </Head>
-      <div className="container">
+      <div className="container-fluid">
         <Nav />
         <main>
           <Component {...pageProps} />
