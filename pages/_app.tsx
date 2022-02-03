@@ -1,4 +1,4 @@
-import Nav from "../components/Nav";
+import Nav from "components/nav";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -14,9 +14,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossOrigin="anonymous"
         /> */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <div className="container-fluid">
-        <Nav />
         <main>
           <Component {...pageProps} />
         </main>

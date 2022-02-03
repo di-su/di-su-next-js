@@ -4,8 +4,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import Button from "../../components/Button";
-import { frontMatter } from "../../ts/interfaces/interfaces";
+import Button from "components/button";
+import { frontMatter } from "ts/interfaces/interfaces";
 
 interface Params {
   params: {
