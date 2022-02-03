@@ -5,6 +5,7 @@ module.exports = {
   //   "./pages/**/*.{js,ts,jsx,tsx}",
   //   "./components/**/*.{js,ts,jsx,tsx}",
   // ],
+  mode: "jit",
   purge: ["./build/**/*.html", "./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     // fontFamily: {
