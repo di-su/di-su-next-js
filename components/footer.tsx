@@ -6,13 +6,13 @@ export default function Footer() {
         <img className="w-auto h-8" src="https://cdn.rareblocks.xyz/collection/clarity/images/logo.svg" alt="" />
         <div className="grid grid-cols-2 mt-16 sm:grid-cols-3 gap-y-16 lg:grid-cols-6 gap-x-16">
           <div>
-            <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase font-pj">Company</h6>
+            <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase ">Company</h6>
             <ul className="mt-8 space-y-5">
               <li>
                 <a
                   href="#"
                   title=""
-                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform font-pj hover:text-gray-600 hover:translate-x-1"
+                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform  hover:text-gray-600 hover:translate-x-1"
                 >
                   About
                 </a>
@@ -21,7 +21,7 @@ export default function Footer() {
                 <a
                   href="#"
                   title=""
-                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform font-pj hover:text-gray-600 hover:translate-x-1"
+                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform  hover:text-gray-600 hover:translate-x-1"
                 >
                   Features
                 </a>
@@ -29,13 +29,13 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase font-pj">Help</h6>
+            <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase ">Help</h6>
             <ul className="mt-8 space-y-5">
               <li>
                 <a
                   href="#"
                   title=""
-                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform font-pj hover:text-gray-600 hover:translate-x-1"
+                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform  hover:text-gray-600 hover:translate-x-1"
                 >
                   Customer Support
                 </a>
@@ -44,7 +44,7 @@ export default function Footer() {
                 <a
                   href="#"
                   title=""
-                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform font-pj hover:text-gray-600 hover:translate-x-1"
+                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform  hover:text-gray-600 hover:translate-x-1"
                 >
                   Delivery Details
                 </a>
@@ -52,13 +52,13 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-span-2 sm:col-span-1">
-            <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase font-pj">Resources</h6>
+            <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase ">Resources</h6>
             <ul className="mt-8 space-y-5">
               <li>
                 <a
                   href="#"
                   title=""
-                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform font-pj hover:text-gray-600 hover:translate-x-1"
+                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform  hover:text-gray-600 hover:translate-x-1"
                 >
                   Free eBooks
                 </a>
@@ -67,7 +67,7 @@ export default function Footer() {
                 <a
                   href="#"
                   title=""
-                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform font-pj hover:text-gray-600 hover:translate-x-1"
+                  className="inline-flex text-sm font-normal text-gray-900 transition-all duration-300 transform  hover:text-gray-600 hover:translate-x-1"
                 >
                   Development Tutorial
                 </a>
@@ -75,7 +75,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-span-2 sm:col-span-3 xl:pl-20">
-            <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase font-pj">
+            <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase ">
               Subscribe to newsletter
             </h6>
             <div className="relative mt-8">
@@ -96,13 +96,13 @@ export default function Footer() {
                       name=""
                       id=""
                       placeholder="Enter email address"
-                      className="block w-full px-4 py-4 text-base text-gray-900 placeholder-gray-600 bg-white border-gray-300 focus:ring-gray-900 focus:border-gray-900 rounded-l-xl font-pj caret-gray-900"
+                      className="block w-full px-4 py-4 text-base text-gray-900 placeholder-gray-600 bg-white border-gray-300 focus:ring-gray-900 focus:border-gray-900 rounded-l-xl  caret-gray-900"
                       required
                     />
                   </div>
                   <button
                     type="submit"
-                    className="px-10 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-700 border border-transparent sm:px-16 focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 rounded-r-xl font-pj focus:outline-none"
+                    className="px-10 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-700 border border-transparent sm:px-16 focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 rounded-r-xl  focus:outline-none"
                   >
                     Join
                   </button>
@@ -111,16 +111,16 @@ export default function Footer() {
             </div>
             <div className="grid grid-cols-1 mt-8 gap-y-8 sm:grid-cols-2 sm:gap-x-16">
               <div>
-                <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase font-pj">Call us</h6>
-                <p className="mt-2.5 text-xl font-pj text-gray-900 font-bold">
+                <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase ">Call us</h6>
+                <p className="mt-2.5 text-xl  text-gray-900 font-bold">
                   <a href="#" title="">
                     (239) 555-0108
                   </a>
                 </p>
               </div>
               <div>
-                <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase font-pj">Email us</h6>
-                <p className="mt-2.5 text-xl font-pj text-gray-900 font-bold">
+                <h6 className="text-sm font-bold tracking-widest text-gray-900 uppercase ">Email us</h6>
+                <p className="mt-2.5 text-xl  text-gray-900 font-bold">
                   <a href="#" title="">
                     info@rareblocks.xyz
                   </a>
@@ -191,7 +191,7 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-          <p className="mt-8 text-sm font-normal text-gray-600 font-pj sm:order-1 sm:mt-0">
+          <p className="mt-8 text-sm font-normal text-gray-600  sm:order-1 sm:mt-0">
             © Copyright 2022, All Rights Reserved
           </p>
         </div>

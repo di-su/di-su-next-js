@@ -30,7 +30,7 @@ export default function ThreeBlocks1({
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-4xl px-4 mx-auto text-center sm:px-0">
           <ScrollAnimation animateOnce animateIn="animate__fadeIn animate__animated">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">{title}</h2>
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl ">{title}</h2>
           </ScrollAnimation>
         </div>
         <div className="relative max-w-md mx-auto mt-12 md:max-w-none md:mt-20">
@@ -64,7 +64,7 @@ export default function ThreeBlocks1({
                 />
               </div>
               <div className="mt-6 md:mt-10">
-                <h3 className="text-xl font-bold text-gray-900 font-pj">{heading1}</h3>
+                <h3 className="text-xl font-bold text-gray-900 ">{heading1}</h3>
                 <p className="mt-4 text-base font-normal leading-7 text-gray-600">{description1}</p>
               </div>
             </ScrollAnimation>
@@ -90,7 +90,7 @@ export default function ThreeBlocks1({
                 />
               </div>
               <div className="mt-6 md:mt-10">
-                <h3 className="text-xl font-bold text-gray-900 font-pj">{heading2}</h3>
+                <h3 className="text-xl font-bold text-gray-900 ">{heading2}</h3>
                 <p className="mt-4 text-base font-normal leading-7 text-gray-600">{description2}</p>
               </div>
             </ScrollAnimation>
@@ -116,7 +116,7 @@ export default function ThreeBlocks1({
                 />
               </div>
               <div className="mt-6 md:mt-10">
-                <h3 className="text-xl font-bold text-gray-900 font-pj">See {heading3}</h3>
+                <h3 className="text-xl font-bold text-gray-900 ">See {heading3}</h3>
                 <p className="mt-4 text-base font-normal leading-7 text-gray-600">{description3}</p>
               </div>
             </ScrollAnimation>

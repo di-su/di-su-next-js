@@ -6,7 +6,7 @@ export default function BrandsBanner2() {
       <section className="py-12 bg-white sm:py-16 lg:py-20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="xl:flex xl:items-center xl:justify-between">
-            <h2 className="text-xl font-bold text-center text-gray-400 xl:text-left font-pj">
+            <h2 className="text-xl font-bold text-center text-gray-400 xl:text-left ">
               1000+ Big brands trust us
             </h2>
             <div className="grid items-center grid-cols-1 mt-10 gap-y-6 xl:mt-0 sm:grid-cols-2 sm:gap-y-8 lg:grid-cols-4 lg:gap-x-8">

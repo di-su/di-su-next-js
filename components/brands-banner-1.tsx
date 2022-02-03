@@ -6,7 +6,7 @@ export default function BrandsBanner1() {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
           <ScrollAnimation animateOnce animateIn="animate__fadeIn animate__animated">
-            <h2 className="text-2xl font-bold text-white font-pj">
+            <h2 className="text-2xl font-bold text-white ">
               Trust banner - Trusted by nearly 5000+ paying customers
             </h2>
           </ScrollAnimation>

@@ -34,7 +34,7 @@ export default function Home({ posts }: Post) {
           title="Take your business to the next level"
           description="Managed is the ultimate platform dedicated to streamlining the management of your appointments and clients."
           ctaText="Hello"
-          appDownloadText="Download iOS App"
+          projUrl="google.co.uk"
           imageUrl="https://di-su.com/showcase-img/relic.jpg"
         />
         <ProjectShowcase />
@@ -47,7 +47,7 @@ export default function Home({ posts }: Post) {
                 </h1>
 
                 <ScrollAnimation animateOnce animateIn="animate__fadeInUp animate__animated">
-                  <p className=" mt-5 text-4xl font-bold leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight font-pj ">
+                  <p className=" mt-5 text-4xl font-bold leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight  ">
                     Turn your visitors into profitable
                     <span className="relative inline-flex sm:inline">
                       <span className=" bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0 " />
@@ -59,7 +59,7 @@ export default function Home({ posts }: Post) {
                   <a
                     href="#"
                     title=""
-                    className=" inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-900 border-2 border-transparent sm:w-auto rounded-xl font-pj hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 "
+                    className=" inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-900 border-2 border-transparent sm:w-auto rounded-xl  hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 "
                     role="button"
                   >
                     Get more customers
@@ -67,7 +67,7 @@ export default function Home({ posts }: Post) {
                   <a
                     href="#"
                     title=""
-                    className=" inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto sm:mt-0 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 focus:bg-gray-900 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900 "
+                    className=" inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto sm:mt-0 rounded-xl  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 focus:bg-gray-900 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900 "
                     role="button"
                   >
                     <svg

@@ -13,8 +13,8 @@ export default function Cta6({ title, description, ctaSubText, ctaText }: Cta6) 
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <ScrollAnimation animateOnce animateIn="animate__fadeIn animate__animated">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-900 font-pj">{title}</h2>
-            <p className="max-w-md mx-auto mt-5 text-base font-normal text-gray-600 font-pj">{description}</p>
+            <h2 className="text-4xl font-bold text-gray-900 ">{title}</h2>
+            <p className="max-w-md mx-auto mt-5 text-base font-normal text-gray-600 ">{description}</p>
           </div>
         </ScrollAnimation>
 
@@ -35,20 +35,20 @@ export default function Cta6({ title, description, ctaSubText, ctaText }: Cta6) 
                 name=""
                 id=""
                 placeholder="Enter your email address"
-                className="block w-full px-5 py-6 text-base font-normal text-black placeholder-gray-600 bg-white border border-gray-300 rounded-xl focus:border-black focus:ring-1 focus:ring-black font-pj focus:outline-none"
+                className="block w-full px-5 py-6 text-base font-normal text-black placeholder-gray-600 bg-white border border-gray-300 rounded-xl focus:border-black focus:ring-1 focus:ring-black  focus:outline-none"
                 // required=""
               />
               <div className="mt-4 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center sm:pr-3">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-800 border border-transparent sm:w-auto sm:py-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 font-pj hover:bg-opacity-90 rounded-xl"
+                  className="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-800 border border-transparent sm:w-auto sm:py-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900  hover:bg-opacity-90 rounded-xl"
                 >
                   {ctaText}
                 </button>
               </div>
             </form>
           </div>
-          <p className="mt-6 text-sm font-normal text-center text-gray-500 font-pj">{ctaSubText}</p>
+          <p className="mt-6 text-sm font-normal text-center text-gray-500 ">{ctaSubText}</p>
         </ScrollAnimation>
       </div>
     </section>

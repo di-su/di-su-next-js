@@ -23,7 +23,7 @@ export default function Cta1({
         <div className="px-8 py-10 overflow-hidden lg:px-24 md:py-20 bg-gray-50 rounded-3xl">
           <div className="max-w-lg mx-auto text-center">
             <ScrollAnimation animateOnce animateIn="animate__fadeInUp animate__animated">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
+              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl ">
                 {title}
               </h2>
             </ScrollAnimation>
@@ -45,7 +45,7 @@ export default function Cta1({
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span className="ml-3 text-lg font-bold font-pj">{point1}</span>
+                <span className="ml-3 text-lg font-bold ">{point1}</span>
               </li>
               <li className="flex items-center text-gray-900">
                 <svg
@@ -62,7 +62,7 @@ export default function Cta1({
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span className="ml-3 text-lg font-bold font-pj">{point2}</span>
+                <span className="ml-3 text-lg font-bold ">{point2}</span>
               </li>
               <li className="flex items-center text-gray-900">
                 <svg
@@ -79,7 +79,7 @@ export default function Cta1({
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span className="ml-3 text-lg font-bold font-pj">{point3}</span>
+                <span className="ml-3 text-lg font-bold ">{point3}</span>
               </li>
             </ul>
           </ScrollAnimation>
@@ -96,13 +96,13 @@ export default function Cta1({
                 <a
                   href="#"
                   title=""
-                  className="relative inline-flex items-center justify-center py-3.5 text-base font-bold text-white transition-all duration-200 bg-brand-800 border border-transparent px-9 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 font-pj hover:bg-opacity-90 rounded-xl"
+                  className="relative inline-flex items-center justify-center py-3.5 text-base font-bold text-white transition-all duration-200 bg-brand-800 border border-transparent px-9 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900  hover:bg-opacity-90 rounded-xl"
                   role="button"
                 >
                   {ctaText}
                 </a>
               </div>
-              <p className="mt-5 text-sm font-normal text-gray-500 font-pj">{ctaSubText}</p>
+              <p className="mt-5 text-sm font-normal text-gray-500 ">{ctaSubText}</p>
             </div>
           </ScrollAnimation>
         </div>

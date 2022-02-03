@@ -24,7 +24,7 @@ export default function Cta3({
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <ScrollAnimation animateOnce animateIn="animate__fadeInUp animate__animated">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 font-pj">{title}</h2>
+            <h2 className="text-3xl font-bold text-gray-900 ">{title}</h2>
           </div>
         </ScrollAnimation>
         <div className="relative mt-14">
@@ -74,12 +74,12 @@ export default function Cta3({
                       </svg>
                     </div>
                   </div> */}
-                  <h3 className="text-xl font-bold text-gray-900 font-pj mt-0">{subHeading1}</h3>
+                  <h3 className="text-xl font-bold text-gray-900  mt-0">{subHeading1}</h3>
                   <p className="mt-3 text-base font-normal leading-7 text-gray-600">{subDescription1}</p>
                   <a
                     href="#"
                     title=""
-                    className="inline-flex items-center justify-center px-8 py-3 mt-8 text-base font-bold text-white transition-all duration-200 bg-brand-800 border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 font-pj hover:bg-gray-600 rounded-xl"
+                    className="inline-flex items-center justify-center px-8 py-3 mt-8 text-base font-bold text-white transition-all duration-200 bg-brand-800 border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900  hover:bg-gray-600 rounded-xl"
                     role="button"
                   >
                     {subCtaText1}
@@ -107,12 +107,12 @@ export default function Cta3({
                       alt=""
                     />
                   </div> */}
-                  <h3 className="text-xl font-bold text-gray-900 font-pj mt-0">{subHeading2}</h3>
+                  <h3 className="text-xl font-bold text-gray-900  mt-0">{subHeading2}</h3>
                   <p className="mt-3 text-base font-normal leading-7 text-gray-600">{subDescription2}</p>
                   <a
                     href="#"
                     title=""
-                    className="inline-flex items-center justify-center px-8 py-3 mt-8 text-base font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-brand-800 focus:bg-brand-800 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900"
+                    className="inline-flex items-center justify-center px-8 py-3 mt-8 text-base font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 rounded-xl  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-brand-800 focus:bg-brand-800 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900"
                     role="button"
                   >
                     {subCtaText2}

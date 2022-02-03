@@ -13,8 +13,8 @@ export default function Cta9({ title, description, ctaText, secondaryCtaText }: 
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <ScrollAnimation animateOnce animateIn="animate__fadeIn animate__animated">
           <div className="text-center">
-            <h2 className="text-4xl font-bold text-gray-900 font-pj">{title}</h2>
-            <p className="max-w-md mx-auto mt-5 text-base leading-6 text-gray-600 font-pj">{description}</p>
+            <h2 className="text-4xl font-bold text-gray-900 ">{title}</h2>
+            <p className="max-w-md mx-auto mt-5 text-base leading-6 text-gray-600 ">{description}</p>
           </div>
         </ScrollAnimation>
         <ScrollAnimation animateOnce animateIn="animate__fadeInUp animate__animated">
@@ -27,9 +27,9 @@ export default function Cta9({ title, description, ctaText, secondaryCtaText }: 
                     src="https://cdn.rareblocks.xyz/collection/clarity/images/cta/7/command-symbol.svg"
                     alt=""
                   />
-                  <span className="text-[42px] font-bold text-gray-900 font-pj ml-1 inline-flex">C</span>
+                  <span className="text-[42px] font-bold text-gray-900  ml-1 inline-flex">C</span>
                 </div>
-                <p className="mt-4 text-sm font-medium text-gray-600 font-pj">Copy any code you want</p>
+                <p className="mt-4 text-sm font-medium text-gray-600 ">Copy any code you want</p>
               </div>
               <div>
                 <div className="flex items-center justify-center mx-auto bg-white border border-gray-200 shadow-md rounded-3xl w-28 h-28">
@@ -38,9 +38,9 @@ export default function Cta9({ title, description, ctaText, secondaryCtaText }: 
                     src="https://cdn.rareblocks.xyz/collection/clarity/images/cta/7/command-symbol.svg"
                     alt=""
                   />
-                  <span className="text-[42px] font-bold text-gray-900 font-pj ml-1 inline-flex">V</span>
+                  <span className="text-[42px] font-bold text-gray-900  ml-1 inline-flex">V</span>
                 </div>
-                <p className="mt-4 text-sm font-medium text-gray-600 font-pj">Paste the code</p>
+                <p className="mt-4 text-sm font-medium text-gray-600 ">Paste the code</p>
               </div>
               <div>
                 <div className="flex items-center justify-center mx-auto bg-white border border-gray-200 shadow-md rounded-3xl w-28 h-28">
@@ -49,9 +49,9 @@ export default function Cta9({ title, description, ctaText, secondaryCtaText }: 
                     src="https://cdn.rareblocks.xyz/collection/clarity/images/cta/7/command-symbol.svg"
                     alt=""
                   />
-                  <span className="text-[42px] font-bold text-gray-900 font-pj ml-1 inline-flex">R</span>
+                  <span className="text-[42px] font-bold text-gray-900  ml-1 inline-flex">R</span>
                 </div>
-                <p className="mt-4 text-sm font-medium text-gray-600 font-pj">Publish your website ⚡</p>
+                <p className="mt-4 text-sm font-medium text-gray-600 ">Publish your website ⚡</p>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function Cta9({ title, description, ctaText, secondaryCtaText }: 
             <a
               href="#"
               title=""
-              className="inline-flex items-center justify-center w-full px-8 py-3 text-base font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-brand-800 focus:bg-brand-800 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900"
+              className="inline-flex items-center justify-center w-full px-8 py-3 text-base font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto rounded-xl  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-brand-800 focus:bg-brand-800 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900"
               role="button"
             >
               {secondaryCtaText}
@@ -77,7 +77,7 @@ export default function Cta9({ title, description, ctaText, secondaryCtaText }: 
               <a
                 href="#"
                 title=""
-                className="relative inline-flex items-center justify-center w-full px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-brand-800 border-2 border-transparent sm:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 font-pj hover:bg-opacity-90 rounded-xl"
+                className="relative inline-flex items-center justify-center w-full px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-brand-800 border-2 border-transparent sm:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900  hover:bg-opacity-90 rounded-xl"
                 role="button"
               >
                 {ctaText}

@@ -25,16 +25,16 @@ export default function FeatureBlock1({
       <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <ScrollAnimation animateOnce animateIn="animate__fadeIn animate__animated">
           <div className="max-w-xl mx-auto text-center xl:max-w-3xl">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl font-pj">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl ">
             {title}
             </h2>
-            <p className="max-w-xl mx-auto mt-4 text-base leading-7 text-gray-100 sm:mt-8 font-pj">
+            <p className="max-w-xl mx-auto mt-4 text-base leading-7 text-gray-100 sm:mt-8 ">
             {description}
             </p>
             <a
               href="#"
               title=""
-              className="inline-flex items-center justify-center px-6 py-3 mt-8 text-lg font-bold text-white transition-all duration-200 bg-transparent border border-white sm:mt-11 hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-gray-900"
+              className="inline-flex items-center justify-center px-6 py-3 mt-8 text-lg font-bold text-white transition-all duration-200 bg-transparent border border-white sm:mt-11 hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 rounded-xl  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-gray-900"
               role="button"
             >
               {ctaText}

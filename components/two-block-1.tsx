@@ -3,11 +3,11 @@ import ScrollAnimation from "react-animate-on-scroll";
 interface TwoBlock1 {
   title: string;
   description: string;
+  projUrl: string;
   imageUrl: string;
   ctaText: string;
-  appDownloadText: string;
 }
-export default function TwoBlock1({ title, description, imageUrl, ctaText, appDownloadText }: TwoBlock1) {
+export default function TwoBlock1({ title, description, projUrl, ctaText, imageUrl }: TwoBlock1) {
   return (
     <div className="relative bg-gray-50">
       <section className="relative pt-12 sm:pt-16 lg:pt-20 pb-0 animate__fadeIn animate__animated">
@@ -19,67 +19,29 @@ export default function TwoBlock1({ title, description, imageUrl, ctaText, appDo
               animateIn="animate__fadeInLeft animate__animated"
             >
               <div className="max-w-sm mx-auto sm:max-w-xl md:max-w-full">
-                <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">
+                <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:leading-tight lg:text-5xl lg:leading-tight ">
                   {title}
                 </h1>
-                <div className="mt-8 lg:mt-12 lg:flex lg:items-center">
-                  <div className="flex justify-center flex-shrink-0 -space-x-4  lg:justify-start">
-                    <img
-                      className="inline-block rounded-full w-14 h-14 ring-2 ring-white"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/hero/3/avatar-male.png"
-                      alt=""
-                    />
-                    <img
-                      className="inline-block rounded-full w-14 h-14 ring-2 ring-white"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/hero/3/avatar-female-1.png"
-                      alt=""
-                    />
-                    <img
-                      className="inline-block rounded-full w-14 h-14 ring-2 ring-white"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/hero/3/avatar-female-2.png"
-                      alt=""
-                    />
-                  </div>
-                  <p className="mt-4 text-lg text-gray-900 lg:mt-0 lg:ml-4 font-pj">{description}</p>
-                </div>
+                <p>
+                  {projUrl}
+                </p>
+                <p className="mt-4 text-lg text-gray-900 lg:mt-0 ">{description}</p>
               </div>
-              <div className="mt-8 sm:flex sm:items-center sm:justify-center lg:justify-start sm:space-x-5 lg:mt-12">
+              <div className="sm:flex sm:items-center sm:justify-center lg:justify-start sm:space-x-5">
                 <a
                   href="#"
                   title=""
-                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-brand-700 border border-transparent rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 font-pj hover:bg-gray-600"
+                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-brand-700 border border-transparent rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900  hover:bg-gray-600"
                   role="button"
                 >
                   {ctaText}
-                </a>
-                <a
-                  href="#"
-                  title=""
-                  className="inline-flex items-center justify-center px-4 py-4 mt-4 text-lg font-bold transition-all duration-200 bg-transparent border border-transparent sm:mt-0 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 hover:bg-gray-200 focus:bg-gray-200"
-                  role="button"
-                >
-                  <svg
-                    className="w-5 h-5 mr-2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2.5"
-                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                    />
-                  </svg>
-                  {appDownloadText}
                 </a>
               </div>
             </ScrollAnimation>
             <ScrollAnimation
               animateOnce
               style={{ maxHeight: "600px" }}
-              className="xl:col-span-3 p-4"
+              className="xl:col-span-3 p-0 lg:p-12 lg:pt-0"
               animateIn="animate__fadeInRight animate__fadeIn animate__animated"
             >
               <img src={imageUrl} alt="" className="shadow-2xl shadow-slate-600"/>

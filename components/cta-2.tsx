@@ -18,7 +18,7 @@ export default function Cta2({
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <ScrollAnimation animateOnce animateIn="animate__fadeInUp animate__animated">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl ">
               {title}
             </h2>
           </ScrollAnimation>
@@ -28,13 +28,13 @@ export default function Cta2({
             <div className="relative px-6 pt-12 md:py-10 md:px-8 lg:py-12">
               <div className="flex items-center justify-end md:order-2">
                 <div className="relative text-center md:text-left md:pl-8 lg:pl-0 md:w-1/2">
-                  <p className="text-lg font-normal leading-relaxed text-white font-pj">
+                  <p className="text-lg font-normal leading-relaxed text-white ">
                     {description}
                   </p>
                   <a
                     href="#"
                     title=""
-                    className="inline-flex items-center justify-center px-8 py-3 mt-8 text-base font-bold text-gray-900 transition-all duration-200 bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white font-pj hover:bg-opacity-90 rounded-xl"
+                    className="inline-flex items-center justify-center px-8 py-3 mt-8 text-base font-bold text-gray-900 transition-all duration-200 bg-white border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white  hover:bg-opacity-90 rounded-xl"
                     role="button"
                   >
                     {ctaText}

@@ -23,7 +23,7 @@ export default function CenteredBlock1({ title, description, imageUrl }: Centere
             text-white
             sm:text-5xl sm:leading-tight
             lg:text-6xl lg:leading-tight
-            font-pj
+            
           "
             >
               {title}

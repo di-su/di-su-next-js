@@ -39,7 +39,7 @@ export default function Cta8({
                     alt=""
                   />
                   <blockquote className="mt-6">
-                    <p className="text-lg font-normal leading-relaxed text-gray-900 font-pj">{reviewText}</p>
+                    <p className="text-lg font-normal leading-relaxed text-gray-900 ">{reviewText}</p>
                   </blockquote>
                   <div className="flex items-center justify-between mt-8">
                     <div className="flex items-center">
@@ -49,8 +49,8 @@ export default function Cta8({
                         alt=""
                       />
                       <div className="ml-3">
-                        <p className="text-lg font-bold text-gray-900 font-pj">{reviewPersonName}</p>
-                        <p className="text-base font-pj font-normal text-gray-600 mt-0.5">{reviewPersonTitle}</p>
+                        <p className="text-lg font-bold text-gray-900 ">{reviewPersonName}</p>
+                        <p className="text-base  font-normal text-gray-600 mt-0.5">{reviewPersonTitle}</p>
                       </div>
                     </div>
                     <img
@@ -65,14 +65,14 @@ export default function Cta8({
           </div>
           <div className="max-w-md mx-auto text-center lg:max-w-none lg:text-left w-full">
             <ScrollAnimation animateOnce animateIn="animate__fadeInUp animate__animated">
-              <h2 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl font-pj">{title}</h2>
+              <h2 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl ">{title}</h2>
             </ScrollAnimation>
             <ScrollAnimation animateOnce animateIn="animate__fadeInUp animate__animated">
-              <p className="mt-8 text-base font-normal leading-7 text-gray-300 font-pj">{description}</p>
+              <p className="mt-8 text-base font-normal leading-7 text-gray-300 ">{description}</p>
             </ScrollAnimation>
             <ScrollAnimation animateOnce animateIn="animate__fadeInUp animate__animated">
               <form action="#" method="POST" className="mt-16">
-                <label htmlFor="" className="text-lg font-bold text-white font-pj">
+                <label htmlFor="" className="text-lg font-bold text-white ">
                   {ctaPreText}
                 </label>
                 <div className="relative max-w-lg mx-auto mt-5 lg:mx-0">
@@ -91,12 +91,12 @@ export default function Cta8({
                       name=""
                       id=""
                       placeholder="Enter your email address"
-                      className="block w-full px-5 py-6 text-base font-normal text-white placeholder-white bg-brand-900 border border-transparent rounded-xl focus:border-white focus:ring-1 focus:ring-white font-pj focus:outline-none"
+                      className="block w-full px-5 py-6 text-base font-normal text-white placeholder-white bg-brand-900 border border-transparent rounded-xl focus:border-white focus:ring-1 focus:ring-white  focus:outline-none"
                     />
                     <div className="mt-4 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center sm:pr-3">
                       <button
                         type="submit"
-                        className="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold text-gray-900 transition-all duration-200 bg-white border border-transparent sm:py-3 sm:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white font-pj hover:bg-opacity-90 rounded-xl"
+                        className="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold text-gray-900 transition-all duration-200 bg-white border border-transparent sm:py-3 sm:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white  hover:bg-opacity-90 rounded-xl"
                       >
                         {ctaText}
                       </button>

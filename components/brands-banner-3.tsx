@@ -7,10 +7,10 @@ export default function BrandsBanner3() {
         <div className="grid items-center grid-cols-1 xl:grid-cols-2">
           <ScrollAnimation animateOnce animateIn="animate__fadeInLeft animate__animated">
             <div className="px-8 text-center xl:text-left xl:pr-16 md:max-w-2xl md:mx-auto xl:max-w-none">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
+              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl ">
                 Customers and brands love using Rareblocks
               </h2>
-              <p className="mt-6 text-lg font-normal text-gray-600 font-pj">
+              <p className="mt-6 text-lg font-normal text-gray-600 ">
                 Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis.
               </p>
             </div>

@@ -95,28 +95,28 @@ export default function Nav() {
             <a
               href="#"
               title=""
-              className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
+              className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
             >
               Showcase
             </a>
             <a
               href="#"
               title=""
-              className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
+              className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
             >
               Hire Me
             </a>
             <a
               href="#"
               title=""
-              className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
+              className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
             >
               Articles
             </a>
             <a
               href="#"
               title=""
-              className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
+              className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
             >
               CV
             </a>
@@ -125,7 +125,7 @@ export default function Nav() {
             <a
               href="#"
               title=""
-              className=" inline-flex items-center justify-center px-6 py-3 text-base font-bold leading-7 text-white transition-all duration-200 border border-transparent rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2"
+              className=" inline-flex items-center justify-center px-6 py-3 text-base font-bold leading-7 text-white transition-all duration-200 border border-transparent rounded-xl  focus:outline-none focus:ring-2 focus:ring-offset-2"
               role="button"
             >
               Contact Me
@@ -140,7 +140,7 @@ export default function Nav() {
                   <a
                     href={item.link}
                     title=""
-                    className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
+                    className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none  focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
                   >
                     {item.title}
                   </a>
@@ -149,35 +149,35 @@ export default function Nav() {
               {/* <a
                 href="#"
                 title=""
-                className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
+                className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none  focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
               >
                 Features
               </a>
               <a
                 href="#"
                 title=""
-                className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
+                className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none  focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
               >
                 Pricing
               </a>
               <a
                 href="#"
                 title=""
-                className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
+                className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none  focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
               >
                 Automation
               </a>
               <a
                 href="#"
                 title=""
-                className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
+                className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none  focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
               >
                 Customer Login
               </a>
               <a
                 href="#"
                 title=""
-                className=" inline-flex items-center justify-center px-6 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-xl hover:bg-gray-600 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 "
+                className=" inline-flex items-center justify-center px-6 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-xl hover:bg-gray-600  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 "
                 role="button"
               >
                 Sign up

@@ -16,7 +16,7 @@ export default function Cta7({
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center lg:flex lg:items-center lg:justify-between lg:text-left">
           <ScrollAnimation animateOnce animateIn="animate__fadeInLeft animate__animated">
-            <h2 className="max-w-xl mx-auto text-4xl font-bold text-gray-900 lg:mx-0 font-pj lg:pr-8 xl:pr-0">
+            <h2 className="max-w-xl mx-auto text-4xl font-bold text-gray-900 lg:mx-0  lg:pr-8 xl:pr-0">
               {title}
             </h2>
           </ScrollAnimation>
@@ -25,7 +25,7 @@ export default function Cta7({
               <a
                 href="#"
                 title=""
-                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-brand-800 focus:bg-brand-800 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900"
+                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto rounded-xl  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-brand-800 focus:bg-brand-800 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900"
                 role="button"
               >
                 {ctaSubText}
@@ -41,7 +41,7 @@ export default function Cta7({
                 <a
                   href="#"
                   title=""
-                  className="relative inline-flex items-center justify-center w-full px-6 py-3 text-base font-bold text-white transition-all duration-200 bg-brand-800 border-2 border-transparent lg:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 font-pj hover:bg-opacity-90 rounded-xl"
+                  className="relative inline-flex items-center justify-center w-full px-6 py-3 text-base font-bold text-white transition-all duration-200 bg-brand-800 border-2 border-transparent lg:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900  hover:bg-opacity-90 rounded-xl"
                   role="button"
                 >
                   {ctaText}

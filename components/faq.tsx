@@ -44,7 +44,7 @@ export default function Faq() {
           <div role="region" className="relative overflow-hidden bg-white border border-gray-200 rounded-xl">
             <h3>
               <button
-                className="flex items-center justify-between w-full px-6 py-5 text-xl font-bold text-left text-gray-900 sm:p-8 font-pj"
+                className="flex items-center justify-between w-full px-6 py-5 text-xl font-bold text-left text-gray-900 sm:p-8 "
                 onClick={() => setShowAnswer(!showAnswer)}
               >
                 <span>{props.question}</span>
@@ -92,10 +92,10 @@ export default function Faq() {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <ScrollAnimation animateOnce animateIn="animate__fadeIn animate__animated">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl ">
               Frequently Asked Questions
             </h2>
-            <p className="max-w-lg mx-auto mt-6 text-base text-gray-600 font-pj">
+            <p className="max-w-lg mx-auto mt-6 text-base text-gray-600 ">
               With lots of unique blocks, you can easily build a page without coding. Build your next landing page.
             </p>
           </div>
