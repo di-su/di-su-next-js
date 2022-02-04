@@ -7,9 +7,10 @@ import { frontMatter } from "ts/interfaces/interfaces";
 import ProjectShowcase from "components/project-showcase";
 import ScrollAnimation from "react-animate-on-scroll";
 import Layout from "components/layout";
-import Head from "next/head";
 import CenteredBlock1 from "components/centered-block-1";
 import TwoBlock1 from "components/two-block-1";
+import { faCode, faInfoCircle,  faMobile,  faPencilAlt} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Post {
   posts: [
@@ -31,11 +32,27 @@ export default function Home({ posts }: Post) {
           imageUrl="https://di-su.com/me.jpeg"
         />
         <TwoBlock1
-          title="Take your business to the next level"
-          description="Managed is the ultimate platform dedicated to streamlining the management of your appointments and clients."
-          ctaText="Hello"
-          projUrl="google.co.uk"
+          title="Relic"
+          description="Multi-step landing page, mobile mockups, email capture and waitlist system. Relic is a new service designed to allow individuals to invest in highly collectible appreciating assets."
+          ctaText="See website"
+          projUrl="relicapp.co.uk"
           imageUrl="https://di-su.com/showcase-img/relic.jpg"
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle}/> Landing page, photoshop, email capture
+              </p>
+              <p className="flex">
+              <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+              <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS &amp; API
+              </p>
+              <p className="flex">
+              <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} />  Optimised for mobile
+              </p>
+            </div>
+          }
         />
         <ProjectShowcase />
         <div className="overflow-x-hidden bg-gray-50">
@@ -132,17 +149,17 @@ export default function Home({ posts }: Post) {
 
 export const getStaticProps = async () => {
   const files = fs.readdirSync(path.join("posts"));
-  const posts = files.map((filename) => {
+  const posts = files.map(filename => {
     const markdownWithMeta = fs.readFileSync(path.join("posts", filename), "utf-8");
     const { data: frontMatter } = matter(markdownWithMeta);
     return {
       frontMatter,
-      slug: filename.split(".")[0],
+      slug: filename.split(".")[0]
     };
   });
   return {
     props: {
-      posts,
-    },
+      posts
+    }
   };
 };

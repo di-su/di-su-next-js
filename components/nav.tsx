@@ -47,7 +47,7 @@ export default function Nav() {
             </p>
           </div>
           <div className="flex lg:hidden">
-            <button type="button" className="text-gray-900">
+            <button type="button" className="text-white">
               {state.showMobileNavBar ? (
                 <span
                   aria-hidden="true"
@@ -141,7 +141,7 @@ export default function Nav() {
                     key={item.title}
                     href={item.link}
                     title=""
-                    className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none  focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
+                    className=" flex items-center p-3 -m-3 text-base font-medium text-white transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none  focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
                   >
                     {item.title}
                   </a>
