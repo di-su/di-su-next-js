@@ -1,6 +1,6 @@
 import ScrollAnimation from "react-animate-on-scroll";
 
-interface TwoBlock1 {
+interface TwoBlock {
   title: string;
   description: string;
   ctaText: string;
@@ -12,7 +12,7 @@ export default function FeatureBlock1({
   description,
   ctaText,
   imageUrl
-}: TwoBlock1) {
+}: TwoBlock) {
   return (
     <section className="relative pt-12 bg-brand-800 sm:pt-16 lg:pt-20">
       <div className="absolute inset-0 overflow-hidden">

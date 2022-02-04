@@ -4,12 +4,11 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import { frontMatter } from "ts/interfaces/interfaces";
-import ProjectShowcase from "components/project-showcase";
 import ScrollAnimation from "react-animate-on-scroll";
 import Layout from "components/layout";
 import CenteredBlock1 from "components/centered-block-1";
-import TwoBlock1 from "components/two-block-1";
-import { faCode, faInfoCircle,  faMobile,  faPencilAlt} from "@fortawesome/free-solid-svg-icons";
+import TwoBlock from "components/two-block";
+import { faCode, faInfoCircle, faMobile, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Post {
@@ -31,88 +30,332 @@ export default function Home({ posts }: Post) {
           description="Welcome! I'm Di, an experienced ecommerce marketer and web developer. Here are some things I've built."
           imageUrl="https://di-su.com/me.jpeg"
         />
-        <TwoBlock1
+        <TwoBlock
           title="Relic"
           description="Multi-step landing page, mobile mockups, email capture and waitlist system. Relic is a new service designed to allow individuals to invest in highly collectible appreciating assets."
-          ctaText="See website"
           projUrl="relicapp.co.uk"
           imageUrl="https://di-su.com/showcase-img/relic.jpg"
           extraHtmlText={
             <div className="mt-4">
               <p className="flex">
-                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle}/> Landing page, photoshop, email capture
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Landing page, photoshop, email capture
               </p>
               <p className="flex">
-              <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
               </p>
               <p className="flex">
-              <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS &amp; API
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS &amp; API
               </p>
               <p className="flex">
-              <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} />  Optimised for mobile
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
               </p>
             </div>
           }
         />
-        <ProjectShowcase />
-        <div className="overflow-x-hidden bg-gray-50">
-          <section className="pt-12 bg-gray-50 sm:pt-16">
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-              <div className="max-w-2xl mx-auto text-center">
-                <h1 className="px-6 text-lg text-gray-600 font-inter">
-                  Smart email campaign builder, made for Developers
-                </h1>
-
-                <ScrollAnimation animateOnce animateIn="animate__fadeInUp animate__animated">
-                  <p className=" mt-5 text-4xl font-bold leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight  ">
-                    Turn your visitors into profitable
-                    <span className="relative inline-flex sm:inline">
-                      <span className=" bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0 " />
-                      <span className="relative"> business </span>
-                    </span>
-                  </p>
-                </ScrollAnimation>
-                <div className=" px-8 sm:items-center sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9 ">
-                  <a
-                    href="#"
-                    title=""
-                    className=" inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-900 border-2 border-transparent sm:w-auto rounded-xl  hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 "
-                    role="button"
-                  >
-                    Get more customers
-                  </a>
-                  <a
-                    href="#"
-                    title=""
-                    className=" inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto sm:mt-0 rounded-xl  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 focus:bg-gray-900 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900 "
-                    role="button"
-                  >
-                    <svg
-                      className="w-5 h-5 mr-2"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      stroke="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.18003 13.4261C6.8586 14.3918 5 13.448 5 11.8113V5.43865C5 3.80198 6.8586 2.85821 8.18003 3.82387L12.5403 7.01022C13.6336 7.80916 13.6336 9.44084 12.5403 10.2398L8.18003 13.4261Z"
-                        strokeWidth={2}
-                        strokeMiterlimit={10}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    Watch free demo
-                  </a>
-                </div>
-                <p className="mt-8 text-base text-gray-500 font-inter">
-                  {" "}
-                  60 Days free trial · No credit card required{" "}
-                </p>
-              </div>
+        <TwoBlock
+          title="AHOYY"
+          description="AHOYY is an Shopify ecommerce business that delivers caffeinated chocolates."
+          discontinued
+          projUrl="ahoyy.co.uk"
+          imageUrl="https://di-su.com/showcase-img/ahoyy.jpeg"
+          flipPosition
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Website & Business
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Shopify
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS/Liquid
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
             </div>
-          </section>
-        </div>
+          }
+        />
+        <TwoBlock
+          title="Blend my day Acquisiton page"
+          description="Landing page for Blend my day's smoothies and oat bowls. A simple introduction to the service and high-quality product and video shots. Used on Facebook and Adwords."
+          projUrl="blendmyday.co.uk"
+          imageUrl="https://di-su.com/showcase-img/bmd.jpeg"
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Landing page, photoshop, video editing
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS & API
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+        <TwoBlock
+          title="Poply"
+          description="Poply helps homeowners sell their houses with bespoke, professional websites, dedicated to the listing of their property."
+          discontinued
+          projUrl="poply.co.uk"
+          imageUrl="https://di-su.com/showcase-img/poply.jpg"
+          flipPosition
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Website & Business
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+        <TwoBlock
+          title="The Cornerstone Razor"
+          description="An acquisition page dedicated to Cornerstone's most popular product - the chrome-plated personalised razor. A simple introduction to the service and high-quality product shots. Intended for Facebook and Adwords."
+          projUrl="cornerstone.co.uk"
+          imageUrl="https://di-su.com/showcase-img/razor-lp.jpg"
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Landing page
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+        <TwoBlock
+          title="A Cornerstone Christmas"
+          description="Last chance Christmas offer email built for Cornerstone's gifting period. Sent to existing members."
+          projUrl="cornerstone.co.uk"
+          imageUrl="https://di-su.com/showcase-img/christmas-email.jpg"
+          flipPosition
+          ctaText="See email"
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Email
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS, mjml.io
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+        <TwoBlock
+          title="App mockup for Love UnderDogs"
+          description="A brief app mockup for Love UnderDogs - a rescue and rehoming service helping to support some of the most under loved dogs."
+          projUrl="oveunderdogs.org"
+          imageUrl="https://di-su.com/showcase-img/welcome.jpg"
+          ctaText="See mockup"
+          noShadow
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> App mockup
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Design
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> sketch.com
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> iOS
+              </p>
+            </div>
+          }
+        />
+        <TwoBlock
+          title="Moneyapp"
+          description="A money-budgeting program built using Laravel, a MVC PHP Framework."
+          imageUrl="https://di-su.com/showcase-img/money-main.jpg"
+          ctaText="See mockup"
+          flipPosition
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Website
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS/Laravel/PHP/Databases/SQL
+              </p>
+            </div>
+          }
+        />
+        <TwoBlock
+          title="Configurable template for European launch"
+          description="A configurable, mobile-friendly landing page built on unbounce for Bakenight's European launch of their baking masterclass service."
+          projUrl="bakenight.com"
+          imageUrl="https://di-su.com/showcase-img/bakenight-lp.jpg"
+          ctaText="See page"
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Landing page
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> Unbounce.com
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+
+        <TwoBlock
+          title="Hon's restaurant"
+          description="The online home for a restaurant based in Rainham, Kent. With essential information and menu's in .pdf format."
+          projUrl="honsrestaurant.co.uk"
+          imageUrl="https://di-su.com/showcase-img/hons-site.jpg"
+          flipPosition
+          ctaText="See page"
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Website
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+        <TwoBlock
+          title="Blender dropshipping"
+          description="A draft mockup page for the Shopify dropshipping of a blender available from aliexpress."
+          imageUrl="https://di-su.com/showcase-img/blender.jpg"
+          ctaText="See page"
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Landing page
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+        <TwoBlock
+          title="Chop Suey Centre"
+          projUrl="chopsueycentre.co.uk"
+          description="The online home for a restaurant based in Romford, Essex. With essential information and menu's all available in text format."
+          imageUrl="https://di-su.com/showcase-img/chop.jpg"
+          flipPosition
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Website
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+
+        <TwoBlock
+          title="Instagram influencer capture"
+          projUrl="cornerstone.co.uk"
+          description="A page linked with google forms to capture information submitted by potential instagram influencers for Cornerstone."
+          imageUrl="https://di-su.com/showcase-img/influencer.jpg"
+          ctaText="See page"
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Landing page
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+        <TwoBlock
+          title="Manaman Games"
+          projUrl="manamangames.com"
+          description="The home to Manaman Games, an independent developer of casual games for Android and iOS."
+          imageUrl="https://di-su.com/showcase-img/manaman-games.jpg"
+          flipPosition
+          extraHtmlText={
+            <div className="mt-4">
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faInfoCircle} /> Website
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faPencilAlt} /> Complete Implementation
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faCode} /> HTML/CSS/JS
+              </p>
+              <p className="flex">
+                <FontAwesomeIcon className="h-5 w-5 mr-2" icon={faMobile} /> Optimised for mobile
+              </p>
+            </div>
+          }
+        />
+
         <div className="mt-5">
           {posts.map((post, index) => (
             <Link href={"/blog/" + post.slug} passHref key={index}>
