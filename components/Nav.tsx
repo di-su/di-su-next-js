@@ -138,6 +138,7 @@ export default function Nav() {
               {navLinks.map((item) => {
                 return (
                   <a
+                    key={item.title}
                     href={item.link}
                     title=""
                     className=" flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none  focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 "
