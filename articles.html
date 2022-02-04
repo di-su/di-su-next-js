@@ -1,0 +1,207 @@
+<html>
+
+
+<head>
+    <script>
+    var submitted=false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
+    onload="
+        if(submitted) {
+            $('#mailing-list').html('<h5 class=\'text-center mb-3\'>Cheers! You\'ve signed up to my mailing list.</h5>');
+        }
+    "></iframe>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Di Su</title>
+    <style>
+
+        img {
+            border: 1px solid #ececec;
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;a
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (min-width: 576px) {
+            #four-block {
+                padding-right: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body style="">
+
+    <div id="nav"></div>
+    <div class="py-2" style="background: #0069d9;color: white;text-align: center;">I'm available for short-term hire! <a style="color: white;text-decoration: underline;" href="/hire-me">Find out more</a></div>
+    <div class="container py-4 mt-5" style="max-width: 950px;">
+        <div class="m-auto" style="max-width: 600px;">
+            <h1 class="text-center" style="font-size: 4em;">Hey there 👋, I'm Di.</h1>
+            <p class="lead text-center pb-4 m-auto pt-2 px-1" style="max-width: 550px;font-size: 18px;line-height: 26px;">Welcome! I'm a digital marketer based in London, currently working as Head of LTV for <a target="_blank" href="https://www.cornerstone.co.uk/">Cornerstone.co.uk</a>.</p>
+        </div>
+        <!-- <p class="lead text-center pb-4">Welcome! Have a read</p> -->
+
+        <h4 class="pt-2 mb-3 mt-5" style="margin-left: 19px;">Articles</h4>
+        <div class="row m-1">
+            <div id="four-block" class="col-sm-6 themed-grid-col mb-4">
+                <div class="row">
+                  <div class="col-sm-6 themed-grid-col mb-4">
+                      <a href="/articles/working-out">
+                        <img src="/blog-images/weight.jpg" class="img-fluid" alt="Responsive image">
+                      </a>
+                      <p class="mt-2 cat"><span>Fitness</span></p>
+                  <h5>Working out during lockdown</h5>
+                      <a href="/articles/apple-notes">read more</a>
+                  </div>
+                    <div class="col-sm-6 themed-grid-col mb-4">
+                        <a href="/articles/how-i-built-this-website">
+                            <img src="/blog-images/laptop-code.jpg" class="img-fluid" alt="Responsive image">
+                        </a>
+                        <p class="mt-2 cat"><span>Tech</span></p>
+                        <h5>How I built this website</h5>
+                        <a href="/articles/how-i-built-this-website">read more</a>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 themed-grid-col mb-4">
+                        <a href="/articles/apple-notes">
+                            <img src="/blog-images/apple-notes.jpg" class="img-fluid" alt="Responsive image">
+                        </a>
+                        <p class="mt-2 cat"><span>Productivity</span></p>
+                        <h5>The 3 ways I use Apple Notes</h5>
+                        <a href="/articles/apple-notes">read more</a>
+                    </div>
+                    <div class="col-sm-6 themed-grid-col mb-4">
+                        <a href="/articles/landing-pages-built">
+                            <img src="/blog-images/coffee-splash.jpg" class="img-fluid" alt="Responsive image">
+                        </a>
+                        <p class="mt-2 cat"><span>Marketing</span></p>
+                        <h5>A collection of landing pages I've built</h5>
+                        <a href="/articles/landing-pages-built">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 themed-grid-col mb-4 bg-overlay">
+                <div style="height: 100%;min-height: 350px;max-height: 800px;" class="row align-items-end">
+                    <div class="col mb-5">
+                        <p class="mt-2"><span class="p-1" style="color: white;font-size: 14px;">MARKETING</span></p>
+                        <h5>Cornerstone.co.uk projects gallery</h5>
+                        <a href="/articles/cornerstone-gallery">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background: #f7f7f7;">
+        <div class="container py-5 mb-5">
+            <div id="mailing-list">
+                <h5 class="text-center mb-4 px-4">Like what you see? Join my mailing list for more</h5>
+                <form style="max-width: 300px;" id="contact-form" class="m-auto" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdGT52EvAxAMHHXJQMka6ryS1bvgAm8KyaLCoYOoP0K36k9cw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                    <div class="form-group">
+                        <!-- <label>Your email address (required)</label> -->
+                        <input name="entry.606294237" type="email" class="form-control" placeholder="John@email.com" required="">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;height: 55px;">Join list</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container py-4 mt-5" style="max-width: 950px;">
+        <h4 class="pt-2 mb-3">More articles</h4>
+        <div class="row mb-3">
+            <div class="col-sm-4 themed-grid-col mb-4">
+                <a href="/articles/emails-built">
+                    <img src="/blog-images/email-iphone.jpg" class="img-fluid" alt="Responsive image">
+                </a>
+                <p class="mt-2 cat"><span>Marketing</span></p>
+                <h5>A collection of emails I've built</h5>
+                <a href="/articles/emails-built">read more</a>
+            </div>
+            <div class="col-sm-4 themed-grid-col mb-4">
+                <a href="/articles/save-money">
+                    <img src="/articles/save-money/images/dollar.jpg" class="img-fluid" alt="Responsive image">
+                </a>
+                <p class="mt-2 cat"><span>Money</span></p>
+                <h5>How I buget using the Envelope Method</h5>
+                <a href="/articles/save-money">read more</a>
+            </div>
+            <div class="col-sm-4 themed-grid-col mb-4">
+                <a href="/articles/fav-programs">
+                    <img src="/articles/fav-programs/images/apple-logo.jpg" class="img-fluid" alt="Responsive image">
+                </a>
+                <p class="mt-2 cat"><span>Productivity</span></p>
+                <h5>My essential websites and programs for MacOS</h5>
+                <a href="/articles/fav-programs">read more</a>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-4 themed-grid-col mb-4">
+                <a href="/articles/plan-projects">
+                    <img src="/articles/plan-projects/images/lightbulb.jpg" class="img-fluid" alt="Responsive image">
+                </a>
+                <p class="mt-2 cat"><span>PRODUCTIVITY</span></p>
+                <h5>The tools I use to plan new projects</h5>
+                <a href="/articles/plan-projects">read more</a>
+            </div>
+            <div class="col-sm-4 themed-grid-col mb-4">
+                <img src="/blog-images/coming-soon.png" class="img-fluid" alt="Responsive image">
+                <p class="mt-2 cat"><span>Article 10 T</span></p>
+                <h5>Article 10 P</h5>
+                <a href="#">read more</a>
+            </div>
+            <div class="col-sm-4 themed-grid-col mb-4">
+                <img src="/blog-images/coming-soon.png" class="img-fluid" alt="Responsive image">
+                <p class="mt-2 cat"><span>Article 11 T</span></p>
+                <h5>Article 11 P</h5>
+                <a href="#">read more</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("#nav").load("../nav.html");
+            $("#footer").load("../footer.html");
+        });
+
+        function loadNav() {
+            $('#nav-hire a').attr("href", "/hire-me");
+            $('#nav-contact a').attr("href", "/contact-me");
+            $('#nav-articles').addClass("active");
+            $('#nav-cv a').attr("href", "/cv");
+            $('#nav-showcase a').attr("href", "/");
+        };
+
+        window.onload = function() {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(loadNav, 100 * i);
+            }
+        };
+    </script>
+</body>
+
+</html>

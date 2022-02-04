@@ -1,0 +1,461 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+</head>
+<script>
+function imageGallery1(imgs) {
+    var expandImg = document.getElementById("expandedImg1");
+    expandImg.src = imgs.src;
+    expandImg.parentElement.style.display = "block";
+}
+
+function imageGallery2(imgs) {
+    var expandImg = document.getElementById("expandedImg2");
+    expandImg.src = imgs.src;
+    expandImg.parentElement.style.display = "block";
+}
+
+function imageGallery3(imgs) {
+    var expandImg = document.getElementById("expandedImg3");
+    expandImg.src = imgs.src;
+    expandImg.parentElement.style.display = "block";
+}
+
+function imageGallery4(imgs) {
+    var expandImg = document.getElementById("expandedImg4");
+    expandImg.src = imgs.src;
+    expandImg.parentElement.style.display = "block";
+}
+
+function imageGallery5(imgs) {
+    var expandImg = document.getElementById("expandedImg5");
+    expandImg.src = imgs.src;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p,
+ul,
+li {
+    color: #3a444a;
+}
+
+body {
+    margin: 0;
+}
+
+@media (min-width: 700px) {
+    .product {
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .product-image {
+        width: 50%;
+    }
+
+    .product-copy {
+        width: 50%;
+        margin-left: 30px;
+    }
+
+    .gift-cta {
+        max-width: 300px;
+    }
+
+}
+
+@media (max-width: 699px) {
+
+    .product-contents {
+        margin-left: 25px;
+    }
+
+    .product-copy {
+        margin-top: 10px;
+    }
+
+}
+
+#page-wrapper {
+    padding: 0px 20px;
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.gift-cta a {
+    background: #117940;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #117940;
+    cursor: pointer;
+    display: block;
+    padding: 15px;
+}
+
+.gift-cta {
+    padding-top: 20px;
+}
+
+.product-name {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 25px;
+}
+
+.product-description {
+    font-size: 16px;
+}
+
+.product-contents {
+    font-size: 16px;
+    list-style: disc;
+}
+
+.product-contents li {
+    font-size: 16px;
+}
+
+.product {
+    padding: 40px 0px;
+}
+
+.product-wrapper {
+    border-bottom: 1px solid #bec1c3;
+}
+
+.product-price-before {
+    line-height: 1em;
+    position: relative;
+    margin-right: 15px;
+}
+
+.product-price-before::after {
+    border-bottom: 0.125em solid #c2002f;
+    content: "";
+    left: 0;
+    margin-top: calc(0.125em / 2 * -1);
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.discount-notice {
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+/* Gallery starts */
+@media (min-width: 700px) {
+    .row {
+        max-width: 500px;
+    }
+
+    .container {
+        max-width: 500px;
+        padding-left: 5px;
+    }
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    border: 2px solid white;
+}
+
+.thumbnail {
+    padding: 5px;
+    float: left;
+    width: 25%;
+}
+
+.column:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+.column img {
+    opacity: 0.8;
+    cursor: pointer;
+    display: block;
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+.container {
+    position: relative;
+    display: none;
+}
+
+.row {
+    display: inline-block;
+}
+
+/* Gallery ends */
+</style>
+<div>
+    <p style="background: black;color: white; width: 100%; padding: 10px 0px;text-align: center;">Welcome to our <strong>exclusive</strong> members-only gift offers shop! 🎉</p>
+</div>
+<div id="page-wrapper">
+    <div class="product-wrapper">
+        <div class="product" style="padding-top: 20px;">
+            <div class="product-image">
+                <div class="container" style="display: block;">
+                    <img id="expandedImg1" style="width:100%" src="https://images.ctfassets.net/itvcls9imtx8/58bHOrcEiDBTeoFydrCqk7/4cb370e7f55379d012423997e3876782/Lux-Box-Image-1__1_.jpg?w=930">
+                    <div id="imgtext"></div>
+                </div>
+                <div class="row">
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/58bHOrcEiDBTeoFydrCqk7/4cb370e7f55379d012423997e3876782/Lux-Box-Image-1__1_.jpg?w=930" style="width:100%" onclick="imageGallery1(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/1wQUJGOBBk8DGgb8KZYofM/b902c4a0727f6a299072dbc4f2b1cba0/Lux-Box-Image-Christmas-Edit-Updated.jpg?w=930" style="width:100%" onclick="imageGallery1(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/1UHcf1pHUIsm8icm00gUQC/b1dad92291a72ff42ad21f9416d0f148/Lux-Box-Image-3.jpg?w=930" style="width:100%" onclick="imageGallery1(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/5T1cRElvO0kIKOCSAYSacC/2af8c6435dccaf76c18b11547d52f810/Lux-Box-Image-4.jpg?w=930" style="width:100%" onclick="imageGallery1(this);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-copy">
+                <p class="product-name">Luxury Gift Set</p>
+                <p class="product-price"><span class="product-price-before">£35</span>£30*</p>
+                <p class="product-description">Everything a man needs for a smooth, comfortable shave in a single box</p>
+                <ul class="product-contents">
+                    <li>A personalised chrome razor handle</li>
+                    <li>6 German-engineered razor blades</li>
+                    <li>Sensitive Shave Gel</li>
+                    <li>Sensitive Pre-Shave Scrub</li>
+                    <li>Sensitive Cooling Post-Shave Balm</li>
+                    <li>£10 Gift Voucher (for their first subscription order!)</li>
+                    <li>Gift wrap & messaging available</li>
+                    <li>UK next-day and express delivery options available</li>
+                </ul>
+                <div class="gift-cta">
+                    <a>SHOP NOW</a>
+                </div>
+                <p class="discount-notice">*Please note: <strong>your discount will be applied at the checkout.</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="product-wrapper">
+        <div class="product">
+            <div class="product-image">
+                <div class="container" style="display: block;">
+                    <img id="expandedImg2" style="width:100%" src="https://images.ctfassets.net/itvcls9imtx8/2C7YD5dWA8puVrYptNKvjj/ad7580d5ce7af8aa1b806979d79a4710/Bodycare-set-3.jpg?w=930">
+                    <div id="imgtext"></div>
+                </div>
+                <div class="row">
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/2C7YD5dWA8puVrYptNKvjj/ad7580d5ce7af8aa1b806979d79a4710/Bodycare-set-3.jpg?w=930" style="width:100%" onclick="imageGallery2(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/6dW2rxD0Bne6p3bs14Cycu/fbf7377608cce9733e5fd6721ab1cd77/Bodycare-set-1.jpg?w=930" style="width:100%" onclick="imageGallery2(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/5Vo24TMMCFoAekBBBsrHAp/16afe4c52c8acc0cd191b02aec46849b/Bodycare-set-2.jpg?w=930" style="width:100%" onclick="imageGallery2(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/4cV2Ouw4pBWc3i4OtUYSOu/694772dbfed6d88c01d8b8a90b719a61/Bodycare-set-4.jpg?w=930" style="width:100%" onclick="imageGallery2(this);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-copy">
+                <p class="product-name">Luxury Wash Set</p>
+                <p class="product-price"><span class="product-price-before">£35</span>£30*</p>
+                <p class="product-description">Our complete wash set, perfect for your gym or travel bag.</p>
+                <ul class="product-contents">
+                    <li>48 Hour Anti-Perspirant Deodorant</li>
+                    <li>Energising Body Wash</li>
+                    <li>Oil-Free Face Wash</li>
+                    <li>Hydrating Daily Moisturiser</li>
+                    <li>Gift wrap & messaging available</li>
+                    <li>UK next-day and express delivery options available</li>
+                </ul>
+                <div class="gift-cta">
+                    <a>SHOP NOW</a>
+                </div>
+                <p class="discount-notice">*Please note: <strong>your discount will be applied at the checkout.</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="product-wrapper">
+        <div class="product">
+            <div class="product-image">
+                <div class="container" style="display: block;">
+                    <img id="expandedImg3" style="width:100%" src="https://images.ctfassets.net/itvcls9imtx8/5yXkWl5Aw724EdBHXqbsxn/70b4ad309153750666d26584b19e7eda/Trial-Box-Image-Christmas-Edit-Updated-Razor.jpg?w=930">
+                    <div id="imgtext"></div>
+                </div>
+                <div class="row">
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/5yXkWl5Aw724EdBHXqbsxn/70b4ad309153750666d26584b19e7eda/Trial-Box-Image-Christmas-Edit-Updated-Razor.jpg?w=930" style="width:100%" onclick="imageGallery3(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/4A5OAQ1tNfr7sepXvLcHCf/2e6293cbec78689879ad795d89308596/Trial-Box-Image-Christmas-Edit-Updated-Razor__1_.jpg?w=930" style="width:100%" onclick="imageGallery3(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/3cWrD0JXk44wAMw64AGSQQ/cc37ab88ecd0660110ff0d466190fd11/Trial-Box-Image-3.jpg?w=930" style="width:100%" onclick="imageGallery3(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/2dmx1ZwoGEasMqCkgMWoU4/bc263b97ef742a5f0050dbdc34c1aeb5/Trial-Box-Image-4.jpg?w=930" style="width:100%" onclick="imageGallery3(this);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-copy">
+                <p class="product-name">Mini Gift Set</p>
+                <p class="product-price"><span class="product-price-before">£15</span>£10*</p>
+                <p class="product-description">Everything a man needs for a smooth, comfortable shave, just in a mini gift box!</p>
+                <ul class="product-contents">
+                    <li>A personalised chrome razor handle</li>
+                    <li>1 German-engineered razor blade</li>
+                    <li>Travel size Shave Cream (75ml)</li>
+                    <li>Red blade protector</li>
+                    <li>£10 Gift Voucher (for their first subscription order!)</li>
+                    <li>Gift wrap & messaging available</li>
+                    <li>UK next-day and express delivery options available</li>
+                </ul>
+                <div class="gift-cta">
+                    <a>SHOP NOW</a>
+                </div>
+                <p class="discount-notice">*Please note: <strong>your discount will be applied at the checkout.</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="product-wrapper">
+        <div class="product">
+            <div class="product-image">
+                <div class="container" style="display: block;">
+                    <img id="expandedImg4" style="width:100%" src="https://images.ctfassets.net/itvcls9imtx8/1Wk18XyPlOCIS2U8MkGEwa/c766ab956bff83a7aadb14fb46771316/Wash-Bag-Image.jpg?w=930">
+                    <div id="imgtext"></div>
+                </div>
+                <div class="row">
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/1Wk18XyPlOCIS2U8MkGEwa/c766ab956bff83a7aadb14fb46771316/Wash-Bag-Image.jpg?w=930" style="width:100%" onclick="imageGallery4(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/6Q6ffMER3ykKCEY4Ew2aIu/7a9ce01468a8a41506ce8225ca82ed07/Wash-Bag-Image-1.jpg?w=930" style="width:100%" onclick="imageGallery4(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/7f4SnerinuaagG4CQSaQc6/c33007e047e5b30fafea114a3a3a3a8b/Wash-Bag-Image-2.jpg?w=930" style="width:100%" onclick="imageGallery4(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://images.ctfassets.net/itvcls9imtx8/6Pexn44nReW42IoGaUk4S/9c200065244a55edf5e0dbe1ebebdc57/Wash-Bag-Image-3.jpg?w=930" style="width:100%" onclick="imageGallery4(this);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-copy">
+                <p class="product-name">Leather Wash Bag</p>
+                <p class="product-price"><span class="product-price-before">£40</span>£35*</p>
+                <p class="product-description">Store your shaving essentials in style. The crushed buffalo leather and waterproof lining combine both style and practicality and make this wash bag ideal for travelling or using as storage at home. Skincare products not included.</p>
+                <ul class="product-contents">
+                    <li>Gift wrap & messaging available</li>
+                    <li>UK next-day and express delivery options available</li>
+                </ul>
+                <div class="gift-cta">
+                    <a>SHOP NOW</a>
+                </div>
+                <p class="discount-notice">*Please note: <strong>your discount will be applied at the checkout.</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="product-wrapper">
+        <div class="product">
+            <div class="product-image">
+                <div class="container" style="display: block;">
+                    <img id="expandedImg5" style="width:100%" src="https://static.cornerstone.co.uk/gold_razor_stood_up.jpg">
+                    <div id="imgtext"></div>
+                </div>
+                <div class="row">
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://static.cornerstone.co.uk/gold_razor_stood_up.jpg" style="width:100%" onclick="imageGallery5(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://static.cornerstone.co.uk/gold_razor_trimmer.jpg" style="width:100%" onclick="imageGallery5(this);">
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="column" tabindex="0">
+                            <img src="https://static.cornerstone.co.uk/gold_razor_trimmer_down.jpg" style="width:100%" onclick="imageGallery5(this);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-copy">
+                <p class="product-name">Golden Razor Handle</p>
+                <p class="product-price"><span class="product-price-before">£50</span>£45*</p>
+                <p class="product-description">Perfectly weighted for comfort and control; our handle combines classic simplicity with modern ergonomics. Outstanding performance merged with uncompromising aesthetics.</p>
+                <ul class="product-contents">
+                    <li>Free personalisation</li>
+                    <li>Includes 1 German-engineered razor blade</li>
+                    <li>Gift wrap & messaging available</li>
+                    <li>UK next-day and express delivery options available</li>
+                </ul>
+                <div class="gift-cta">
+                    <a>SHOP NOW</a>
+                </div>
+                <p class="discount-notice">*Please note: <strong>your discount will be applied at the checkout.</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style=" background: rgb(196, 30, 58); text-align: center; padding: 25px 0px;">
+    <div style=" display: flex; margin: 0 auto; width: 180px;">
+        <div style=" color: white; font-size: 0.75em; letter-spacing: -0.2px; padding-left: 10px;">© Cornerstone 2019 All Rights Reserved</div>
+    </div>
+</div>

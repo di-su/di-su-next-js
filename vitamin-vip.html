@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<link rel='shortcut icon' type='image/x-icon' href='https://www.cornerstone.co.uk/static-assets/favicons/favicon.ico' />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Cornerstone</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+		var submitted = false;
+		</script>
+		<meta name="robots" content="noindex">
+		<style>
+		* {
+				font-family: 'Montserrat', sans-serif;
+				}
+				.button {
+				background: #c2002f;
+				color: white;
+				font-size: 25px;
+				padding: 12px;
+				cursor: pointer;
+				text-transform: uppercase;
+				width: 300px;
+				font-weight: bold;
+				margin-top: 15px;
+				}
+				#uid {
+				display: none;
+				}
+				#cta-div {
+				text-align: center;
+				margin: 0 auto;
+				width: 90%;
+				max-width: 800px;
+				}
+				.cta-div {
+				display: none;
+				}
+				#vitamin-image {
+				width: 100%;
+				max-width: 650px;
+				}
+				#header {
+				height: 40px;
+				background: #c2002f;
+				position: relative;
+				top: -6px;
+				}
+				#logo {
+				max-width: 210px;
+				margin-left: 20px;
+				margin-top: 15px;
+				}
+				body {
+				margin: 0;
+				}
+				.offer-removed {
+				display: none;
+				text-align: center;
+				}
+				.success-message {
+				max-width: 550px;
+				margin: 0 auto;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				}
+				#success-image {
+				width: 100%;
+				display: none;
+				}
+				input {
+				-webkit-appearance: none;
+				-webkit-border-radius: 0px;
+				border-radius: 0;
+				}
+				.tagline {
+				color: #c2002f;
+				text-transform: uppercase;
+				font-size: 14px;
+				margin: 5px 0px;
+				}
+				.product-name {
+				text-transform: uppercase;
+				font-size: 25px;
+				font-weight: 500;
+				margin: 5px 0px;
+				}
+				.coming-soon {
+				color: rgb(79, 178, 206);
+				font-weight: 700;
+				text-transform: uppercase;
+				margin: 5px 0px;
+				}
+				#product-info-image img {
+				width: 100%;
+				}
+				#url {
+				color: #c2002f;
+				}
+				.remove-button {
+				color: #c2002f;
+				text-decoration: underline;
+				cursor: pointer;
+				}
+				#congrats {
+				background: green;
+				color: white;
+				padding: 10px;
+				}
+				#removed, #email {
+				display: none;
+				}
+				#didnt {
+				color: #c2002f;
+				margin-bottom: 4em;
+				}
+				#optout {
+				margin-bottom: 4em;
+				}
+				ul {
+				padding-left: 0;
+				}
+				#tc-p {
+					font-size: 14px;
+					font-style: italic;
+		margin-top: 0;
+		border: 1px solid lightgray;
+		padding: 5px;
+				}
+				#more-info {
+					font-size: 12px;
+					margin-top: 15px;
+				}
+				.hidden {
+					display: none !important;
+				}
+				#tc-div {
+					max-width: 700px;
+					margin: 0 auto;
+					margin-top: 20px;
+				}
+				#show-more-info {
+					border: 1px solid black;
+					padding: 5px 10px;
+					display: block;
+					max-width: 250px;
+					margin: 0 auto;
+					cursor: pointer;
+				}
+				@media (min-width: 700px) {
+				#product-info-div {
+				display: flex;
+				}
+				#product-info-image {
+				max-width: 50%;
+				}
+				#product-info-copy {
+				max-width: 50%;
+				text-align: left;
+				}
+				.bullet-div {
+				margin-left: 25px;
+				}
+				#more-info {
+					display: flex;
+					text-align: left;
+				}
+				.more-info-p {
+					width: 25%;
+				}
+				}
+				@media (max-width: 699px) {
+				.bullet-div {
+				max-width: 170px;
+				margin: 0 auto;
+				}
+				}
+		</style>
+		<script>
+		$(document).ready(function() {
+					uid = getUrlVars()["uid"];
+					email = getUrlVars()["email"];
+					$('#uid').val(uid);
+					$('#email').val(email);
+					submitForm();
+				});
+				function pressedCta() {
+				$('.cta-div').hide();
+				$('.success').show();
+				}
+				function submitForm() {
+				$('#cta').click();
+				}
+				function moreInfo() {
+					$('#more-info').toggleClass('hidden');
+				}
+				function pressedRemove() {
+				$('#removed').val("Remove offer");
+				submitForm();
+				$('.success').hide();
+				$('.offer-removed').show();
+				$('#tc-div').hide();
+				}
+				function getUrlVars()
+				{
+				var vars = [], hash;
+				var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+				for(var i = 0; i < hashes.length; i++)
+				{
+				hash = hashes[i].split('=');
+				vars.push(hash[0]);
+				vars[hash[0]] = hash[1];
+				}
+				return vars;
+				}
+		</script>
+	</head>
+	<body>
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="submitted"></iframe>
+		<a href="https://www.cornerstone.co.uk">
+			<img id="logo" src="https://cdn.cornerstone.co.uk/317e304cd28af582b6f0a5002a279a62.svg">
+		</a>
+		<div id="header"></div>
+		<div id="cta-div">
+			<div>
+				<h1>Exclusive members-only offer 🎉</h1>
+				<div class="success">
+					<p id="congrats" class="success-message">Congratulations. You'll be amongst the first to try our new Multi-vitamins, with an exclusive 20% off applied to your first order (making them just £4). Of course, we'll let you know when they're ready!</p>
+				</div>
+				<div id="product-info-div">
+					<div id="product-info-image">
+						<img src="https://csprd-uploads.s3.eu-west-1.amazonaws.com/Vitamins_transparent.png">
+					</div>
+					<div id="product-info-copy">
+						<p class="tagline">Daily Energy Boosting</p>
+						<p class="product-name">Multi-Vitamins</p>
+						<p class="coming-soon">Coming soon</p>
+						<hr>
+						<p class="product-copy">An expertly blended combination of vitamins, minerals and micronutrients including: Vitamins C, D3 and B12, Magnesium, Iron and Riboflavin - supporting your immune system, metabolism, energy levels, eyesight and joint health.</p>
+						<div class="bullet-div">
+							<ul>
+								<li>30 Tablets</li>
+								<li>Made in the UK</li>
+								<li>Vegetarian Friendly</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div>
+					<a onclick="moreInfo()" id="show-more-info">Ingredients and NRV ></a>
+					<div class="hidden" id="more-info">
+						<p class="more-info-p">Turmeric Powder 50mg<br> Magnesium 5mg (1.33% NRV)<br> Soy Lecithin 40mg<br> Zinc 10mg (100% NRV)<br> Vitamin C 80mg (100% NRV)<br> Iron 14mg (100% NRV)<br> L-Choline 20mg<br> Vitamin E (DL-Alpha-Tocopherol Acetate) 12mg (100% NRV)<br></p>
+						<p class="more-info-p">Niacin 16mg (100% NRV)<br> L-Lysine 15mg<br> Inositol 15mg<br> Citrus Bioflavonoids 14mg (Citrus Sinensis)<br> Pantothenic Acid 12mg (200% NRV)<br> Manganese 2mg (100% NRV) <br> L-Methionine 7.5mg<br> Grape Seed Extract 5mg (Vitis
+						vinifera) (seeds) <br> (Standardized to contain 95% Proanthocyanidins)<br></p>
+						<p class="more-info-p">L-Glutamine 5mg<br> Trimethylglycine 5mg<br> Vitamin B6 4.2mg (300%)<br> Alpha Lipoic Acid 2mg<br> Thiamine 1.1mg (100% NRV)<br> Riboflavin 1.4mg (100% NRV)<br> Vitamin D3 5μg (100% NRV)<br> Vitamin A 800μg (100% NRV) <br></p>
+						<p class="more-info-p">Folic Acid 200μg (100% NRV)<br> Potassium 150μg (100% NRV)<br> Copper 1mg (100% NRV)<br> Molybendenum 50ug (100% NRV)<br> Vitamin B12 2.5μg (100% NRV)<br> Selenium 55ug (100% NRV)<br> Biotin 50μg (100% NRV)<br></p>
+					</div>
+				</div>
+			</div>
+			<div id="tc-div">
+				<p id="tc-p">Terms & conditions: By accepting this offer you are agreeing to allow us to add our new Multi-vitamins to your ongoing subscription, with a default delivery frequency of 1 pack every 1 month. Your product selection and frequency can be edited or cancelled at any time via your account. </p>
+			</div>
+			<div id="optout" class="success">
+				<p class="success-message">Didn't mean to redeem this offer?</p>
+				<a onclick="pressedRemove()" class="remove-button">Remove offer</a>
+			</div>
+		</div>
+		<form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLScUy9Dpm9AvYB0q_SHrOZP6H4AfMFqzWmwrxMuJks2bpQMHWQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+			<input id="uid" name="entry.592995347" type="text" />
+			<input id="removed" name="entry.278217967" type="text" />
+			<input id="email" name="entry.35265952" type="text" />
+			<div class="cta-div">
+				<input id="cta" class="button" type="submit" value="Redeem Offer" />
+			</div>
+			<div class="offer-removed">
+				<p id="didnt" class="success-message">We've removed this offer from your account.</p>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

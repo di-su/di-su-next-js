@@ -1,0 +1,113 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+	<link rel="stylesheet" href="css.css">
+</head>
+<body><audio style="display: none;" id="audio" controls="" loop="">
+	<source src="theme.mp3" type="audio/mpeg">
+</audio>
+
+<div>
+	<div id="background-div">
+		<div id="game">
+			<div id="header">
+				<p id="game-title">Rock Paper Scissors</p>
+			</div>
+			<div>
+				<p id="win-text"><span id="win-counter">0</span> win(s)</p>
+			</div>
+			<div id="battle-div">
+				<div id="battle">
+					<div>
+						<p id="selection">Scissors</p>
+						<img class="choice" id="user-choice-image" src="./images/scissors.jpg">
+						<div id="choice-buttons">
+							<div style="margin-right: 10px;" class="select-button" onclick="backward()">&lt;</div>
+							<div class="select-button" onclick="forward()">&gt;</div>
+						</div>
+					</div>
+					<div>
+						<p id="vs">VS</p>
+					</div>
+					<div>
+						<p id="computer-selection">Scissors</p>
+						<img class="choice" id="computer-choice-image" src="./images/scissors.jpg">
+					</div>
+				</div>
+			</div>
+			<div id="play-div">
+				<div id="start-button" onclick="play()">Start</div>
+			</div>
+			<div id="lose-window">
+				<div>
+					<p id="message-title">Message box</p>
+					<p id="lose-copy">You lose!</p>
+					<div style="text-align: center;padding-bottom: 20px;"><div onclick="dismissLoseWindow()" id="lose-ok-button">OK</div></div>
+				</div>
+			</div>
+			<div id="win-window">
+				<div>
+					<p id="message-title">You win!</p>
+					<div id="prize-choice">
+						<div class="prize-div">
+							<img id="current-prize" class="prize" src="http://via.placeholder.com/200x200">
+							<span id="prize-quantity-1"></span>
+							<p>End</p>
+						</div>
+						<div class="prize-div">
+							<img id="next-prize" class="prize" src="http://via.placeholder.com/200x200">
+							<span id="prize-quantity-2"></span>
+							<p>Next</p>
+						</div>
+					</div>
+					<p id="lose-copy">Press END if you want to claim your current prize and stop playing or press NEXT to continue playing for more prizes.</p>
+					<div id="win-choice">
+						<div class="prize-buttons"><div onclick="endGame()" id="end-button">END</div></div>
+						<div class="prize-buttons"><div onclick="continueGame()" id="next-button">NEXT</div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="prizes-div" style="
+    margin-top: 20px;
+">
+	<div style="
+    background: black;
+    border-radius: 10px;
+    border: 1px solid #d2ca7e;
+">
+		<p style="
+    color: gold;
+    padding: 10px 0px;
+    background: black;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 0;
+    border-bottom: 0;
+    margin-top: 0;
+">Prizes won:</p>
+		<ul id="prizes-won" style="
+    color: gold;
+    border-top: 0;
+    margin: 0;
+    padding: 10px 50px;
+"></ul>
+	</div>
+</div>
+
+<div>
+	<!-- <br><br><button onclick="playMusic()">play music</button>
+	<br><br><button onclick="pauseMusic()">pause music</button> -->
+<p id="prize"></p>
+<!-- 	<div id="win-window">
+		<p>you win</p>
+		
+		<button onclick="endGame()">end</button>
+		<button onclick="continueGame()">next</button>
+	</div> -->
+</div>
+</body></html>
+<script src="js.js"></script>
+<script src="tooltip.js"></script>

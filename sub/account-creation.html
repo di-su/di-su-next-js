@@ -1,0 +1,91 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+	crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<script>
+		$(window).bind("pageshow", function(event) {
+	if (event.originalEvent.persisted) {
+	window.location.reload()
+	}
+	});
+		$( document ).ready(function() {
+		});
+	</script>
+	<style>
+		#clear {
+			position: fixed;
+			z-index: 9999;
+			bottom: 0;
+			font-size: 20px;
+			margin-left: 1em;
+			background: black;
+			color: white;
+			padding: 10px;
+			display: block;
+		}
+		* {
+			font-family: Montserrat;
+		}
+		body {
+			margin: 0;
+		}
+		h1 {
+			text-align: center;
+		}
+		.account-form {
+			display: inline-grid;
+			width: 100%;
+		}
+		.account-form input {
+			padding: 10px;
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+		.account-form-div {
+			max-width: 400px;
+			margin: 0 auto;
+			padding: 15px 0px;
+		}
+		.password-p {
+			font-size: 14px;
+			font-style: italic;
+		}
+		.protection-p {
+			font-size: 14px;
+			margin-top: 10px;
+		}
+		.continue {
+			background: #c2002f;
+			color: white;
+			max-width: 250px;
+			display: block;
+			text-decoration: none;
+			margin: 0 auto;
+			text-align: center;
+			padding: 10px;
+			font-size: 20px;
+			cursor: pointer;
+		}
+		a {
+			display: block
+		}
+	</style>
+</head>
+<body>
+	<a id="top" style="background: #c2002f;height:40px;margin-bottom: 8px;"></a>
+	<div>
+		<h1 style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;padding: 10px;margin-top: 0px;">Quick account set-up</h1>
+		<div class="account-form-div">
+			<form class="account-form">
+				<input type="text" name="email" placeholder="Email address">
+				<input type="text" name="pw" placeholder="Password">
+				<span class="password-p">Password needs to be at least 8 characters.</span>
+				<span class="protection-p">cornerstone.co.uk is secure and your personal information is protected</span>
+			</form>
+			<a href="review.html" class="continue">CREATE ACCOUNT</a>
+		</div>
+	</div>
+</body>

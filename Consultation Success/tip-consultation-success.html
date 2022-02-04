@@ -1,0 +1,63 @@
+@extends('emails.template-transactional')
+
+@section('content')
+    <table class="full-table" width="650" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse !important;margin:0px auto;">
+        <tbody>
+        <tr>
+            <td bgcolor="#FFFFFF" align="center">
+                <table class="full-table" cellspacing="0" cellpadding="0" align="center" width="650" style="border-collapse:collapse !important;margin:0px auto;">
+                    <tbody>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse !important;margin:0px auto;">
+                                <tbody>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family:Montserrat, Helvetica, Arial, sans-serif !important;font-size:16px !important;line-height:25px !important;letter-spacing:0px !important;font-weight:400;color:#000000;padding: 0px 20px;">
+                                        <p>Hey {{ ucwords(strtolower($firstName)) }},</p>
+                                        @if ($isNewUser)
+                                            <p>We're happy to let you know that you've been approved for {{implode(' and ', $productNames)}}, and we are processing your order.</p>
+
+                                            <p>Look out for your confirmation email, it will be with you shortly.</p>
+                                        @else
+                                            <p>We're happy to let you know that you've been approved for {{implode(' and ', $productNames)}}.</p>
+                                            @if($billingDate)
+                                                <p>They will be included in your next order on {{ $billingDate }}, for £{{ $discountPercentage ? $currentPrice.' (a '.$discountPercentage.'% discount on the normal price'.($discountMaxRedemptions > 1 ? ', for your first '.$discountMaxRedemptions.' boxes': '').').' : $currentPrice.'.'}}
+                                                    After that, we'll send you a box every {{$frequencyInMonths}} for £{{$regularPrice}} to keep you stocked up. If you’d like to remove it from your plan this is really simple to do in <a href="{{ config('app.url'). '/account'}}">My Account</a>.</p>
+
+                                                <p> Should you want to bring your next order closer to today, click <a href="{{ $chooseNextBillingDateUrl }}">here</a> to change your billing date - otherwise, you're good to go!</p>
+                                            @else
+                                                <p>They will be included in your next order if you resume your subscription within the next few months.</p>
+                                            @endif
+                                        @endif
+                                        <p>
+                                            Best wishes,
+                                            <br>
+                                            Lucy at Cornerstone
+                                        </p>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </td>
+    </tr>
+    </table>
+@stop

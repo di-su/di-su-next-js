@@ -1,0 +1,579 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+	crossorigin="anonymous"></script>
+	<script>
+		$(window).bind("pageshow", function(event) {
+	if (event.originalEvent.persisted) {
+	window.location.reload()
+	}
+	});
+		$(document).ready(function() {
+			if (localStorage.length == 0) {
+				$('#empty-basket').removeClass('hidden');
+			}
+			if (localStorage.razorBlades) {
+				$('#razor-handle').removeClass('hidden');
+				$('#razor-blades').removeClass('hidden');
+				$('#summary').removeClass('hidden');
+				$('#upsell-div').removeClass('hidden')
+			}
+			if (localStorage.shaveBalm) {
+				$('#shave-balm').removeClass('hidden');
+				$('#summary').removeClass('hidden');
+				$('#upsell-div').removeClass('hidden')
+			}
+			if (localStorage.shaveCream) {
+				$('#shave-cream').removeClass('hidden');
+				$('#summary').removeClass('hidden');
+				$('#upsell-div').removeClass('hidden')
+			}
+			if (localStorage.faceScrub) {
+				$('#face-scrub').removeClass('hidden');
+				$('#summary').removeClass('hidden');
+				$('#upsell-div').removeClass('hidden')
+			}
+			if (localStorage.toothpaste) {
+				$('#toothpaste').removeClass('hidden');
+				$('#summary').removeClass('hidden');
+				$('#upsell-div').removeClass('hidden')
+			}
+			if (localStorage.toothbrushHeads) {
+				$('#toothbrush-heads').removeClass('hidden');
+				$('#summary').removeClass('hidden');
+				$('#upsell-div').removeClass('hidden')
+			}
+			if (localStorage.mouthwash) {
+				$('#mouthwash').removeClass('hidden');
+				$('#summary').removeClass('hidden');
+				$('#upsell-div').removeClass('hidden')
+			}
+			if (localStorage.floss) {
+				$('#floss').removeClass('hidden');
+				$('#summary').removeClass('hidden');
+				$('#upsell-div').removeClass('hidden')
+			}
+			if (localStorage.shaveGel) {
+				$('#shave-gel').removeClass('hidden');
+				$('#summary').removeClass('hidden');
+				$('#upsell-div').removeClass('hidden')
+			}
+			$('#remove-blades').click(function(){
+				localStorage.removeItem('razorBlades');
+			});
+			$('#remove-gel').click(function(){
+				localStorage.removeItem('shaveGel');
+			});
+			$('#remove-cream').click(function(){
+				localStorage.removeItem('shaveCream');
+			});
+			$('#remove-balm').click(function(){
+				localStorage.removeItem('shaveBalm');
+			});
+			$('#remove-scrub').click(function(){
+				localStorage.removeItem('faceScrub');
+			});
+			$('#remove-toothpaste').click(function(){
+				localStorage.removeItem('toothpaste');
+			});
+			$('#remove-toothbrush-heads').click(function(){
+				localStorage.removeItem('toothbrushHeads');
+			});
+			$('#remove-mouthwash').click(function(){
+				localStorage.removeItem('mouthwash');
+			});
+			$('#remove-floss').click(function(){
+				localStorage.removeItem('floss');
+			});
+			$('#clear').click(function(){
+			localStorage.clear();
+			location.reload();
+			});
+		});
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<style>
+		#clear {
+			position: fixed;
+			z-index: 9999;
+			bottom: 0;
+			font-size: 20px;
+			margin-left: 1em;
+			background: black;
+			color: white;
+			padding: 10px;
+			display: block;
+		}
+		* {
+			font-family: Montserrat;
+		}
+	</style>
+	<style>
+		.hidden {
+			display: none !important;
+		}
+		body {
+			margin: 0;
+		}
+		.checkout-div {
+			border: 1px solid lightgrey;
+			/*margin: 10px;*/
+		}
+		.basket-h1 {
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+			padding: 10px;
+		}
+		h1 {
+			text-align: center;
+		}
+		h2 {
+			/*text-align: center;*/
+		}
+		.prod-div {
+			display: flex;
+			border-bottom: 1px solid #e6e6e6;
+			padding: 10px 0px;
+			/*padding-bottom: 20px;*/
+		}
+		.prod-image {
+			width: 25%;
+			text-align: center;
+			cursor: pointer;
+		}
+		.prod-image img {
+			max-width: 85px;
+		}
+		.prod-text {
+			width: 75%;
+			padding: 0px 10px;
+		}
+		.prod-freq {
+			
+		}
+		.remove {
+			float: right;
+			text-decoration: underline;
+			color: black;
+			font-weight: normal;
+		}
+		.checkout-text {
+			position: sticky;
+			top: 40;
+		}
+		hr {
+			opacity: 0.5;
+		}
+		.price-after-discount-span {
+			float: right;
+		}
+		.price-after-discount {
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.checkout {
+			background: #c2002f;
+			color: white;
+			display: block;
+			font-size: 25px;
+			text-align: center;
+			cursor: pointer;
+			padding: 10px;
+			margin: 0 auto;
+			text-decoration: none;
+		}
+		#continue {
+			border-bottom: 1px solid lightgrey;
+			padding-bottom: 20px;
+			text-decoration: underline;
+			cursor: pointer;
+			color: black;
+			margin-bottom: 10px;
+		}
+		.price-strike {
+			text-decoration: line-through;
+			text-decoration-color: #c2002f;
+			font-size: 16px;
+			padding-right: 5px;
+		}
+		.discounted-price {
+			font-size: 18px;
+		}
+		.freq-p {
+			margin-bottom: 5px;
+			max-width: 210px;
+			font-size: 14px;
+		}
+		.more-products-item {
+			text-align: center;
+			border: 1px solid lightgrey;
+			cursor: pointer;
+		}
+		.more-products-item img {
+			width: 100%;
+			max-width: 120px;
+		}
+		.also-bought-title {
+		text-align: center;
+		border-top: 1px solid lightgrey;
+		padding-top: 30px;
+		}
+		.more-info {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		a {
+			display: block
+		}
+		#summary {
+			border: none;
+		}
+		#top {
+			background: #c2002f;
+			height:40px;
+		}
+		#empty-basket {
+			text-align: center;
+			border-bottom: 1px solid black;
+		}
+		.prod-name {
+			font-weight: 500;
+		}
+		.freq-drop {
+			padding: 10px 0px;
+			font-size: 12px;
+		}
+		.prod-click {
+			display: contents;
+		}
+		@media (max-width: 799px) {
+			#top {
+				margin-bottom: 10px;
+			}
+			.prod-div {
+				margin: 0em 15px;
+			}
+			.checkout-text {
+				padding: 0px 15px;
+			}
+			#continue {
+				padding-left: 15px;
+			}
+			.more-products-item {
+				margin: 15px;
+			}
+			.prod-image img {
+				width: 70px;
+				height: 80px;
+				padding-top: 5px;
+			}
+			.discounted-price, .price {
+				margin: 5px 0px;
+			}
+			.freq-p {
+				margin-top: 5px;
+			}
+			.prod-name {
+				margin: 5px 0px;
+			}
+			.basket-h1 {
+				margin-bottom: 5px;
+				margin-top: 0px;
+			}
+			.upsell {
+				display: none;
+			}
+			.prod-name span {
+			}
+			.h-summary {
+				margin: 0;
+			}
+			.prod-text {
+				padding-right: 0px;
+			}
+			#continue {
+				padding-bottom: 10px;
+				margin-top: 10px;
+			}
+			.more-products-item {
+				padding: 10px;
+			}
+		}
+		@media (min-width: 800px) {
+			.prod-div {
+				padding-bottom: 20px;
+			}
+			.prod-image img {
+				width: 100%;
+				padding-top: 10px;
+			}
+			.more-products-item {
+				margin: 10px;
+				padding: 20px;
+			}
+			.basket-div {
+				width: 60%;
+			}
+			.checkout-div {
+				width: 40%;
+				margin: 10px;
+				margin-left: 50px;
+			}
+			.order-div {
+			display: flex;
+			max-width: 1000px;
+			margin: auto;
+			}
+			.more-products {
+			display: flex;
+			max-width: 900px;
+			margin: 0 auto;
+			}
+			.more-products-item {
+				width: 25%;
+			}
+			.checkout-text {
+				border: 1px solid lightgrey;
+				padding: 10px 30px;
+				padding-bottom: 30px;
+			}
+			#continue {
+				padding-left: 10px;
+			}
+			.upsell {
+				display: block;
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<div style="position: fixed;width: 100%;top: 0;z-index: 1;"><a style="position:relative;z-index: 2;top:0;">
+		</a><a id="top" style="position:sticky;top:0;background: #c2002f;height:40px;margin-bottom: 0em;z-index: 1;display: block;"></a></div>
+		<div>
+			<h1 style="margin-top: 1.5em;" class="basket-h1">Your subscription</h1>
+			<div class="order-div">
+				<div class="basket-div">
+					<div id="empty-basket" class="hidden"><p>Your basket is empty</p></div>
+					<div id="razor-handle" class="prod-div hidden">
+						<div class="prod-image">
+							<img src="https://images.ctfassets.net/itvcls9imtx8/3saxfwzvjOoYUuwem8qWeU/d3fc57295bb0557a187e817202219493/handle.png">
+						</div>
+						<div class="prod-text">
+							<p class="prod-name">Razor Handle (initials: ABC)</p>
+							<p class="discounted-price"><span class="price-strike">£10</span> FREE</p>
+							<p class="freq-p">Only included in your first order</p>
+						</div>
+					</div>
+					<div id="razor-blades" class="prod-div hidden">
+						<a class="prod-click" href="razor-blades.html">
+							<div class="prod-image">
+								<img src="https://images.ctfassets.net/itvcls9imtx8/ADaIedP5Liw2qiQQOiUeg/35548e61dc29fe63ce97e382c27c5b1a/blades.png?w=300">
+							</div>
+						</a>
+						<div class="prod-text">
+							<p class="prod-name">6 Razor Blades<a href="basket.html" id="remove-blades" class="remove">Remove</a></p>
+							<p class="price">£14</p>
+							<p class="freq-p">Delivery frequency:</p>
+							<select class="freq-drop">
+								<option value="1-m">1 month</option>
+								<option value="2-m" selected="selected">2 months (recommended)</option>
+								<option value="3-m">3 months</option>
+								<option value="4-m">4 months</option>
+							</select>
+						</div>
+					</div>
+					<div id="shave-gel" class="prod-div hidden">
+						<a class="prod-click" href="shave-gel.html">
+							<div class="prod-image">
+								<img src="https://images.ctfassets.net/itvcls9imtx8/2Vkg2gPYG4kGWi2i0S4Ag8/f368e0863796f41f5febc5ddb7dc0de3/product-shave-gel-3.png?fm=jpg&fl=progressive&bg=rgb:fff&w=300">
+							</div>
+						</a>
+						<div class="prod-text">
+							<p class="prod-name">Shave Gel<a href="basket.html"><span id="remove-gel" class="remove">Remove</span></a></p>
+							<p class="discounted-price">£6</p>
+							<p class="freq-p">Delivery frequency:</p>
+							<select class="freq-drop">
+								<option value="1-m">1 month</option>
+								<option value="2-m" selected="selected">2 months (recommended)</option>
+								<option value="3-m">3 months</option>
+								<option value="4-m">4 months</option>
+							</select>
+						</div>
+					</div>
+					<div id="shave-cream" class="prod-div hidden">
+						<a class="prod-click" href="shave-cream.html">
+							<div class="prod-image">
+								<img src="https://images.ctfassets.net/itvcls9imtx8/1q1j9d6qRmEQ8wqskQO0G/abad3f7ec16b202b18cf42e9b81f33fe/product-shave-cream-2.png?fm=jpg&fl=progressive&bg=rgb:fff&w=300">
+							</div>
+						</a>
+						<div class="prod-text">
+							<p class="prod-name">Shave Cream<a href="basket.html" id="remove-cream" class="remove">Remove</a></p>
+							<p class="discounted-price">£6</p>
+							<p class="freq-p">Delivery frequency:</p>
+							<select class="freq-drop">
+								<option value="1-m">1 month</option>
+								<option value="2-m" selected="selected">2 months (recommended)</option>
+								<option value="3-m">3 months</option>
+								<option value="4-m">4 months</option>
+							</select>
+						</div>
+					</div>
+					<div id="shave-balm" class="prod-div hidden">
+						<a class="prod-click" href="shave-balm.html">
+							<div class="prod-image">
+								<img src="https://images.ctfassets.net/itvcls9imtx8/3uGN8FbQCAU4SwCiAOYOG/5499bd9086740df094f7849a45807bcb/product-post-shave-balm-2.png?fm=jpg&fl=progressive&bg=rgb:fff&w=300">
+							</div>
+						</a>
+						<div class="prod-text">
+							<p class="prod-name">Shave Balm<a href="basket.html" id="remove-balm" class="remove">Remove</a></p>
+							<p class="discounted-price">£6</p>
+							<p class="freq-p">Delivery frequency:</p>
+							<select class="freq-drop">
+								<option value="1-m">1 month</option>
+								<option value="2-m" selected="selected">2 months (recommended)</option>
+								<option value="3-m">3 months</option>
+								<option value="4-m">4 months</option>
+							</select>
+						</div>
+					</div>
+					<div id="face-scrub" class="prod-div hidden">
+						<a class="prod-click" href="face-scrub.html">
+							<div class="prod-image">
+								<img src="https://images.ctfassets.net/itvcls9imtx8/6YVfKX2EO4Ys2wG4EgKsiu/0da138e433f4ac9e99afafa08875248b/product-face-scrub-3.png?fm=jpg&fl=progressive&bg=rgb:fff&w=300">
+							</div>
+						</a>
+						<div class="prod-text">
+							<p class="prod-name">Face Scrub<a href="basket.html" id="remove-scrub" class="remove">Remove</a></p>
+							<p class="discounted-price">£5</p>
+							<p class="freq-p">Delivery frequency:</p>
+							<select class="freq-drop">
+								<option value="1-m">1 month</option>
+								<option value="2-m" selected="selected">2 months (recommended)</option>
+								<option value="3-m">3 months</option>
+								<option value="4-m">4 months</option>
+							</select>
+						</div>
+					</div>
+					<div id="toothpaste" class="prod-div hidden">
+						<a class="prod-click" href="toothpaste.html">
+							<div class="prod-image">
+								<img src="https://images.ctfassets.net/itvcls9imtx8/61V7sSJRgAoMmIEgcsqcoY/3a7e7268a11087bb06f2b6dd1509005d/Toothpaste-Square-2500.png?fm=jpg&fl=progressive&bg=rgb:fff&w=300">
+							</div>
+						</a>
+						<div class="prod-text">
+							<p class="prod-name">Whitening Toothpaste<a href="basket.html"><span id="remove-toothpaste" class="remove">Remove</span></a></p>
+							<p class="price">£4</p>
+							<p class="freq-p">Delivery frequency:</p>
+							<select class="freq-drop">
+								<option value="1-m">1 month</option>
+								<option value="2-m" selected="selected">2 months (recommended)</option>
+								<option value="3-m">3 months</option>
+								<option value="4-m">4 months</option>
+							</select>
+						</div>
+					</div>
+					<div id="toothbrush-heads" class="prod-div hidden">
+						<a class="prod-click" href="toothbrush-heads.html">
+							<div class="prod-image">
+								<img src="https://images.ctfassets.net/itvcls9imtx8/1tGRXRh0T60sk40moWsAUa/9b9900930f5df753867b5a7b6838a84d/Toothbrush-Heads-Square-2500.png?fm=jpg&fl=progressive&bg=rgb:fff&w=300">
+							</div>
+						</a>
+						<div class="prod-text">
+							<p class="prod-name">4 Toothbrush Heads<a href="basket.html"><span id="remove-toothbrush-heads" class="remove">Remove</span></a></p>
+							<p class="price">£12</p>
+							<p class="freq-p">Delivery frequency:</p>
+							<select class="freq-drop">
+								<option value="1-m">1 month</option>
+								<option value="2-m" selected="selected">2 months (recommended)</option>
+								<option value="3-m">3 months</option>
+								<option value="4-m">4 months</option>
+							</select>
+						</div>
+					</div>
+					<div id="mouthwash" class="prod-div hidden">
+						<a class="prod-click" href="mouthwash.html">
+							<div class="prod-image">
+								<img src="https://images.ctfassets.net/itvcls9imtx8/3vlqKkNGRi8yCGogQMGSeE/37d377913b7f27cd7b76fed214b0f870/Mouthwash-Square-2500.png?fm=jpg&fl=progressive&bg=rgb:fff&w=300">
+							</div>
+						</a>
+						<div class="prod-text">
+							<p class="prod-name">Mouthwash<a href="basket.html"><span id="remove-mouthwash" class="remove">Remove</span></a></p>
+							<p class="price">£4</p>
+							<p class="freq-p">Delivery frequency:</p>
+							<select class="freq-drop">
+								<option value="1-m">1 month</option>
+								<option value="2-m" selected="selected">2 months (recommended)</option>
+								<option value="3-m">3 months</option>
+								<option value="4-m">4 months</option>
+							</select>
+						</div>
+					</div>
+					<div id="floss" class="prod-div hidden">
+						<a class="prod-click" href="floss-tape.html">
+							<div class="prod-image">
+								<img src="https://images.ctfassets.net/itvcls9imtx8/4UqSvXdiXmoaOq2s884Wsq/e740c83a30ad5f461ed759d82338c24d/Floss-Square-2500.png?w=300">
+							</div>
+						</a>
+						<div class="prod-text">
+							<p class="prod-name">Daily Floss<a href="basket.html"><span id="remove-floss" class="remove">Remove</span></a></p>
+							<p class="price">£2</p>
+							<p class="freq-p">Delivery frequency:</p>
+							<select class="freq-drop">
+								<option value="1-m">1 month</option>
+								<option value="2-m" selected="selected">2 months (recommended)</option>
+								<option value="3-m">3 months</option>
+								<option value="4-m">4 months</option>
+							</select>
+						</div>
+					</div>
+					<a href="categories.html" id="continue">Continue shopping</a>
+				</div>
+				<div id="summary" class="checkout-div hidden">
+					<div class="checkout-text">
+						<h2 class="h-summary">Summary</h2>
+						<p>You can easily edit your products and manage your subscription at any time. We'll send you a reminder before every delivery.<p>
+							<hr>
+							<p>Subtotal:<span class="price-after-discount-span">£000</span></p>
+							<p>Delivery:<span class="price-after-discount-span">FREE</span></p>
+							<p">Discount:<span class="price-after-discount-span">-£000</span></p>
+							<p class="price-after-discount">Total today:<span class="price-after-discount-span">£000</span></p>
+							<a href="account-creation.html" class="checkout">CONTINUE</a>
+						</div>
+					</div>
+				</div>
+				<div style="display: none;" id="upsell-div" class="hidden">
+					<h2 class="also-bought-title">Customers also bought</h2>
+					<div class="more-products">
+						<div class="more-products-item">
+							<img src="https://images.ctfassets.net/itvcls9imtx8/3vlqKkNGRi8yCGogQMGSeE/37d377913b7f27cd7b76fed214b0f870/Mouthwash-Square-2500.png?w=300">
+							<p>Daily Fresh Mint Mouthwash</p>
+							<p>£4</p>
+							<a class="more-info">More info</a>
+						</div>
+						<div class="more-products-item upsell">
+							<img src="https://images.ctfassets.net/itvcls9imtx8/3vlqKkNGRi8yCGogQMGSeE/37d377913b7f27cd7b76fed214b0f870/Mouthwash-Square-2500.png?w=300">
+							<p>Daily Fresh Mint Mouthwash</p>
+							<p>£4</p>
+							<a class="more-info">More info</a>
+						</div>
+						<div class="more-products-item upsell">
+							<img src="https://images.ctfassets.net/itvcls9imtx8/3vlqKkNGRi8yCGogQMGSeE/37d377913b7f27cd7b76fed214b0f870/Mouthwash-Square-2500.png?w=300">
+							<p>Daily Fresh Mint Mouthwash</p>
+							<p>£4</p>
+							<a class="more-info">More info</a>
+						</div>
+						<div class="more-products-item upsell">
+							<img src="https://images.ctfassets.net/itvcls9imtx8/3vlqKkNGRi8yCGogQMGSeE/37d377913b7f27cd7b76fed214b0f870/Mouthwash-Square-2500.png?w=300">
+							<p>Daily Fresh Mint Mouthwash</p>
+							<p>£4</p>
+							<a class="more-info">More info</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p id="clear">CLEAR</p>
+			<div id="bottom" style="background: #c2002f;height:40px;margin-top: 2em;"></div>
+		</body>

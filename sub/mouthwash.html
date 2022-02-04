@@ -1,0 +1,207 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(window).bind("pageshow", function(event) {
+	if (event.originalEvent.persisted) {
+	window.location.reload()
+	}
+	});
+	// $(document).ready(function() {
+	// count = $('.cart-count').text();
+	// parsedCount = parseInt(count);
+	// $('.product-description').click(function() {
+	// $('.cta').hide();
+	// $('.added').show();
+	// $('.cart-count').show(0);
+	// parsedCount++;
+	// $('.cart-count').text(parsedCount);
+	// $('.added-banner').show(0);
+	// setTimeout(
+	//     function() {
+	//         $('.added-banner').hide(0);
+	//     }, 1500);
+	// });
+	// $('.added').click(function() {
+	// $(this).hide();
+	// $('.already-added').show();
+	// });
+	// });
+	$( document ).ready(function() {
+		cartCount = localStorage.length;
+		if (cartCount === 0) {
+			$('.cart-count').hide()
+		} else {
+			$('.cart-count').text(cartCount);
+		}
+	});
+	$(document).ready(function() {
+		if (localStorage.mouthwash) {
+			$('.cta').hide();
+			$('.added').show();
+		}
+		$('.cta').click(function(){
+			localStorage.setItem('mouthwash', 'added');
+			document.location.reload(true)
+		});
+		$('.added').click(function(){
+			$(this).hide();
+			$('.already-added').show();
+		});
+		$('#clear').click(function(){
+			localStorage.clear();
+			location.reload();
+		});
+		$('.toggle').click(function(){
+			$('.learn-more-div').toggle();
+		});
+		$('.hamburger').click(function() {
+	$("#menu-page").animate({
+	width: 'toggle'
+	}, 200);
+	$('.hamburger').hide();
+	$('.crossmark').show();
+	});
+	$('.crossmark').click(function() {
+	$("#menu-page").animate({
+	width: 'toggle'
+	}, 200);
+	$('.crossmark').hide();
+	$('.hamburger').show();
+	});
+	});
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="product-pages.css">
+</head>
+<body>
+	<a href="basket.html" ><a style="position:relative;z-index: 2;top:0;">
+		<div><img class="hamburger menu" src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png"><img class="crossmark menu" src="https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png"></div>
+	</a>
+	<div style="position: fixed;width: 100%;top: 0;z-index: 1;"><a href="basket.html" style="position:relative;z-index: 2;top:0;">
+		<div class="cart-div">
+			<img class="cart-img" "="" src="https://www.shareicon.net/download/2016/09/10/828167_cart_512x512.png">
+			<span class="cart-count">1</span>
+		</div>
+		</a><a id="top" style="position:fixed;width: 100%;top:0;background: #c2002f;height:40px;margin-bottom: 0em;z-index: 1;display: block;"></a></div>
+		</a><a href="products.html" id="top" style="height:40px;margin-bottom: 0em;"></a>
+		<div style="display:none;" class="added-banner">Added to basket</div>
+		<div class="added-banner-div"><p
+		">Added to subscription!</p></div>
+		<div>
+			<div id="menu-page">
+				<div><a href="categories.html" class="menu-page-big">All ranges</a><a href="products-shaving.html" class="menu-page-small">Shaving</a><a href="products-dental.html" class="menu-page-small">Dental</a><a class="menu-page-small">Placeholder</a><a class="menu-page-small">Placeholder</a>
+				<a
+					class="menu-page-big">How it works</a><a class="menu-page-big">Our Story</a><a class="menu-page-big">Blog</a><a class="menu-page-big">Gifts</a><a class="menu-page-login">Login</a></div>
+				</div>
+				<div id="breadcrumb"><a href="products.html" class="back-prod">Dental</a> &gt; Mouthwash</div>
+				<div class="prod-div" style="margin-bottom: 0;padding-bottom: 0">
+					<div class="prod-img"><img src="https://images.ctfassets.net/itvcls9imtx8/3vlqKkNGRi8yCGogQMGSeE/37d377913b7f27cd7b76fed214b0f870/Mouthwash-Square-2500.png?fm=jpg&fl=progressive&bg=rgb:fff&w=405"></div>
+					<div>
+						<div style="padding-bottom: 0;" class="carousel">
+							<div class="carousel-div"><img class="highlighted carousel-div-image" src="http://via.placeholder.com/90x90"></div>
+							<div class="carousel-div"><img class="carousel-div-image" src="http://via.placeholder.com/90x90"></div>
+							<div class="carousel-div"><img class="carousel-div-image" src="http://via.placeholder.com/90x90"></div>
+							<div class="carousel-div"><img class="carousel-div-image" src="http://via.placeholder.com/90x90"></div>
+						</div>
+						<div style="padding-top: 0;" class="carousel">
+							<div class="carousel-div"><img class="carousel-div-image" src="http://via.placeholder.com/90x90"></div>
+							<div class="carousel-div"><img class="carousel-div-image" src="http://via.placeholder.com/90x90"></div>
+							<div class="carousel-div"><img class="carousel-div-image" src="http://via.placeholder.com/90x90"></div>
+							<div class="carousel-div"><img class="carousel-div-image" src="http://via.placeholder.com/90x90"></div>
+						</div>
+					</div>
+					<div class="prod-text">
+						<p class="tagline">Fresh Mint</p>
+						<p class="product-name">Mouthwash</p>
+						<p class="product-price">£4</p>
+						<hr>
+						<ul class="list-ul">
+							<li class="list-title">
+								Description
+								<ul class="list-items-ul">
+									<li class="list-item">Description</li>
+									<li class="list-item">Description</li>
+									<li class="list-item">Description</li>
+								</ul>
+							</li>
+						</ul>
+						<p class="product-description-title">Description Description</p>
+						<p class="product-description">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description  Description Description  Description Description </p>
+						<!-- <div id="initials"><p id="initial-p">Handle personaliation:</p><div class="initial-div"><select class="initial-select">
+						<option value="A">A</option>
+						<option value="B">B</option>
+						<option value="C">C</option>
+					</select>
+					<select class="initial-select">
+						<option value="A">A</option>
+						<option value="B" selected>B</option>
+						<option value="C">C</option>
+					</select class="initial-select"><select class="initial-select">
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C" selected>C</option>
+				</select></div></div> -->
+				
+				<a
+				class="cta">Add To Subscription</a>
+				<div class="added"><a class="cta-added">Added!</a></div>
+				<div class="already-added"><a class="cta-already-added">Added!*</a>
+				<p style="text-align: center;">*You cannot add more than 1 to your subscription</p>
+			</div>
+			<a href="javascript:history.back();" style="
+				color: #c2002f;
+				padding: 15px;
+				text-align: center;
+				margin: 0 auto;
+				font-size: 17px;
+				cursor: pointer;
+				text-transform: uppercase;
+				border: 1px solid #c2002f;
+				text-decoration: none;
+				margin-top: 10px;
+			">&lt; Back</a>
+		</div>
+	</div>
+	<!-- <div class="review-div">
+											<div>
+																					<div class="toggle" style="margin: 0px 15px;border-left: 0;border-right: 0;">
+																															<div style="display: flex;">
+																																									<div style="display: flex;width: 100%;border-left: none;">
+																																																			<p style="width: 100%;margin-left: 25px;">LEARN MORE </p><img src="https://uk.lush.com/sites/all/themes/lush/assets/lush/images/web-kit/arrows/black-down.svg" style="width: 20px;margin-right: 25px;"></div>
+																																									</div>
+																															</div>
+																															<div style="display: none;">
+																																									<div class="toggle" style="margin: 0;border-left: 0;border-right: 0;margin: 0px 15px;">
+																																																			<div style="display: flex;margin: 0;">
+																																																													<div style="display: flex;width: 100%;border-left: 0;">
+																																																																							<p style="width: 100%;margin-left: 25px;">REVIEWS </p><img src="https://uk.lush.com/sites/all/themes/lush/assets/lush/images/web-kit/arrows/black-down.svg" style="width: 20px;margin-right: 25px;transform: rotate(180deg);"></div>
+																																																													</div>
+																																																													
+																																																			</div>
+																																																			<p style="width: 90%;margin: 0 auto;margin-top: 1em;font-size: 17px;">★★★★★<br>Great design<br>Really sharp and very well balanced - great design.<br><br>Richard A<br>reviews.co.uk</p>
+																																																			<p style="width: 90%;margin: 0 auto;margin-top: 1em;font-size: 17px;">★★★★★<br>Great design<br>Really sharp and very well balanced - great design.<br><br>Richard A<br>reviews.co.uk</p>
+																																																			<p style="width: 90%;margin: 0 auto;margin-top: 1em;font-size: 17px;">★★★★★<br>Great design<br>Really sharp and very well balanced - great design.<br><br>Richard A<br>reviews.co.uk</p>
+																																									</div>
+																															</div>
+			</div> -->
+			<div class="learn-more-div">
+				<p class="learn-more-title">
+					<p></p><p></p>Description Description Description Description Description
+				</p>
+				<p class="learn-more-paragraph">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description
+				</p>
+			</div>
+			<div style="display: none;">
+				<h2 class="also-bought-title">Customers also bought</h2>
+				<div class="more-products">
+					<div class="more-products-item"><img src="https://images.ctfassets.net/itvcls9imtx8/3vlqKkNGRi8yCGogQMGSeE/37d377913b7f27cd7b76fed214b0f870/Mouthwash-Square-2500.png?w=300">
+						<p>Daily Fresh Mint Mouthwash</p>
+						<p>£4</p><a class="more-info">More info</a></div>
+					</div>
+					<div id="bottom" style="background: #c2002f;height:40px;margin-top: 2em;"></div>
+				</div>
+			</div>
+			<p id="clear">CLEAR</p>
+			<a id="top" style="background: #c2002f;height:40px;margin-top: 2em;"></a>
+		</body>

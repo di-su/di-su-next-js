@@ -1,0 +1,335 @@
+tip-consultation-failure.blade.php
+@extends('emails.template-transactional')
+
+@section('content')
+    <table class="full-table" width="650" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse !important;margin:0px auto;">
+        <tbody>
+        <tr>
+            <td bgcolor="#FFFFFF" align="center">
+                <table class="full-table" cellspacing="0" cellpadding="0" align="center" width="650" style="border-collapse:collapse !important;margin:0px auto;">
+                    <tbody>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse !important;margin:0px auto;">
+                                <tbody>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family:Montserrat, Helvetica, Arial, sans-serif !important;font-size:16px !important;line-height:25px !important;letter-spacing:0px !important;font-weight:400;color:#000000;padding: 0px 20px;">
+                                        <p>Hi {{ ucwords(strtolower($firstName)) }},</p>
+
+                                        <p>Our medical team have reviewed your consultation for your {{$treatmentType}} treatment and written you a note:</p>
+
+                                        <p>"{{$failureReason}}"</p>
+
+                                        <p>For this reason, your consultation has been declined and we would suggest that you follow our medical team's advice on what to do next. Your card will not be charged.</p>
+
+                                        @if ($isNewUser && $hasOtherProducts)
+                                            <p>This time tomorrow, we’ll bill you for your non-medical products - look out for your order confirmation email, it will be with you shortly.</p>
+                                        @endif
+
+                                        @if (!$hasOtherProducts)
+                                            <p>Just to let you know, if you don't successfully retake your consultation or add any of our other products to your subscription it will be automatically cancelled in the next {{$cancellationBuffer}} days. </p>
+                                        @endif
+
+                                        <p> If you think there may be a mistake, please click <a href="{{$consultationUrl}}">here</a> to restart your consultation.</p>
+
+                                        <p> If you have any questions, just reply to this email - we'll be happy to help!</p>
+
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </td>
+    </tr>
+    </table>
+@stop
+
+tip-consultation-success.blade.php
+@extends('emails.template-transactional')
+
+@section('content')
+    <table class="full-table" width="650" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse !important;margin:0px auto;">
+        <tbody>
+        <tr>
+            <td bgcolor="#FFFFFF" align="center">
+                <table class="full-table" cellspacing="0" cellpadding="0" align="center" width="650" style="border-collapse:collapse !important;margin:0px auto;">
+                    <tbody>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse !important;margin:0px auto;">
+                                <tbody>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family:Montserrat, Helvetica, Arial, sans-serif !important;font-size:16px !important;line-height:25px !important;letter-spacing:0px !important;font-weight:400;color:#000000;padding: 0px 20px;">
+                                        <p>Hey {{ ucwords(strtolower($firstName)) }},</p>
+                                        @if ($isNewUser)
+                                            <p>We're happy to let you know that you've been approved for {{implode(' and ', $productNames)}}, and we are processing your order.</p>
+
+                                            <p>Look out for your confirmation email, it will be with you shortly.</p>
+                                        @else
+                                            <p>We're happy to let you know that you've been approved for {{implode(' and ', $productNames)}}.</p>
+                                            @if($billingDate)
+                                                <p>They will be included in your next order on {{ $billingDate }}, for £{{ $discountPercentage ? $currentPrice.' (a '.$discountPercentage.'% discount on the normal price'.($discountMaxRedemptions > 1 ? ', for your first '.$discountMaxRedemptions.' boxes': '').').' : $currentPrice.'.'}}
+                                                    After that, we'll send you a box every {{$frequencyInMonths}} for £{{$regularPrice}} to keep you stocked up. If you’d like to remove it from your plan this is really simple to do in <a href="{{ config('app.url'). '/account'}}">My Account</a>.</p>
+
+                                                <p> Should you want to bring your next order closer to today, click <a href="{{ $chooseNextBillingDateUrl }}">here</a> to change your billing date - otherwise, you're good to go!</p>
+                                            @else
+                                                <p>They will be included in your next order if you resume your subscription within the next few months.</p>
+                                            @endif
+                                        @endif
+                                        <p>
+                                            Best wishes,
+                                            <br>
+                                            Lucy at Cornerstone
+                                        </p>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </td>
+    </tr>
+    </table>
+@stop
+
+tip-failed.blade.php
+@extends('emails.template-transactional')
+@section('content')
+    <table class="full-table" width="650" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse !important;margin:0px auto;">
+        <tbody>
+        <tr>
+            <td bgcolor="#FFFFFF" align="center">
+                <table class="full-table" cellspacing="0" cellpadding="0" align="center" width="650" style="border-collapse:collapse !important;margin:0px auto;">
+                    <tbody>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse !important;margin:0px auto;">
+                                <tbody>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family:Montserrat, Helvetica, Arial, sans-serif !important;font-size:16px !important;line-height:25px !important;letter-spacing:0px !important;font-weight:400;color:#000000;padding: 0px 20px;">
+                                    <p>There was a problem with the following TIP API response: </p>
+                                       {{ $webhookEvent }}
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>
+</tr>
+</table>
+@stop
+
+tip-identity-failure.blade.php
+@extends('emails.template-transactional')
+@section('content')
+    <table class="full-table" width="650" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse !important;margin:0px auto;">
+        <tbody>
+        <tr>
+            <td bgcolor="#FFFFFF" align="center">
+                <table class="full-table" cellspacing="0" cellpadding="0" align="center" width="650" style="border-collapse:collapse !important;margin:0px auto;">
+                    <tbody>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse !important;margin:0px auto;">
+                                <tbody>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family:Montserrat, Helvetica, Arial, sans-serif !important;font-size:16px !important;line-height:25px !important;letter-spacing:0px !important;font-weight:400;color:#000000;padding: 0px 20px;">
+                                        <p>Hey {{$name}},</p>
+
+                                        <p>
+                                            For prescription medication, we are obliged to perform an identity check. This information must correspond with your official documents, e.g UK driving license or passport.
+                                        </p>
+                                        <p> Unfortunately, the information you have provided has failed. </p>
+
+                                        <p>The details provided were:</p>
+
+                                        <p>
+                                            First name: {{$firstName}}<br/>
+                                            Surname: {{$lastName}}<br/>
+                                            Date of Birth: {{$dob}}
+                                        </p>
+
+                                        <p>Address: {{$address}}</p>
+
+                                        <p>The address you provide is only used for identity verification purposes, not delivery (we'll continue to use your existing saved Cornerstone delivery address).</p>
+
+                                        <p>If you think you've made a mistake, please click <a href="{{$identityCheckUrl}}">here to resubmit your personal details.</a></p>
+
+                                        <p>Should you have any questions or want to make any changes to your order, please let us know by replying to this email - we'll be happy to help!</p>
+
+                                        <p>
+                                            Best wishes,
+                                            <br/>
+                                            Lucy at Cornerstone
+                                        </p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </td>
+    </tr>
+    </table>
+@stop
+
+tip-multi-product-consultation-result-anomaly.blade.php
+@extends('emails.template-transactional')
+@section('content')
+    <table class="full-table" width="650" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse !important;margin:0px auto;">
+        <tbody>
+        <tr>
+            <td bgcolor="#FFFFFF" align="center">
+                <table class="full-table" cellspacing="0" cellpadding="0" align="center" width="650" style="border-collapse:collapse !important;margin:0px auto;">
+                    <tbody>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse !important;margin:0px auto;">
+                                <tbody>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family:Montserrat, Helvetica, Arial, sans-serif !important;font-size:16px !important;line-height:25px !important;letter-spacing:0px !important;font-weight:400;color:#000000;padding: 0px 20px;">
+
+                                        <h3>A multi product TIP consultation has received both an approval and a denial!.</h3>
+
+                                        <p>User: <a href="https://admin.cornerstone.co.uk/users/{{ $userId }}">https://admin.cornerstone.co.uk/users/{{ $userId }}</a></p>
+
+                                        <p>Consultation ID: {{$consultationId}}</p>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+@stop
+
+tip-order-dispatch-failed.blade.php
+@extends('emails.template-transactional')
+@section('content')
+    <table class="full-table" width="650" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse !important;margin:0px auto;">
+        <tbody>
+        <tr>
+            <td bgcolor="#FFFFFF" align="center">
+                <table class="full-table" cellspacing="0" cellpadding="0" align="center" width="650" style="border-collapse:collapse !important;margin:0px auto;">
+                    <tbody>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse !important;margin:0px auto;">
+                                <tbody>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%" height="10" style="font-size:1px;line-height:1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="font-family:Montserrat, Helvetica, Arial, sans-serif !important;font-size:16px !important;line-height:25px !important;letter-spacing:0px !important;font-weight:400;color:#000000;padding: 0px 20px;">
+
+                                        <h3>Order cancelled by TIP.</h3>
+
+                                        <p>User: <a href="https://admin.cornerstone.co.uk/users/{{ $user->id }}">https://admin.cornerstone.co.uk/users/{{ $user->id }}</a></p>
+
+                                        <p>Order: BOX{{ $box->id }}</p>
+
+                                        <p>Reason: {{ $reason }}</p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+@stop

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+   <script>
+   var submitted=false;
+ </script>
+ <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="
+         if(submitted) {
+             $('#contact-form').html('<p class=\'text-center\'>Thanks! Your message has been sent. We will get back to you with a quote as soon as possible.</p>');
+         }
+     "></iframe>
+   <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="./plugins/bootstrap-4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./plugins/meanmenu/meanmenu.css">
+      <link rel="stylesheet" href="./fonts/ep-icon-fonts/css/style.css">
+      <link rel="stylesheet" href="./fonts/fontawesome-5/css/all.min.css">
+      <link rel="stylesheet" href="./css/settings.css">
+      <link rel="stylesheet" href="./css/style.css">
+      <title>Poply - Sell your home quicker and for more money</title>
+      <meta name="description" content="We help you stand out from the crowd, increase the value of your property and sell your house faster. We'll create a bespoke, professional website, dedicated to the listing of your property. We'll look after everything - beautiful imagery, design, copy-writing and hosting.">
+   </head>
+   <body>
+      <div class="site-wrapper">
+         <header class="site-header">
+            <div class="container">
+               <div class="row justify-content-center align-items-center position-relative">
+                  <div class="col-sm-3 col-6 col-lg-2 col-xl-2 order-lg-1">
+                     <div class="brand-logo"> <a href=""><img src="image/logo.png" alt=""/></a> </div>
+                  </div>
+                  <div class="col-sm-8 col-lg-3 col-xl-3 d-none d-sm-block order-lg-3 offset-xl-1">
+                     <div class="header-btns justify-content-end"> <a href="#quote" class="btn btn-sm btn--orange btn--hover-shine">Get my FREE quote</a> </div>
+                  </div>
+                  <div class="col-sm-1 col-6 col-lg-7 col-xl-6 position-static order-lg-2">
+                     <div class="main-navigation">
+                        <ul class="main-menu">
+                           <!-- <li class="menu-item has-dropdown"> <a href="#features">Free Landing Pages</a> <ul class="menu-dropdown"> <li class="single-item"> <a href=""> <h3>Mobile Application</h3> <p>Best for Mobile App Presentation</p></a> </li><li class="single-item"> <a href=""> <h3>Web Application</h3> <p>Best for Mobile App Presentation</p></a> </li><li class="single-item"> <a href=""> <h3>SaaS Application</h3> <p>Best for Mobile App Presentation</p></a> </li><li class="single-item"> <a href=""> <h3> SaaS Subscription</h3> <p>Best for Mobile App Presentation</p></a> </li></ul> </li>--><!-- <li class="menu-item "><a href="#features">Features</a></li><li class="menu-item"><a href="#">Services</a></li>--> 
+                           <li class="menu-item"><a target="_blank" href="./demo">Demo</a></li>
+                           <li class="menu-item"><a href="#quote">Get a quote</a></li>
+                        </ul>
+                     </div>
+                     <div class="mobile-menu"></div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <div class="hero-area">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-lg-8 col-xl-7">
+                     <div class="hero-content" data-aos="fade-up">
+                        <h5>Introducing Poply</h5>
+                        <h2>Sell your home <i>quicker</i> and for more <i>money</i> with <b style="color: #338cd1">Poply</b></h2>
+                        <p>Stand out from the crowd, increase the value of your property and sell your house faster.</p>
+                     </div>
+                  </div>
+                  <!-- <div class="col-lg-7 col-xl-6"> <div class="subscription-form"> <form action=""> <div class="form-group"> <input type="text" class="form-control" Poply="Enter your email"> <button class="submit-btn btn--hover-shine ">Subscribe</button> </div><p class="form-text">Trused by over 50,000+ customers</p></form> </div></div>--> 
+               </div>
+            </div>
+         </div>
+         <div class="feature-area" style="border-bottom: 1px solid #ececec;">
+            <div class="container" data-aos="fade-up">
+               <h2 class="text-center mb--80">Reasons to use Poply</h2>
+            </div>
+            <div class="container">
+               <div class="row mb-d-30">
+                  <div class="col-lg-4 col-sm-6 mb--30">
+                     <div class="feature-widget" data-aos="fade-up">
+                        <div class="widget-icon"> <i class="icon icon-archery-target"></i> </div>
+                        <div class="content">
+                           <h5>Sell your home faster</h5>
+                           <p>Our service will help make your home more attractive to potential buyers, helping you sell quicker.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 mb--30">
+                     <div class="feature-widget" data-aos="fade-up">
+                        <div class="widget-icon"> <i class="icon icon-smile"></i> </div>
+                        <div class="content">
+                           <h5>Make more money</h5>
+                           <p>We'll help your house stand out from the crowd, giving you a head start for the best deal possible.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 mb--30">
+                     <div class="feature-widget" data-aos="fade-up">
+                        <div class="widget-icon"> <i class="icon icon-wallet-90"></i> </div>
+                        <div class="content">
+                           <h5>It pays for itself</h5>
+                           <p>We're a cheap and simple investment. You'll probably <b>make your money back from your house sale.</b></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="content-section-01" style="background: #f7f7f7;">
+            <div class="container">
+               <h1 class="text-center mb-5" data-aos="fade-up"><u>The problem</u>: Your house is just one of many</h1>
+               <div data-aos="fade-up" style="padding: 0px 15px;">
+                  <p>With thousands of house listings online, what makes your house special? Why should house hunters view your property over another?</p>
+                  <p>That's where <b>Poply</b> comes in. We understand that the online listing of your home is vital to the success of your sale. Beautiful pictures and enticing copy instantly transforms the demand and value of your property.</p>
+                  <p>Simply put, we help your home stand out amongst the crowd. Our aim is to help you get more viewings booked. Poply helps you sell your home faster and at a better price. Sounds good, doesn't it?</p>
+               </div>
+            </div>
+         </div>
+         <!-- <div class="container" data-aos="fade-up"> <h2 class="text-center mb--60">How it works</h2> </div>--> 
+         <div class="content-section-02">
+            <div class="container">
+               <div class="content-wrapper">
+                  <h1 class="text-center mb--10" data-aos="fade-up">The solution</h1>
+                  <h5 class="text-center mb--120" data-aos="fade-up">In 3 easy steps</h5>
+                  <div class="row ">
+                     <div class="col-lg-7 col-md-7 col-xl-5 order-2 order-md-1">
+                        <div data-aos="fade-right" class="content-left-content">
+                           <h2>1. We'll create a website for your home</h2>
+                           <p>We'll create a <strong>bespoke, professional website</strong>, dedicated to the listing of your property. We'll look after everything - beautiful imagery, design, copy-writing and hosting.</p>
+                           <p>We'll help bring your home to life.</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-5 col-md-5 col-xl-5 offset-xl-2 order-1 order-md-2">
+                        <div class="content-right-image pb-5"> <img data-aos="fade-left" src="image/web.svg" alt=""> </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="content-section-01" id="view">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-5 col-sm-6 col-md-5 col-xl-5">
+                     <div class="content-left-image pb-5"> <img data-aos="fade-right" src="image/phone.png" alt=""> </div>
+                  </div>
+                  <div class="col-lg-7 col-sm-6 col-md-7 col-xl-6 offset-xl-1">
+                     <div data-aos="fade-left" class="content-right-content">
+                        <h2>2. Increase your viewings and sell your home faster</h2>
+                        <p>Once you're happy with your bespoke website, you're free to share your beautiful page with all your potential buyers and any real estate agents you're using.</p>
+                        <p>Have your website included as part of the description in your house listing. You could see around a <strong style="color: green;font-size: 20px;">+20%</strong> increase in interest from house-hunters.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="content-section-02">
+            <div class="container">
+               <div class="content-wrapper">
+                  <div class="row ">
+                     <div class="col-lg-7 col-md-7 col-xl-5 order-2 order-md-1">
+                        <div data-aos="fade-right" class="content-left-content">
+                           <h2>3. Stand out from the crowd</h2>
+                           <p>Your polished website will <strong>leave a lasting impression</strong>, helping your home <strong>stand out from the crowd.</strong></p>
+                           <p>Feel confident with your best asking price and see an increase in interest from potential buyers.</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-5 col-md-5 col-xl-5 offset-xl-2 order-1 order-md-2">
+                        <div class="content-right-image pb-5"> <img data-aos="fade-left" src="image/home.svg" alt=""> </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- <div class="tesimonial-section"> <div class="container"> <div class="row"> <div class="col-xl-4"> <div class="testimonial-content"> <h5>Customers’ story</h5> <h2>50k+ users are showing love.</h2> <p>We designed and tested prototypes that helped identify pain points in the account creation process. Together, we shaped the new standard.</p></div></div><div class="col-xl-8"> <div class="masonry-with-columns"> <div class="testimonial-card"> <div class="card-content"> <p>“You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save.</p></div><div class="card-id"> <div class="id-img"> <img src="image/t5-nav-1.png" alt=""> </div><div class="id-content"> <h6>Cameron Anderson</h6> <span>Designer</span> </div></div></div><div class="testimonial-card"> <div class="card-content"> <p>“Finally, I’ve found a template that covers all bases for a bootstrapped startup. We were able to launch in days, not months.”</p></div><div class="card-id"> <div class="id-img"> <img src="image/t9-nav-4.png" alt=""> </div><div class="id-content"> <h6>Catherine Simmons</h6> <span>Marketer</span> </div></div></div><div class="testimonial-card"> <div class="card-content"> <p>“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.” </p></div><div class="card-id"> <div class="id-img"> <img src="image/t9-nav-6.png" alt=""> </div><div class="id-content"> <h6>Leo Morton</h6> <span>Marketer</span> </div></div></div><div class="testimonial-card"> <div class="card-content"> <p>My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save. Thanks, guys!</p></div><div class="card-id"> <div class="id-img"> <img src="image/t9-nav-5.png" alt=""> </div><div class="id-content"> <h6>Charlie Beck</h6> <span>Startup Founder</span> </div></div></div></div></div></div></div></div>--><!-- <section class="client-section"> <div class="container"> <div class="client-brand-wrapper"> <div class="single-brand"> <img src="image/logo-5.png" alt=""/> </div><div class="single-brand"> <img src="image/logo-4.png" alt=""/> </div><div class="single-brand"> <img src="image/logo-3.png" alt=""/> </div><div class="single-brand"> <img src="image/logo-2.png" alt=""/> </div><div class="single-brand"> <img src="image/logo-1.png" alt=""/> </div></div></div></section> -->
+         <div class="content-section-02" style="background: #e3eef8;border-top: 1px solid #ececec">
+            <div class="container">
+               <div class="content-wrapper" data-aos="fade-up">
+                  <h1 class="text-center mb--10">Interested? See our Demo</h1>
+                  <h5 class="text-center mb--40">See an example of a house website made by us at Poply below</h5>
+                  <div class="text-center content-btn"><a target="_blank" href="./demo" class="btn btn--primary">View demo</a></div>
+               </div>
+            </div>
+         </div>
+         <section id="quote" class="pricing-section section-spacing">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-xl-6 col-lg-7 col-md-8 col-sm-11">
+                     <div class="section-title pb-lg--85" data-aos="fade-up">
+                        <span class="title-sm-text">Ready to supercharge the sale of your home?</span> 
+                        <h2><u>Contact us</u> now for a FREE quote.</h2>
+                     </div>
+                  </div>
+               </div>
+               <div class="row mb-d-30 justify-content-center">
+                  <div class="col-lg-8 col-xl-7 col-md-10 mb--30">
+                     <div class="pricing-card" data-aos="fade-up">
+                        <div class="card-head">
+                           <h6>Estimated one-off cost</h6>
+                           <!-- <span class="card-badge">Safe & secure&nbsp;<i class="icon icon-lock"></i></span> <p style="background: #258aff;color: white;padding: 5px; width: 150px;font-size: 16px;" class="text-center mb-2">Save 20%!</p>  -->
+                           <h2><span class="small-title">£</span><span class="big-txt">199 - <span class="small-title">£</span>400<span class="small-title"></span></span></h2>
+                           <p style="font-size: 20px;">Quote dependent on the amount of customisation required for your home website.</p>
+                        </div>
+                        <div class="card-content">
+                           <ul class="pricing-list">
+                              <li><span><i class="icon icon-check-2"></i></span>Only a small deposit to get started</li>
+                              <li><span><i class="icon icon-check-2"></i></span>No full payment until you're happy</li>
+                              <li><span><i class="icon icon-check-2"></i></span>No extra or ongoing fees</li>
+                              <li><span><i class="icon icon-check-2"></i></span>Free, 24/7 friendly support</li>
+                              <li><span><i class="icon icon-check-2"></i></span>Complete within 7 days</li>
+                              <li><span><i class="icon icon-check-2"></i></span>Custom domain name</li>
+                              <li><span><i class="icon icon-check-2"></i></span>Beautifully designed for mobile</li>
+                           </ul>
+                           <div style="padding: 20px 0px;">
+                            <p style="font-size: 20px;margin-bottom: 20px;">Fill in your details to get your <b>FREE</b> quote. The more information you can provide, the more accurate your quote will be.</p>
+                              <form id="contact-form" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScdXvx1bMKSUXxw23CdGIL9taJbk7GlqRvXqvzT1a3cCHYuLQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                                 <div class="form-group"> <label>Your full name (required)</label> <input name="entry.1256309107" type="text" class="form-control" placeholder="John Smith" required> </div>
+                                 <div class="form-group"> <label>Your email address (required)</label> <input name="entry.1084637096" type="email" class="form-control" placeholder="John@example.com" required> </div>
+                                 <div class="form-group"> <label>Links to your existing house listings e.g. rightmove, zoopla (optional)</label> <textarea name="entry.358825843" type="text" class="form-control" placeholder="https://www.rightmove.co.uk/property-for-sale/property-91613357.html"></textarea> </div>
+                                 <div class="form-group"> <label>Your message, including the value of your property (optional)</label> <textarea name="entry.1084080696" type="text" class="form-control" placeholder="Hey! I'd love a website for my house. My house is valued at around £250,000. We've been..."></textarea> </div>
+                                 <div class="card-btn"> <button type="submit" class="btn btn--orange btn--hover-shine">Get my FREE quote</button> </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="faq-section">
+            <div class="container">
+               <div class="faq-accordion" data-aos="fade-up">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-10">
+                        <div class="section-title">
+                           <h2 style="color: #1f1f1f">Common questions 🙋‍♂️</h2>
+                        </div>
+                        <div class="single-faq mb--10 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="600">
+                           <button class="faq-head collapsed" type="button" data-toggle="collapse" data-target="#faq5" aria-expanded="true" aria-controls="faq5">
+                              <h2>Can I decide what appears on the website?</h2>
+                              <i class="icon icon-minimal-down"></i> 
+                           </button>
+                           <div id="faq5" class="collapse" aria-labelledby="faq-heading4" data-parent="#accordionExample2">
+                              <div class="faq-body">
+                                 <p>Yes, absolutely. We'll use any existing copy and images you have on your house listing and we can work with you to create more beautiful copy and images for your website. </p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="accordion faq-accordion space-db--10" id="accordionExample2">
+                           <div class="single-faq mb--10 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                              <button class="faq-head collapsed" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                 <h2>Are there any ongoing costs?</h2>
+                                 <i class="icon icon-minimal-down"></i> 
+                              </button>
+                              <div id="faq1" class="collapse collapsed" aria-labelledby="faq-heading1" data-parent="#accordionExample2">
+                                 <div class="faq-body">
+                                    <p>No. The price that you are quoted is the price that you will pay. There are no ongoing costs, unless you require a large rework of your website.</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="single-faq mb--10 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="200">
+                              <button class="faq-head collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="true" aria-controls="faq2">
+                                 <h2>How long does it take?</h2>
+                                 <i class="icon icon-minimal-down"></i> 
+                              </button>
+                              <div id="faq2" class="collapse" aria-labelledby="faq-heading2" data-parent="#accordionExample2">
+                                 <div class="faq-body">
+                                    <p>We aim to have your website complete within 7 working days. On most occasions, your website will be ready within 3 days.</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="single-faq mb--10 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="400">
+                              <button class="faq-head collapsed" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="true" aria-controls="faq3">
+                                 <h2>How long will my website be available for?</h2>
+                                 <i class="icon icon-minimal-down"></i> 
+                              </button>
+                              <div id="faq3" class="collapse" aria-labelledby="faq-heading3" data-parent="#accordionExample2">
+                                 <div class="faq-body">
+                                    <p>Your website will be online for as long as it takes to sell your house, or up to 3 years. It's unlikely you'll need it for very long.</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="single-faq mb--10 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="600">
+                              <button class="faq-head collapsed" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="true" aria-controls="faq4">
+                                 <h2>How is the price determined?</h2>
+                                 <i class="icon icon-minimal-down"></i> 
+                              </button>
+                              <div id="faq4" class="collapse" aria-labelledby="faq-heading4" data-parent="#accordionExample2">
+                                 <div class="faq-body">
+                                    <p>Your quoted price depends on the complexity of your website. A simple website will be very cost-effective.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- <section class="pricing-section section-spacing"> <div class="container"> <div class="row justify-content-center"> <div class="col-xl-6 col-lg-7 col-md-8 col-sm-11"> <div class="section-title pb-lg--85"> <span class="title-sm-text">Let's do this</span> <h2>Ready to take your house selling seriously? Contact us now.</h2> </div></div></div><div class="row mb-d-30"> <div class="col-lg-5 col-xl-4 offset-lg-1 offset-xl-2 col-md-6 mb--30"> <div class="pricing-card active"> <div class="card-head"> <h6>Basic</h6> <h2><span class="small-title">$</span><span class="big-txt" >19</span><span class="month">/month</span></h2> <p>Good for small business launching their products less then once a year</p></div><div class="card-content"> <ul class="pricing-list"> <li><span><i class="icon icon-check-2"></i></span>Unlimited Blocks</li><li><span><i class="icon icon-check-2"></i></span>5GB Clould Storages</li><li class="disable-opt"><span><i class="icon icon-check-2"></i></span>Custom Domain Names</li><li class="disable-opt"><span><i class="icon icon-check-2"></i></span>Unlimited Emails </li></ul> <div class="card-btn"> <a href="" class="btn btn--primary btn--hover-shine">Start Free Trial</a> </div><p>No credit card required</p></div></div></div><div class="col-lg-5 col-xl-4 col-md-6 mb--30"> <div class="pricing-card"> <div class="card-head"> <h6>Pro</h6> <span class="card-badge">Popular</span> <h2><span class="small-title">$</span><span class="big-txt">29</span><span class="month" >/month</span></h2> <p>Good for small business launching their products less then once a year</p></div><div class="card-content"> <ul class="pricing-list"> <li><span><i class="icon icon-check-2"></i></span>Unlimited Blocks</li><li><span><i class="icon icon-check-2"></i></span>5GB Clould Storages</li><li><span><i class="icon icon-check-2"></i></span>Custom Domain Names</li><li><span><i class="icon icon-check-2"></i></span>Unlimited Emails </li></ul> <div class="card-btn"> <a href="" class="btn btn--orange btn--hover-shine">Start Free Trial</a> </div><p>No credit card required</p></div></div></div></div></div></section> --> 
+         <!-- Calendly link widget begin -->
+<!--          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+         <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/poply/30min?text_color=#1f1f1f&primary_color=fc593b'});return false;">Schedule time with me</a> -->
+         <!-- Calendly link widget end -->
+         <div class="footer-section">
+            <div class="container">
+               <div class="row margin-decrese">
+                  <div class="col-xl-4 col-lg-5 col-margin">
+                     <div class="single-footer">
+                        <div class="footer-title">
+                           <div class="brand-logo"> <img src="./image/logo.png" alt=""> </div>
+                        </div>
+                        <div class="footer-text">
+                           <p>Copyright © 2020</p>
+                        </div>
+                        <!-- <ul class="footer-social-list"> <li> <a href=""> <i class="icon icon-logo-fb-simple"></i> </a> </li><li> <a href=""> <i class="icon icon-logo-twitter"></i> </a> </li><li> <a href=""> <i class="icon icon-google"></i> </a> </li></ul> --> 
+                     </div>
+                  </div>
+                  <!-- <div class="col-lg-2 col-sm-4 col-6 offset-xl-1 col-margin"> <div class="single-footer"> <div class="footer-title"> <h6>Help Menu</h6> </div><ul class="footer-list"> <li><a href="">About</a></li><li><a href="">Features</a></li><li><a href="">Works</a></li><li><a href="">Career</a></li></ul> </div></div><div class="col-lg-2 col-xl-3 col-sm-4 col-6 col-margin"> <div class="single-footer"> <div class="footer-title"> <h6>Support</h6> </div><ul class="footer-list"> <li><a href="">Contact</a></li><li><a href="">Help & Support</a></li><li><a href="">Privacy Policy</a></li><li><a href="">Terms & Conditions</a></li></ul> </div></div><div class="col-lg-2 col-sm-4 col-margin"> <div class="single-footer"> <div class="footer-title"> <h6>Products</h6> </div><ul class="footer-list"> <li><a href=""> Shades Pro</a></li><li><a href="">Essential Blocks</a></li><li><a href="">Avasta Dash</a></li><li><a href="">vApp Landing Page</a></li></ul> </div></div>--> 
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="./plugins/jquery/jquery.min.js"></script> <script src="./plugins/jquery/jquery-migrate.min.js"></script> <script src="./plugins/bootstrap-4.3.1/js/bootstrap.bundle.js"></script> <script src="./plugins/meanmenu/jquery.meanmenu.js"></script> <script src="./js/active.js"></script> <script>AOS.init(); </script>
+   </body>
+</html>

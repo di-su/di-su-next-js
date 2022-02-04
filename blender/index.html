@@ -1,0 +1,911 @@
+<!-- {% layout none %} -->
+<style>
+
+* {
+  font-family: Lato;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+h2 {
+  margin: 20px 0px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+p {
+  margin: 20px 0px;
+}
+
+.hero {
+   background: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 899px) {
+  p {
+    font-size: 16px;
+  }
+  .text-left-div {
+    margin-top: 20px;
+  }
+  .text-right-div {
+    margin-top: 20px;
+  }
+  .three-blocks {
+    margin-top: 20px;
+  }
+  .large-title {
+    font-size: 28px;
+  }
+  .large-paragraph {
+    font-size: 18px;
+  }
+  .product-name {
+    font-size: 35px;
+  }
+  .block {
+    margin-bottom: 50px !important;
+  }
+
+}
+
+@media (min-width: 900px) {
+
+
+  .hero {
+    height: 580px;
+  }
+
+  .benefits-list-div {
+    display: flex; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    margin-top: 20px;
+  }
+
+  .benefits-list-div li {
+    width: 400px;
+  }
+
+  .large-paragraph {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .product-image {
+    margin-top: 80px;
+  }
+  .text-left {
+    display: flex;
+  }
+  .text-right {
+    display: flex;
+  }
+
+  .image-right-div {
+    order: 1;
+  }
+
+  .text-right-div {
+    display: table;
+      height: 400px;
+      overflow: hidden;
+      margin: 0em 70px;
+  }
+
+  .text-right-div-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .text-left-div {    
+    display: table;
+      height: 400px;
+      overflow: hidden;
+      margin: 0em 70px;
+  }
+
+  .text-left-div-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .three-blocks {
+    display: flex;
+    padding: 2em 0em;
+  }
+  .text-right-div {
+    max-width: 600px;
+  }
+  .text-left-div {
+    max-width: 600px;
+  }
+
+  .product-option-div {
+    max-width: 350px;
+  }
+  .block {
+    width: 33.33%;
+  }
+  .large-title {
+    font-size: 35px;
+  }
+  .product-name {
+    font-size: 45px;
+  }
+}
+
+.benefits-list-div li {
+  list-style: none; 
+}
+
+.benefits-list-div li ul {
+  padding-left: 0;
+}
+
+.header {
+  position:fixed;
+  background: #e44377; 
+  text-align: center; 
+  width: 100%;
+  z-index: 99;
+}
+
+.header p {
+  color: white; 
+  padding: 0px; 
+  font-weight: 700; 
+  font-size: 17px;
+  margin: 15px 0px;
+}
+
+.block-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.text-right-div {
+  text-align: center;
+}
+
+.text-left-div {
+  text-align: center;
+}
+
+.image-left-div {
+  text-align: center;
+}
+
+.image-right-div {
+  text-align: center;
+}
+
+/*.image-left-div img, .image-right-div img {
+  box-shadow: 5px 5px 5px #dcdcdc;
+} */
+
+.block {
+  text-align: left;
+  margin: 0em 20px;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 0 auto; 
+  padding: 2em 1.5em;
+}
+
+.centered {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.image-right-div {
+}
+
+.image-left-div img {
+  width: 100%;
+}
+
+.image-right-div img {
+  width: 100%;
+}
+
+.action-button {
+  background: #c2002f;
+  color: white;
+  padding: 15px;
+  max-width: 220px;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.product-option-div {
+  background: #357a41;
+  text-align: center;
+  padding: 8px 0px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  /*box-shadow: 5px 5px 5px #dcdcdc;*/
+  cursor: pointer;
+  border: 2px solid #357a41;
+  border-radius: 5px;
+}
+
+.product-option-div:hover {
+  /*border: 2px solid #c2002f;*/
+  opacity: 0.5;
+}
+
+.product-option-div p {
+  margin: 12px 0px;
+}
+
+.accordion-div {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em 0em;
+}
+
+.accordion {
+  background-color: #E5E5E5;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+/*  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;*/
+}
+
+.accordion-inline {
+  background: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: underline;
+  margin-bottom: 16px;
+}
+
+.accordion-inline:after {
+  content: ">"; /* Unicode character for "plus" sign (+) */
+  font-size: 16px;
+  color: #333333;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.accordion-inline:focus {
+  outline: none;
+}
+
+.panel-inline {
+  background: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel-inline p {
+  margin-top: 0px;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.active-inline:after {
+  content: "<"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel p,
+.panel ul {
+  font-size: 15px;
+  margin-top: 1em;
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+
+.product-strength {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+}
+
+.product-breakdown {
+  color: white;
+  font-size: 13px;
+}
+
+.product-quantity {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 14px;
+  padding-bottom: 5px;
+border-bottom: 4px dotted black;
+max-width: fit-content;
+margin: 0 auto;
+}
+
+.product-name {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.small-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 4px dotted black;
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.large-title {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.large-paragraph {
+  margin: 20px 0px;
+}
+
+.medium-paragraph {
+  font-size: 18px;
+}
+
+.product-image {
+  max-width: 600px;
+  box-shadow: none !important
+}
+
+.text-right-div-center {
+  text-align: left;
+}
+
+.text-left-div-center {
+  text-align: left;
+}
+
+.left {
+  text-align: left;
+}
+
+.cta {
+  text-decoration: none;
+  display: block;
+  padding: 10px 0px;
+}
+
+  .trust-icons-div {
+    display: flex;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .trust-icon-block {
+    width: 33.33%;
+    text-align: center;
+    padding: 0em 5px;
+  }
+  .trust-icon-image {
+    height: 25px;
+    opacity: 0.8;
+  }
+  .trust-icon-text {
+    font-size: 12px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+    .cta-banner-div {
+    background: #367a41;
+  }
+  .cta-banner-copy-div {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .cta-banner-button {
+    border: 1px solid white;
+    border-radius: 5px;
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .cta-banner-button:hover {
+    opacity: 0.5;
+  }
+  .cta-banner-text {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0em 1em;
+  }
+
+  .benefits {
+    /*color: #007cde;*/
+    margin: 5px;
+  }
+  </style>
+<head>
+  <title>FLASH SALE! Your 50% discount has been applied 🎉</title>
+  <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="css.css"> -->
+</head>
+<body>
+  <div class="header"><p>FLASH SALE! Your 50% discount has been applied 🎉</p></div>
+  <div style="background: url(https://cdn.shopify.com/s/files/1/0260/3755/1203/files/background.jpg?178) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+    <div class="hero">
+      <div class="section">
+        <div class="centered">
+            <h1 class="large-title" style="color: white;font-weight: 900;font-size: 40px;margin-top: 80px;">An ultra powerful home blender, at an incredible price.</h1> 
+            <p style="color: white;font-size: 20px;">Own your health with our ultra powerful 2200W German engineered blender. Effortlessly make homemade sauces, smoothies, icecream and much more. The same quality found in commercial smoothie bars, at a fraction of the price.</p><div style="text-align: center;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background:white;">
+    <div class="section">
+      <div class="text-right">
+        <div class="image-left-div">
+          <img class="product-image" src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/blender.jpg?178">
+          <!-- <div><img src="https://static.cornerstone.co.uk/MHRA_only_logo.png" style="max-width: 120px;width: 100%;box-shadow:none;"></div> -->
+        </div>
+        <div class="text-right-div">
+          <h1 class="product-name" style="margin-bottom: 0;">2200W Professional 2 Litre Blender</h1>
+  <div style="text-align: center;"><img src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/review_stars_soft.png?180" style="
+      max-width: 110px;
+  "><span style="
+      display: inline-block;
+      position: relative;
+      top: -5px;
+      padding-left: 10px;
+      margin-top: 0px;
+      font-size: 16px;
+      color: black;
+      padding-bottom: 10px;
+  ">(12,106)</span></div>
+          <p class="product-quantity" style="font-size: 20px; margin-top: 10px;"><span style="color: white;padding: 5px 15px; background: #e44377">SAVE 50% TODAY!</span><br><br><span style="text-decoration: line-through;">£240</span> £120 plus Free UK delivery</p>
+          <p>Diligently designed to deliver professional grade performance, our easy-to-use Blender creates the smooth and creamy concoctions your body craves. Say sayonara to unblended bits, chewy chunks, and grainy lumps—for good.</p>
+          <!-- <p style="font-weight: 700;">Choose your product to begin:</p> -->
+          <div class="product-option-div">
+            <!-- <p class="product-strength">8 x 50mg strength</p> -->
+            <a href="https://mightyblender.myshopify.com/cart/29244384804963:1?channel=buy_button&discount=flashsale50" class="product-price cta">BUY NOW FOR <span style="text-decoration: line-through; color: white;">£240</span> <br>£120</a>
+            <!-- <p class="product-breakdown">£25/month ongoing (£3.13 per tablet)</p> -->
+          </div>
+  <!--         <div class="product-option-div">
+            <p class="product-strength">8 x 100mg strength</p>
+            <p class="product-price">First month for £15</p>
+            <p class="product-breakdown">£30/month ongoing (£3.75 per tablet)</p>
+          </div> -->
+  <!--         <div class="trust-icons-div">
+                    <div class="trust-icon-block">
+                      <img class="trust-icon-image" src="https://static.cornerstone.co.uk/icon_pharma_1.png">
+                      <p class="trust-icon-text">
+                        Medically approved medication
+                      </p>
+                    </div>
+                    <div class="trust-icon-block">
+                      <img class="trust-icon-image" src="https://static.cornerstone.co.uk/icon_pharma_4.png">
+                      <p class="trust-icon-text">
+                        Free tracked, discreet delivery
+                      </p>
+                    </div>
+                    <div class="trust-icon-block">
+                      <img class="trust-icon-image" src="https://static.cornerstone.co.uk/icon_pharma_2.png">
+                      <p class="trust-icon-text">
+                        Cancel at anytime
+                      </p>
+                    </div>
+                  </div>
+          <div>icons</div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="cta-banner-div">
+    <div class="cta-banner-copy-div">
+      <div class="cta-banner-button">BUY NOW</div>
+      <p class="cta-banner-text">Your 50% discount has been applied!</p>
+    </div>
+  </div> -->
+  <div style="background: #ebffd3;">
+    <div class="section">
+      <div class="centered">
+        <h1 class="large-title">Blend your way to better health 💪</h1>
+        <!-- <p>Studies show that using a blender to improve your diet can help you:</p> -->
+        <div class="benefits-list-div"> 
+          <li>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Radically improve your energy</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Slim down without starving</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Finally stick to a meal plan</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Reveal clearer, brighter skin</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Boost your memory and clarity</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Increase your focus &amp; productivity</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Find a total sense of calm and wellbeing</ul>
+          </li>
+          <li>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Save on pricey meals out</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Strengthen your immune system</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Sleep more soundly</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Build muscle and increase performance</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Reduce your risk of heart disease</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> Get your daily vitamins and minerals</ul>
+            <ul class="benefits"><span style="color: green;font-size: 25px;">✓</span> And more!</ul>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background: #f3d0db;">
+    <div class="section">
+      <div class="centered">
+        <h1 class="large-title" style="color: #e44377;">Effortlessly eat your five a day 🍑</h1>
+        <!-- <p>More time, more nutrition, and way more flavour.</p> -->
+        <a href="https://mightyblender.myshopify.com/cart/29244384804963:1?channel=buy_button&discount=flashsale50" class="cta-banner-button cta" style="background: #e44377;color:white;border: 1px solid #e44377;">BUY NOW FOR <span style="text-decoration: line-through; color: white;">£240</span> <br>£120</a>
+      </div>
+    </div>
+  </div>
+  <div style="background: white;">
+    <div class="section">
+      <div class="text-left">
+        <div class="image-right-div">
+          <img src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/blades.jpg?178">
+        </div>
+        <div class="text-left-div">
+          <div class="text-left-div-center"> 
+            <h1 class="large-title">Japanese Stainless Steel Blades</h1>
+            <p>The blade of a blender is crucial. Our blender uses high end, food-grade stainless steel with a 6-blade system configuration that chops, pulverizes and liquefies everything it touches - even ice!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background: white;">
+    <div class="section">
+      <div class="text-right">
+        <div class="image-left-div">
+          <img style="max-width: 500px;" src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/vortex.jpg?178">
+        </div>
+        <div class="text-right-div">
+          <div class="text-right-div-center">
+            <h1 class="large-title">BPA-Free, 2L Vortex container</h1>
+            <p>BPA-Free means you get all of the vitamins and nutrients from your food—and none of the chemicals found in other plastics. The Vortex design helps to pulverizes and liquefy your ingredients with ease; by creating a vacuum effect when blending.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div style="background: #f3d0db; height: 100px;"></div> -->
+  <div style="background: white; background: #f7f7f7">
+    <div class="section">
+      <div class="centered">
+        <h1 class="small-title">What our customers are saying</h1>
+      </div>
+      <div class="three-blocks">
+        <div class="block">
+          <img style="width: 80px; border-radius: 100%;" src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/face2.jpg?178">
+          <h1 class="block-title">Outstanding performance</h1>
+          <p>I can’t say enough about the power and performance. It chews up everything I put in it and creates a nice, smooth blend.</p>
+          <img src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/review_stars_soft.png?180">
+        </div>
+        <div class="block">
+          <img style="width: 80px; border-radius: 100%;" src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/face1.jpg?178">
+          <h1 class="block-title">Amazing value for money</h1>
+          <p>After much research, I decided to buy it. It is well worth the money. It’s quiet and leaves no trace of seeds or clumps.</p>
+          <img src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/review_stars_soft.png?180">
+        </div>
+        <div class="block">
+          <img style="width: 80px; border-radius: 100%;" src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/face3.jpg?179">
+          <h1 class="block-title">I feel so much better already!</h1>
+          <p>This makes perfect smoothies, but also makes perfect hummus in no time!! The clean up is super easy. I use it almost every day and it’s fantastic!</p>
+          <img src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/review_stars_soft.png?180">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background: #f3d0db;">
+    <div class="section">
+      <div class="centered">
+        <h1 class="large-title" style="color: #e44377;">Save time, eat healthy and make delicious smoothies 😍</h1>
+        <!-- <p>More time, more nutrition, and way more flavour.</p> -->
+        <a href="https://mightyblender.myshopify.com/cart/29244384804963:1?channel=buy_button&discount=flashsale50" class="cta-banner-button cta" style="background: #e44377;color:white;border: 1px solid #e44377;">BUY NOW FOR <span style="text-decoration: line-through; color: white;">£240</span> <br>£120</a>
+      </div>
+    </div>
+  </div>
+  <div style="background: white;">
+    <div class="section">
+      <div class="text-left">
+        <div class="image-right-div">
+          <img style="max-width: 500px;" src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/securelid.jpg?178">
+        </div>
+        <div class="text-left-div">
+          <div class="text-left-div-center"> 
+            <h1 class="large-title">Extra secure lid</h1>
+            <p>The last thing you want went blending is a mess - our blender has a extra secure lid, with 3 rigid layers to ensure your ingredients stay where they're supposed to be.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background: white;">
+    <div class="section">
+      <div class="text-right">
+        <div class="image-left-div">
+          <img src="https://cdn.shopify.com/s/files/1/0260/3755/1203/files/zincbottom.jpg?181">
+        </div>
+        <div class="text-right-div">
+          <div class="text-right-div-center">
+            <h1 class="large-title">Quality Engineering</h1>
+            <p>Made from the highest quality materials - the zinc alloy base means our blender will keep going no matter what. Safe and reliable, our blender won't let you down.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background: #f1f1f1"> 
+    <div class="section">
+      <div class="centered left">
+        <h1 class="large-title">Full Specifications</h1>
+        <div style="display: flex;">
+          <p>Power (W): 2200W
+            <br>Voltage (V): 220V / 110V
+            <br>Container Material: Plastic
+            <br>Capacity: 2 Litres, BPA-Free
+            <br>Blades: 6 Japan Stainless Steel Blades
+            <br>Variable Speed: 10 Speeds
+            <br>Weight: 4kg
+          </p>
+          <p style="padding-left: 20px;">
+            Overload protection
+            <br>Food grade rubber cover
+            <br>Food grade tamper
+            <br>Zinc alloy base
+            <br>Steel teeth axis
+            <br>Import Peer self-lubricating bearing 
+          </p>
+        </div>
+      </div>
+    </div>
+  <!--   <div class="section">
+      <div class="centered left">
+        <h1 class="large-title">Shhhhh, secret.</h1>
+        <p>No doctors appointments, no awkwardness, no funny business. Your secret weapon will be sent with free tracked delivery in a subtle, small, plain white box.</p>
+      </div>
+    </div> -->
+  </div>
+  <div style="background: #f1f1f1"> 
+    <div class="section">
+      <div class="centered left">
+        <h1 class="large-title">Parts included</h1>
+        <div style="display: flex;">
+          <p>2 Litre BPA-Free Container
+            <br>Extra secure food grade lid
+            <br>Intruction manual
+          </p>
+          <p style="padding-left: 20px;">
+            2200W Blender Unit with Japanese Stainless Steel Blades
+            <br>Food grade tamper
+            <br>UK Plug
+          </p>
+        </div>
+      </div>
+    </div>
+  <!--   <div class="section">
+      <div class="centered left">
+        <h1 class="large-title">Shhhhh, secret.</h1>
+        <p>No doctors appointments, no awkwardness, no funny business. Your secret weapon will be sent with free tracked delivery in a subtle, small, plain white box.</p>
+      </div>
+    </div> -->
+  </div>
+  <div style="background: #f3d0db;">
+    <div class="section">
+      <div class="centered">
+        <h1 class="large-title" style="color: #e44377;">Feel amazing, all year round ☀️</h1>
+        <!-- <p>More time, more nutrition, and way more flavour.</p> -->
+        <a href="https://mightyblender.myshopify.com/cart/29244384804963:1?channel=buy_button&discount=flashsale50" class="cta-banner-button cta" style="background: #e44377;color:white;border: 1px solid #e44377;">BUY NOW FOR <span style="text-decoration: line-through; color: white;">£240</span> <br>£120</a>
+      </div>
+    </div>
+  </div>
+  <!-- <div style="background: white;">
+    <div class="section">
+      <div class="centered">
+        <h1 class="small-title">How to use Sildenafil</h1>
+      </div>
+      <div class="three-blocks">
+        <div class="block">
+          <h1 class="block-title">1. Set the mood</h1>
+          <p>First thing's first - you need to be sexually aroused for the pill to work its magic. </p>
+        </div>
+        <div class="block">
+          <h1 class="block-title">2. Take the pill</h1>
+          <p>Sildenafil usually takes 30 to 60 minutes to start working, so timing is key!</p>
+        </div>
+        <div class="block">
+          <h1 class="block-title">3. Get intimate</h1>
+          <p>On average, the medication will last for 4-6 hours after you first take it. Enjoy 😉</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="cta-banner-div">
+    <div class="cta-banner-copy-div">
+      <div class="cta-banner-button">BUY NOW</div>
+      <p class="cta-banner-text">Your 50% discount has been applied!</p>
+    </div>
+  </div> -->
+  <!-- <div style="background: #f1f1f1">
+    <div class="section">
+        <div class="centered">
+              <h1 class="small-title">Learn more</h1>
+            </div>
+          <h2>Common questions</h2>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="What are the symptoms of erectile dysfunction?" > What are the symptoms of erectile dysfunction? </button> 
+          <div class="panel">
+             <p> The main symptom of erectile dysfunction (ED) is the inability to get and maintain an erection for satisfactory intercourse. </p>
+             <p> ED should not be confused with ejaculation problems such as premature ejaculation, which is a condition where the process of arousal, orgasm and ejaculation occurs very rapidly. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="What causes erectile dysfunction?" > What causes erectile dysfunction? </button> 
+          <div class="panel">
+             <p> A significant cause of erectile dysfunction is the narrowing of blood vessels that feed the penis, which restricts blood flow and makes it difficult to achieve an erection. </p>
+          </div>
+          <h2>Product questions</h2>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="What's the difference between Sildenafil and Viagra?" > What's the difference between Sildenafil and Viagra? </button> 
+          <div class="panel">
+             <p> The active ingredient in Sildenafil is <strong>identical</strong> to Viagra. Viagra is simply a branded, more expensive version. </p>
+             <p> Viagra is the brand name that Pfizer (the original company that discovered the chemical and marketed this type of medication) gave to the product. Once Pfizer's patent expired in 2013, other manufacturers aside from Pfizer were able to produce and sell medication containing sildenafil, but still are not allowed to use the Viagra brand name. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="How does Sildenafil work?" > How does Sildenafil work? </button> 
+          <div class="panel">
+             <p> Sildenafil works by expanding the blood vessels that feed the penis - this increased amount of blood allows for a stronger erection when you are sexually aroused. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="How long does it take to work?" > How long does it take to work? </button> 
+          <div class="panel">
+             <p> As a general rule you should take sildenafil tablets up to 1 hour before having sex. If the medication works correctly, when you are sexually aroused you will be able to get and maintain an erection. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="How long does it last?" > How long does it last? </button> 
+          <div class="panel">
+             <p> You should be able to achieve a satisfactory erection for 4-6 hours after taking a Sildenafil tablet. Your erection will go down after ejaculation. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="Can I take it as often as I want?" > Can I take it as often as I want? </button> 
+          <div class="panel">
+             <p>You should only take one tablet in a 24-hour period.</p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="What happens if it doesn't work?" > What happens if it doesn't work? </button> 
+          <div class="panel">
+             <p> Sildenafil (and other ED treatments) are not always effective for everyone the first time they take them. You should try a tablet on up to 8 different occasions before deciding that it is ineffective. At this point, you can opt to either increase the strength to 100mg or speak to your doctor about alternative treatment options. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="What's the difference between 50mg and 100mg?" > What's the difference between 50mg and 100mg? </button> 
+          <div class="panel">
+             <p> The difference is the amount of active ingredient - if you've never had ED treatment before, it's recommended that you begin with 50mg, and only switch to 100mg if this does not have an effect after 8 separate attempts. You can change your strength at any time. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="Will taking more than 100mg of sildenafil give me a better erection?" > Will taking more than 100mg of sildenafil give me a better erection? </button> 
+          <div class="panel">
+             <p> No - clinical studies have shown that doses above 100mg of Sildenafil are no more effective at producing an erection but significantly increase the chances of side effects. You should not take more than 100mg of sildenafil in a 24-hour period. </p>
+          </div>
+          <h2>Purchasing questions</h2>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="Where will my medicine come from?" > Where will my medicine come from? </button> 
+          <div class="panel">
+             <p> We've teamed up with one of the UK's leading online pharmacies - regulated by the CQC and GPhC. Their team of fully-qualified doctors and pharmacists write and dispense all of our medication prescriptions. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="Do I need a prescription to buy Sildenafil tablets?" > Do I need a prescription to buy Sildenafil tablets? </button> 
+          <div class="panel">
+             <p> Yes - if they think it's safe, our doctors will write a private prescription for you after you've answered our confidential online medical questionnaire. Your medication will then be sent straight out to you in the post - a fast, convenient and discreet service without any awkward doctors appointments required. </p>
+          </div>
+          <h2>Safety questions</h2>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="Is it safe?" > Is it safe? </button> 
+          <div class="panel">
+             <p> Yes - as long as your answers to our online medical questionnaire are accurate. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="What dosage should I take?" > What dosage should I take? </button> 
+          <div class="panel">
+             <p> The starting dose for most men is 50mg. If 50mg does not have an effect after 8 separate attempts, then switch to 100mg. If you have existing heart conditions, you should talk to your doctor about starting sildenafil - they may decide that 25mg is a better option for you. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="Is it safe to use Sildenafil alongside other medication?" > Is it safe to use Sildenafil alongside other medication? </button> 
+          <div class="panel">
+             <p> You should avoid the following: Nitrates (glyceryl trinitrate spray & isosorbide mononitrate or dinitrate), Poppers (amyl nitrate), Protease inhibitors (HIV treatment) and Alpha-blockers (doxazosin, prazosin, or terazosin). </p>
+             <p>If you have questions about using Sildenafil alongside any other medication please feel free to <a href="mailto:help@cornerstone.co.uk?subject=Sildenafil%20alongside%20other%20medications%20query" style="font-family:Montserrat, Helvetica, Arial, sans-serif !important;font-size:16px !important;line-height:25px !important;letter-spacing:0px !important;font-weight:400;color:#c2002f;padding:0px;text-decoration:underline;">contact our Pharmacists here.</a></p>
+             <p> As all ED treatments work in a similar way, you should not take any other ED treatments (such as Viagra, Cialis, Tadalafil, or Levitra) within 24 hours of sildenafil. Always speak to your doctor or pharmacist before seeking alternative ED treatments. </p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="What are the possible side effects of Sildenafil tablets?" > What are the possible side effects of Sildenafil tablets? </button> 
+          <div class="panel">
+             <p> Common side effects happen in more than 1 in 100 people. If you get these side effects, you can keep taking the medicine, but tell your doctor or pharmacist if these side effects bother you or don't go away. Common Side effects may include: </p>
+             <ul class="benefits">
+                <li>Headache</li>
+                <li>Feeling sick</li>
+                <li>Hot flushes, including facial flushing</li>
+                <li>A colour tinge to your vision or blurred vision</li>
+                <li>Stuffy nose</li>
+                <li>Dizziness</li>
+             </ul>
+             <p> Serious side effects are rare and happen in less than 1 in 1,000 people. <strong >Stop taking Sildenafil and tell a doctor straight away if you experience a serious side effect.</strong > Serious side effects may include: </p>
+             <ul class="benefits">
+                <li> Chest pains - if this happens during or after sex, get into a semi-sitting position and try to relax, do not use nitrates to treat your chest pain </li>
+                <li> Prolonged and sometimes painful erections - if you have an erection which lasts for more than 4 hours, contact a doctor immediately </li>
+                <li>A sudden decrease or loss of vision</li>
+                <li> A serious skin reaction - symptoms may include fever, severe peeling and swelling of the skin, blistering of the mouth, genitals and around the eyes </li>
+                <li>Seizures</li>
+             </ul>
+             <p></p>
+          </div>
+          <button class="accordion ga-event" data-event-category="faq" data-event-label="Where can I find more safety information?" > Where can I find more safety information? </button> 
+          <div class="panel">
+             <p> You can find all the information you need on Sildenafil in the Patient Information Leaflet ( <a target="_blank" style="color: #c2002f;text-decoration: underline;" href="https://www.tevauk.com/mediafile/id/39966.pdf" >https://www.tevauk.com/mediafile/id/39966.pdf</a >). We include one in every pack and suggest you give it a read before you take the medicine. </p>
+          </div>
+          <h2>Still have questions?</h2>
+          <p> Shoot an email over to <a href="mailto:help@cornerstone.co.uk?subject=Cornerstone%20ED%20treatment%20information" style="font-family:Montserrat, Helvetica, Arial, sans-serif !important;font-size:16px !important;line-height:25px !important;letter-spacing:0px !important;font-weight:400;color:#c2002f;padding:0px;text-decoration:underline;">help@cornerstone.co.uk</a>, we'll be more than happy to help! 😊 </p>
+    </div>
+  </div> -->
+  <div style=" background: #f1f1f1; text-align: center; padding: 25px 0px;">
+      <div style="text-align: center;">
+  <!--       <a href="http://medicine-seller-register.mhra.gov.uk/search-registry/36" target="_blank" rel="noopener noreferrer" title="Click to verify if this website is operating legally">
+          <img src="https://pclportal.mhra.gov.uk/analytics/logo-preview-small.png" alt="MHRA logo" style="">
+        </a> -->
+        <div style=" color: black; font-size: 0.75em; letter-spacing: -0.2px;">© Blender 2019 All Rights Reserved</div>
+      </div>
+    </div>
+</div>
+</body>

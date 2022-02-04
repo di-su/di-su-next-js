@@ -1,0 +1,45 @@
+.title-wrapper {
+  text-align: center;
+}
+
+.title {
+  font-size: 45px;
+}
+
+.intro-div {
+  text-align: center;
+}
+
+.intro-image {
+  max-width: 500px;
+}
+
+.intro-copy {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#nav-bar {
+  display: flex;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.nav-button {
+  text-align: center;
+  width: 50%;
+  list-style: none;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: black;
+  color: white;
+}
+

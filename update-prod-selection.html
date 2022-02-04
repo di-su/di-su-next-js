@@ -1,0 +1,548 @@
+<html><head>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+		<script>
+		$(document).ready(function (){
+			$('#blades').click(function(){
+				$('#blades-overlay').show();
+			});
+			$('#shave-gel').click(function(){
+				$('#shave-gel-overlay').show();
+			});
+			$('#face-scrub').click(function(){
+				$('#face-scrub-overlay').show();
+			});
+			$('#toothpaste').click(function(){
+				$('#toothpaste-overlay').show();
+			});
+			$('#floss').click(function(){
+				$('#floss-overlay').show();
+			});
+			$('.save-cta').click(function(){
+				$('.overlay').hide();
+			});
+			$('.remove-cta').click(function(){
+				$('.overlay').hide();
+				$('#confirmation-overlay').show();
+			});
+			$('.remove-again').click(function(){
+				$('.overlay').hide();
+			});
+			$('.add-cta').click(function(){
+				$('.overlay').hide();
+			});
+			$('.close').click(function(){
+				$('.overlay').hide();
+			});
+			$('.back-cta').click(function(){
+				$('.overlay').hide();
+			});
+		});
+		</script>
+		<style>
+		 *{
+		    font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+		}
+		.hidden {
+			display: none;
+		}
+		#top{
+		    cursor:pointer;
+		    background:#c2002f;
+		    height:40px;
+		}
+		.title-div {
+			text-align: center;
+		}
+		.product-div {
+			display: flex;
+			width: 100%;
+			padding: 5px;
+		}
+		.product-image-div {
+			width: 30%;
+			text-align: center;
+		}
+		.product-image-div img {
+			width: 70px;
+		}
+		.product-text-div {
+			width: 70%;
+		}
+		.product-price {
+			float: right;
+			margin-right: 10px;
+		}
+		.product-category-wrap {
+			margin: 0em 1em;
+		}
+		.overlay {
+			position: fixed;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			overflow-y: scroll;
+			display: none;
+			max-width: 450px;
+    		margin: 0 auto;
+		}
+		.overlay-div {
+			background: white;
+			max-width: 350px;
+			margin: 0 auto;
+			margin-top: 15px;
+		}
+		.overlay-product-name {
+			font-size: 26px;
+			margin-bottom: 5px;
+			margin-top: 5px;
+		}
+		.overlay-product-price {
+			font-size: 22px;
+			margin-top: 5px;
+			color: rgb(79, 178, 206);
+			margin-bottom: 5px;
+		}
+		.overlay-contents {
+			padding: 10px 15px;
+		}
+		select {
+			border: 1px solid lightgray;
+			height: 40px;
+			width: 100%;
+			font-size: 15px;
+		}
+		select option {
+			text-align: center;
+		}
+		.select-title {
+			font-size: 15px;
+		}
+		.back-cta {
+			text-transform: uppercase;
+			font-size: 15px;
+			margin-top: 20px;
+			padding: 15px;
+			text-align: center;
+			background: white;
+			border: 2px solid #c2002f;
+			color: #c2002f;
+			cursor: pointer;
+		}
+		.save-cta {
+			text-transform: uppercase;
+			font-size: 15px;
+			margin-top: 20px;
+			padding: 15px;
+			text-align: center;
+			background: #c2002f;
+			color: white;
+			cursor: pointer;
+		}
+		.save-cta p, .back-cta p {
+			margin: 0;
+		}
+		.remove-cta {
+			text-align: center;
+			text-decoration: underline;
+			color: #c2002f;
+			cursor: pointer;
+		}
+		.add-cta {
+			text-transform: uppercase;
+			color: white;
+			font-size: 15px;
+			margin-top: 20px;
+			padding: 15px;
+			text-align: center;
+			background: #c2002f;
+			cursor: pointer;
+		}
+		.add-cta p {
+			margin: 0;
+		}
+		.overlay-product-title-div {
+			border-bottom: 1px solid lightgray;
+		}
+		.overlay-product-image-div {
+			text-align: center;
+		}
+		.overlay-product-image-div img {
+			width: 220px;
+		}
+		p {
+			font-size: 15px;
+		}
+		.selected {
+			background: #c2002f;
+			height: 80px;
+			width: 25px;
+			margin: 0;
+			color: white;
+			text-align: center;
+		}
+		.selected p {
+			padding-top: 10px;
+		}
+		.product-wrap {
+			display: flex;
+			max-height: 80px;
+			border: 1px solid rgb(238, 238, 238);
+			margin-bottom: 10px;
+			cursor: pointer;
+			background: white;
+		}
+		.close {
+			cursor: pointer;
+			float: right;
+   			font-weight: bold;
+  			position: relative;
+    		top: -10px;
+    		font-size: 25px;
+		}
+		.product-name {
+			margin-bottom: 0;
+			font-weight: bold;
+			margin-top: 6px;
+		}
+		.product-next-sent {
+			margin-top: 5px;
+			font-size: 13px;
+			margin-bottom: 0;
+		}
+		.product-frequency {
+			margin-top: 0;
+			font-size: 13px;
+		}
+	}
+		</style>
+	</head>
+	<body style="max-width: 450px;margin: 0 auto;background: rgb(247, 247, 247);">
+		<div id="confirmation-overlay" class="overlay" style="display: none;">
+			<div class="overlay-div">
+				<div class="overlay-contents">
+					<div class="overlay-product-title-div">
+						<p class="overlay-product-name" style="text-align: center;color: #c2002f;">Are you sure?</p>
+					</div>
+					<div style="background: #fff7b0;padding: 10px;margin-top:10px;text-align: center;">
+					<p>Are you sure you want to remove [Product Name] from your subscription? Why not delay the day it's next sent instead?</p>
+					</div>
+					<div>
+						<p class="select-title">Next sent on:</p>
+						<select>
+							<option>13th November</option>
+							<option>13th December</option>
+						  	<option>13th January</option>
+						  	<option>13th February</option>
+						  	<option>13th March</option>
+						  	<option>13th April</option>
+						  	<option>13th May</option>
+						</select>
+						<p class="select-title">and then sent every:</p>
+						<select>
+						  <option>2 weeks</option>
+						  <option>1 month</option>
+						  <option>2 months</option>
+						  <option>3 months</option>
+						  <option>5 months</option>
+						  <option>6 months</option>
+						</select>
+					</div>
+					<div class="save-cta">
+						<p>Save changes</p>
+					</div>
+					<div class="back-cta">
+						<p>Go back</p>
+					</div>
+					<div class="remove-cta remove-again">
+						<p>No, I still want to remove</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="blades-overlay" class="overlay" style="display: none;">
+			<div class="overlay-div">
+				<div class="overlay-contents">
+					<div class="overlay-product-title-div">
+						<p class="overlay-product-name">6 Razor Blades<span class="close">x</span></p>
+						<p class="overlay-product-price">£14</p>
+					</div>
+					<div class="overlay-product-image-div">
+						<img src="https://images.ctfassets.net/itvcls9imtx8/1VPXxhNGyAyg44euIg0kaO/eb95c481e96ab2032f61b197b8896358/Blades-min.png?w=300">
+						<p>Precision ground to stay sharper for longer.</p>
+					</div>
+					<div>
+						<p class="select-title">Next sent on:</p>
+						<select>
+							<option>13th November</option>
+							<option>13th December</option>
+						  	<option>13th January</option>
+						  	<option>13th February</option>
+						  	<option>13th March</option>
+						  	<option>13th April</option>
+						  	<option>13th May</option>
+						</select>
+						<p class="select-title">and then sent every:</p>
+						<select>
+						  <option>2 weeks</option>
+						  <option>1 month</option>
+						  <option>2 months</option>
+						  <option>3 months</option>
+						  <option>5 months</option>
+						  <option>6 months</option>
+						</select>
+					</div>
+				<div style="background: #fff7b0;padding: 10px;margin-top:10px;text-align: center;">
+					<p>Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder</p>
+				</div>
+					<div class="save-cta">
+						<p>Save changes</p>
+					</div>
+					<div class="remove-cta">
+						<p>Remove from subscription</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div id="shave-gel-overlay" class="overlay" style="display: none;">
+		<div class="overlay-div">
+			<div class="overlay-contents">
+				<div class="overlay-product-title-div">
+					<p class="overlay-product-name">Shave Gel<span class="close">x</span></p>
+					<p class="overlay-product-price">£6</p>
+				</div>
+				<div class="overlay-product-image-div">
+					<img src="https://images.ctfassets.net/itvcls9imtx8/6aoNsBi4QoOkAs4SQ4OmOQ/0ce194ddfde75067c5bf2cccfc0517ed/Shave-Gel-min.png?fm=jpg&amp;fl=progressive&amp;bg=rgb:fff&amp;w=300">
+					<p>Protects and rehydrates your skin to help reduce shaving irritation. 150ml.</p>
+				</div>
+				<div>
+					<p class="select-title">Next sent on:</p>
+					<select>
+						<option>13th November</option>
+						<option>13th December</option>
+					  	<option>13th January</option>
+					  	<option>13th February</option>
+					  	<option>13th March</option>
+					  	<option>13th April</option>
+					  	<option>13th May</option>
+					</select>
+					<p class="select-title">and then sent every:</p>
+					<select>
+					  <option>2 weeks</option>
+					  <option>1 month</option>
+					  <option>2 months</option>
+					  <option>3 months</option>
+					  <option>5 months</option>
+					  <option>6 months</option>
+					</select>
+				</div>
+				<div class="add-cta">
+					<p>Add to subscription</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="face-scrub-overlay" class="overlay" style="display: none;">
+		<div class="overlay-div">
+			<div class="overlay-contents">
+				<div class="overlay-product-title-div">
+					<p class="overlay-product-name">Face Scrub<span class="close">x</span></p>
+					<p class="overlay-product-price">£5</p>
+				</div>
+				<div class="overlay-product-image-div">
+					<img src="https://images.ctfassets.net/itvcls9imtx8/6aoNsBi4QoOkAs4SQ4OmOQ/0ce194ddfde75067c5bf2cccfc0517ed/Shave-Gel-min.png?fm=jpg&amp;fl=progressive&amp;bg=rgb:fff&amp;w=300"><p>Helps prevent nicks, cuts and shaving bumps for a smoother, more comfortable shave. 100ml.</p>
+				</div>
+				<div>
+					<p class="select-title">Next sent on:</p>
+					<select>
+						<option>13th November</option>
+						<option>13th December</option>
+					  	<option>13th January</option>
+					  	<option>13th February</option>
+					  	<option>13th March</option>
+					  	<option>13th April</option>
+					  	<option>13th May</option>
+					</select>
+					<p class="select-title">and then sent every:</p>
+					<select>
+					  <option>2 weeks</option>
+					  <option>1 month</option>
+					  <option>2 months</option>
+					  <option>3 months</option>
+					  <option>5 months</option>
+					  <option>6 months</option>
+					</select>
+				</div>
+				<div class="save-cta">
+					<p>Save changes</p>
+				</div>
+				<div class="remove-cta">
+					<p>Remove from subscription</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="toothpaste-overlay" class="overlay" style="display: none;">
+		<div class="overlay-div">
+			<div class="overlay-contents">
+				<div class="overlay-product-title-div">
+					<p class="overlay-product-name">Gentle Whitening Toothpaste<span class="close">x</span></p>
+					<p class="overlay-product-price">£4</p>
+				</div>
+				<div class="overlay-product-image-div">
+					<img src="https://images.ctfassets.net/itvcls9imtx8/61V7sSJRgAoMmIEgcsqcoY/3a7e7268a11087bb06f2b6dd1509005d/Toothpaste-Square-2500.png?fm=jpg&fl=progressive&bg=rgb:fff&w=300"><p>Gently removes stains to restore your teeth’s natural whiteness. Rich in fluoride to help strengthen and remineralise enamel. Peroxide-free to minimize risk of sensitivity. 100ml.</p>
+				</div>
+				<div>
+					<p class="select-title">Next sent on:</p>
+					<select>
+						<option>13th November</option>
+						<option>13th December</option>
+					  	<option>13th January</option>
+					  	<option>13th February</option>
+					  	<option>13th March</option>
+					  	<option>13th April</option>
+					  	<option>13th May</option>
+					</select>
+					<p class="select-title">and then sent every:</p>
+					<select>
+					  <option>2 weeks</option>
+					  <option>1 month</option>
+					  <option>2 months</option>
+					  <option>3 months</option>
+					  <option>5 months</option>
+					  <option>6 months</option>
+					</select>
+				</div>
+				<div class="save-cta">
+					<p>Save changes</p>
+				</div>
+				<div class="remove-cta">
+					<p>Remove from subscription</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="floss-overlay" class="overlay" style="display: none;">
+		<div class="overlay-div">
+			<div class="overlay-contents">
+				<div class="overlay-product-title-div">
+					<p class="overlay-product-name">Gentle Daily Floss <br>Tape<span class="close">x</span></p>
+					<p class="overlay-product-price">£2</p>
+				</div>
+				<div class="overlay-product-image-div">
+					<img src="https://images.ctfassets.net/itvcls9imtx8/4UqSvXdiXmoaOq2s884Wsq/e740c83a30ad5f461ed759d82338c24d/Floss-Square-2500.png?w=300"><p>Coated with PTFE to glide comfortably between your teeth. Helps keep gums clear of plaque and food debris. 25m.</p>
+				</div>
+				<div>
+					<p class="select-title">Next sent on:</p>
+					<select>
+						<option>13th November</option>
+						<option>13th December</option>
+					  	<option>13th January</option>
+					  	<option>13th February</option>
+					  	<option>13th March</option>
+					  	<option>13th April</option>
+					  	<option>13th May</option>
+					</select>
+					<p class="select-title">and then sent every:</p>
+					<select>
+					  <option>2 weeks</option>
+					  <option>1 month</option>
+					  <option>2 months</option>
+					  <option>3 months</option>
+					  <option>5 months</option>
+					  <option>6 months</option>
+					</select>
+				</div>
+				<div class="add-cta">
+					<p>Add to subscription</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div id="top"></div>
+		<div class="title-div">
+			<h1>Subscription</h1>
+			<hr>
+			<div style="background: #fff7b0;padding: 5px;">
+				<p>Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder <span style="
+    position: relative;
+    top: -55px;
+    right: -115px;
+    font-weight: bold;
+    font-size: 18px;
+">x</span></p>
+			</div>
+			<p style="text-align: center;width: 330px;margin: 0 auto;margin-top: 1em;">Add/remove or change the scheduling of the products in your subscription below</p>
+		</div>
+		<div class="product-category-wrap"> 
+			<p style="margin-bottom:10px;font-size: 20px;">In your subscription</p><hr>
+			<div id="blades" class="product-wrap">
+				<div class="selected">
+					<p>✓</p>
+				</div>
+				<div class="product-div">
+					<div class="product-image-div">
+						<img src="https://images.ctfassets.net/itvcls9imtx8/1VPXxhNGyAyg44euIg0kaO/eb95c481e96ab2032f61b197b8896358/Blades-min.png?fm=jpg&amp;fl=progressive&amp;bg=rgb:fff&amp;w=150">	
+					</div>
+					<div class="product-text-div">
+						<p class="product-name">6 Razor Blades<span class="product-price">£14</span></p>
+						<p class="product-next-sent">Next send on: 13th Nov</p>
+						<p class="product-frequency">then every 1.5: months</p>
+					</div>
+				</div>
+			</div>
+			<div id="face-scrub" class="product-wrap">
+				<div class="selected">
+					<p>✓</p>
+				</div>
+				<div class="product-div">
+					<div class="product-image-div">
+						<img src="https://images.ctfassets.net/itvcls9imtx8/6dSCXMWLK0y6oAKOagmka4/5bfe02a8fc55fdba252d2a45460abd9f/Scrub-min.png?w=150">	
+					</div>
+					<div class="product-text-div">
+						<p class="product-name">Face Scrub<span class="product-price">£5</span></p>
+						<p class="product-next-sent">Next sent on: 13th Nov</p>
+						<p class="product-frequency">then every: 2 months</p>
+					</div>
+				</div>
+			</div><div style="max-height: 95px;" id="toothpaste" class="product-wrap">
+				<div class="selected" style="height: 95px;">
+					<p style="margin-top: 25px;">✓</p>
+				</div>
+				<div class="product-div">
+					<div style="margin-top: 8px;" class="product-image-div">
+						<img src="https://images.ctfassets.net/itvcls9imtx8/61V7sSJRgAoMmIEgcsqcoY/3a7e7268a11087bb06f2b6dd1509005d/Toothpaste-Square-2500.png?fm=jpg&amp;fl=progressive&amp;bg=rgb:fff&amp;w=150">	
+					</div>
+					<div class="product-text-div">
+						<p style="margin-top: 5px;" class="product-name">Gentle Whitening<br>Toothpaste<span class="product-price">£4</span></p>
+						<p class="product-next-sent">Next sent on: 13th December</p>
+						<p class="product-frequency">then every: 2 months</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="margin-top: 10px;" class="product-category-wrap"> 
+			<p style="margin-bottom:10px;font-size: 20px;">Not in your subscription</p>
+			<hr><p>Shaving</p>
+			<div id="shave-gel" class="product-wrap">
+				<div class="product-div">
+					<div class="product-image-div">
+						<img src="https://images.ctfassets.net/itvcls9imtx8/6aoNsBi4QoOkAs4SQ4OmOQ/0ce194ddfde75067c5bf2cccfc0517ed/Shave-Gel-min.png?fm=jpg&amp;fl=progressive&amp;bg=rgb:fff&amp;w=150">	
+					</div>
+					<p class="product-text-div">Shave Gel<span class="product-price">£6</span></p>
+				</div>
+			</div>
+			<p>Dental</p>
+			<div id="floss" class="product-wrap">
+				<div class="product-div">
+					<div class="product-image-div">
+						<img src="https://images.ctfassets.net/itvcls9imtx8/4UqSvXdiXmoaOq2s884Wsq/e740c83a30ad5f461ed759d82338c24d/Floss-Square-2500.png?w=150">	
+					</div>
+					<p class="product-text-div">Gentle Daily <br>Floss Tape<span class="product-price">£2</span></p>
+				</div>
+			</div>
+		</div>
+	
+</body></html>

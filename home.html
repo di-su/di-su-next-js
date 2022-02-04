@@ -1,0 +1,186 @@
+<html>
+
+
+<head>
+    <script>
+    var submitted=false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
+    onload="
+        if(submitted) {
+            $('#mailing-list').html('<h5 class=\'text-center mb-3\'>Cheers! You\'ve signed up to my mailing list.</h5>');
+        }
+    "></iframe>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Di Su</title>
+    <style>
+
+        img {
+            border: 1px solid #ececec;
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;a
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (min-width: 576px) {
+            #four-block {
+                padding-right: 30px;
+            }
+        }
+/*        .row, .col {
+            border: 1px solid black;
+        }*/
+        .article-image {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 10px;
+            display: flex;
+            border-radius: 5px;
+        }
+
+        .article-image > div {
+            align-self: flex-end;
+            background: #737373;
+            color: white;
+            width: 100%;
+            border-radius: 0px 0px 5px 5px;
+            /*border-top: 0;*/
+        } 
+        .article-div {
+            display: contents;
+        }
+        .article-image:hover {
+            opacity: 0.9;
+        }
+        .article-div:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body style="">
+
+    <div id="nav"></div>
+    <div class="py-2" style="background: #0069d9;color: white;text-align: center;">I'm available for short-term hire! <a style="color: white;text-decoration: underline;" href="/hire-me">Find out more</a></div>
+    <div class="container py-4 mt-5" style="max-width: 950px;">
+        <div class="m-auto" style="max-width: 600px;">
+            <h1 class="text-center" style="font-size: 4em;">Hey there 👋, I'm Di.</h1>
+            <p class="lead text-center pb-4 m-auto pt-2 px-1" style="max-width: 550px;font-size: 18px;line-height: 26px;">Welcome! I'm a digital marketer based in London, currently working as Head of LTV for <a target="_blank" href="https://www.cornerstone.co.uk/">Cornerstone.co.uk</a>.</p>
+        </div>
+    </div>
+    <div class="container">
+      <div style="height: 400px;" class="row">
+        <a class="article-div" href="/articles/working-out">
+            <div class="article-image col-md p-0" style="background-image: url('/blog-images/weight.jpg')">
+                <div>
+                    <p class="p-2 m-0">Working out during lockdown</p>
+                </div>
+            </div>
+        </a>
+        <a class="article-div" href="/articles/working-out">
+            <div class="article-image col-md p-0" style="background-image: url('/blog-images/laptop-code.jpg')">
+                <div>
+                    <p class="p-2 m-0">How I built this website</p>
+                </div>
+            </div>  
+        </a>
+        <a class="article-div" href="/articles/working-out">
+            <div class="article-image col-md p-0" style="background-image: url('/blog-images/apple-notes.jpg')">
+                <div>
+                    <p class="p-2 m-0">The 3 ways I use Apple Notes</p>
+                </div>
+            </div>
+        </a>
+      </div>
+      <div style="height: 400px;" class="row">
+        <a class="article-div" href="/articles/working-out">
+            <div class="article-image col-md p-0" style="background-image: url('/blog-images/coffee-splash.jpg')">
+                <div>
+                    <p class="p-2 m-0">The 3 ways I use Apple Notes</p>
+                </div>
+            </div>
+        </a>
+        <a class="article-div" href="/articles/working-out">
+            <div class="article-image col-md p-0" style="background-image: url('/blog-images/collage-cover.jpg')">
+                <div>
+                    <p class="p-2 m-0">A collection of emails I've built</p>
+                </div>
+            </div>  
+        </a>
+        <a class="article-div" href="/articles/working-out">
+            <div class="article-image col-md p-0" style="background-image: url('/blog-images/email-iphone.jpg')">
+                <div>
+                    <p class="p-2 m-0">The 3 ways I use Apple Notes</p>
+                </div>
+            </div>
+        </a>
+      </div>
+      <div style="height: 400px;" class="row">
+        <div class="article-image col-md" style="background-image: url('/blog-images/coffee-splash.jpg')">
+        </div>
+        <div class="article-image col-md-4" style="background-image: url('/blog-images/collage-cover.jpg')">
+        </div>
+        <div class="article-image col-md" style="background-image: url('/blog-images/email-iphone.jpg')">
+        </div>
+        <div class="article-image col-md" style="background-image: url('/articles/save-money/images/dollar.jpg')">
+        </div>
+      </div>
+      <div style="height: 400px;" class="row">
+        <div class="article-image col-md" style="background-image: url('/articles/fav-programs/images/apple-logo.jpg')">
+            <div>
+                <p>Text</p>
+            </div>
+        </div>
+        <div class="article-image col-md-4" style="background-image: url('/articles/plan-projects/images/lightbulb.jpg')">
+        </div>
+        <div class="article-image col-md-4" style="background-image: url('/blog-images/coming-soon.png')">
+        </div>
+      </div>
+    </div>
+    
+    <div id="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("#nav").load("../nav.html");
+            $("#footer").load("../footer.html");
+        });
+
+        function loadNav() {
+            $('#nav-hire a').attr("href", "/hire-me");
+            $('#nav-contact a').attr("href", "/contact-me");
+            $('#nav-articles').addClass("active");
+            $('#nav-cv a').attr("href", "/cv");
+        };
+
+        window.onload = function() {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(loadNav, 100 * i);
+            }
+        };
+    </script>
+</body>
+
+</html>

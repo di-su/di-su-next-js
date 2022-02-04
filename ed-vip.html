@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel='shortcut icon' type='image/x-icon' href='https://www.cornerstone.co.uk/static-assets/favicons/favicon.ico' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Cornerstone</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var submitted = false;
+    </script>
+    <meta name="robots" content="noindex">
+    <style>
+    * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        #uid {
+            display: none;
+        }
+        
+        input {
+            -webkit-appearance: none;
+            -webkit-border-radius: 0px;
+            border-radius: 0;
+        }
+        
+        #removed,
+        #email {
+            display: none;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        #cta {
+            display: none;
+        }
+        
+        #logo {
+            max-width: 210px;
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        #header {
+            height: 40px;
+            background: #c2002f;
+            position: relative;
+            top: -6px;
+        }
+        .congrats-div {
+        	text-align: center;
+        	padding: 0em 1em;
+        }
+        h1 {
+        	max-width: 700px;
+        	margin: 0 auto;
+        	margin-top: 20px;
+        	margin-bottom: 1em;
+        }
+        p {
+        	max-width: 500px;
+        	margin: 0 auto;	
+        	margin-top: 1em;	
+        }
+    }
+    </style>
+    <script>
+        $(document).ready(function() {
+            uid = getUrlVars()["uid"];
+            email = getUrlVars()["email"];
+            $('#uid').val(uid);
+            $('#email').val(email);
+            submitForm();
+        });
+
+        function submitForm() {
+            $('#cta').click();
+        }
+
+        function getUrlVars() {
+            var vars = [],
+                hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+    </script>
+</head>
+
+<body>
+	<!-- Form Start -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="submitted"></iframe>
+    <a href="https://www.cornerstone.co.uk"><img id="logo" src="https://cdn.cornerstone.co.uk/317e304cd28af582b6f0a5002a279a62.svg"></a>
+    <div id="header"></div>
+    <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLScAk1xhLRILXvhmloKFzqR6u6YAw4_dwI5RYzgafqFf4oiuzA/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+        <input id="email" name="entry.763751263" type="text" />
+        <input id="uid" name="entry.152463259" type="text" />
+        <div>
+            <input id="cta" class="button" type="submit" value="Redeem Offer" />
+        </div>
+    </form>
+    <!-- Form End -->
+    <div class="congrats-div">
+    	<h1>Thank you for registering your interest!</h1>
+    	<p>To thank you for your support, you'll be the first to know about the launch of our Sildenafil tablets, and we'll give you a 20% discount on your first order.</p>
+    	<p>You can safely leave this page now.</p>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>tip-consultation-success.blade.php</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/tip-consultation-success_blade_php/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/tip-consultation-success_blade_php/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u356" class="ax_default paragraph">
+        <div id="u356_div" class=""></div>
+        <div id="u356_text" class="text ">
+          <p><span>@extends('emails.template-transactional') @section('content')</span></p><p><span>&nbsp;</span></p><p><span>&nbsp;</span></p><p><span>Hey {{ ucwords(strtolower($firstName)) }},</span></p><p><span><br></span></p><p><span>@if ($isNewUser)</span></p><p><span>We're happy to let you know that you've been approved for {{str_replace('8 pack of ', '', $productName)}} and we are processing your order.</span></p><p><span><br></span></p><p><span>Look out for your confirmation email, it will be with you shortly.</span></p><p><span><br></span></p><p><span>@else</span></p><p><span>We're happy to let you know that you've been approved for {{str_replace('8 pack of ', '', $productName)}}.</span></p><p><span><br></span></p><p><span>@if($billingDate)</span></p><p><span>They will be included in your next order on {{ $billingDate }}, for £{{ $discountPercentage ? $currentPrice.' (a '.$discountPercentage.'% discount on the normal price).' : $currentPrice.'.'}} After that, we'll send you a box every {{$frequencyInMonths}} for £{{$regularPrice}} to keep you stocked up. If you’d like to remove it from your plan @if($isED) or change the delivery frequency @endif this is really simple to do in My Account.</span></p><p><span><br></span></p><p><span>Should you want to bring your next order closer to today, click here to change your billing date - otherwise, you're good to go!</span></p><p><span><br></span></p><p><span>@else</span></p><p><span>They will be included in your next order if you resume your subscription within the next few months.</span></p><p><span><br></span></p><p><span>@endif @endif</span></p><p><span>Best wishes, </span></p><p><span>Lucy at Cornerstone</span></p><p><span><br></span></p><p><span>@stop</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u357" class="ax_default sticky_1">
+        <div id="u357_div" class=""></div>
+        <div id="u357_text" class="text ">
+          <p><span>no changes necessary to support HL</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
