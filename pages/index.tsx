@@ -27,8 +27,8 @@ export default function Home({ posts }: Post) {
     <>
       <Layout>
         <Hero
-          title="Hey there 👋, I'm Di."
-          description="Welcome! I'm Di, an experienced ecommerce marketer and web developer. Here are some things I've built."
+          title="Hey there 👋, I&apos;m Di."
+          description="Welcome! I&apos;m Di, an experienced ecommerce marketer and web developer. Here are some things I&apos;ve built."
           imageUrl="https://di-su.com/me.jpeg"
         />
         <TwoBlock
@@ -83,7 +83,7 @@ export default function Home({ posts }: Post) {
         />
         <TwoBlock
           title="Blend my day Acquisiton page"
-          description="Landing page for Blend my day's smoothies and oat bowls. A simple introduction to the service and high-quality product and video shots. Used on Facebook and Adwords."
+          description="Landing page for Blend my day&apos;s smoothies and oat bowls. A simple introduction to the service and high-quality product and video shots. Used on Facebook and Adwords."
           projUrl="blendmyday.co.uk"
           imageUrl="https://di-su.com/showcase-img/bmd.jpeg"
           linkUrl="https://blendmyday.co.uk/pages/save20"
@@ -130,7 +130,7 @@ export default function Home({ posts }: Post) {
         />
         <TwoBlock
           title="The Cornerstone Razor"
-          description="An acquisition page dedicated to Cornerstone's most popular product - the chrome-plated personalised razor. A simple introduction to the service and high-quality product shots. Intended for Facebook and Adwords."
+          description="An acquisition page dedicated to Cornerstone&apos;s most popular product - the chrome-plated personalised razor. A simple introduction to the service and high-quality product shots. Intended for Facebook and Adwords."
           projUrl="cornerstone.co.uk"
           imageUrl="https://di-su.com/showcase-img/razor-lp.jpg"
           linkUrl="https://di-su.com/articles/landing-pages-built/pages/razor-focus"
@@ -154,7 +154,7 @@ export default function Home({ posts }: Post) {
         <Cta title="Got a question?" ctaText="Get in touch" />
         <TwoBlock
           title="A Cornerstone Christmas"
-          description="Last chance Christmas offer email built for Cornerstone's gifting period. Sent to existing members."
+          description="Last chance Christmas offer email built for Cornerstone&apos;s gifting period. Sent to existing members."
           projUrl="cornerstone.co.uk"
           imageUrl="https://di-su.com/showcase-img/christmas-email.jpg"
           flipPosition
@@ -226,7 +226,7 @@ export default function Home({ posts }: Post) {
         />
         <TwoBlock
           title="Configurable template for European launch"
-          description="A configurable, mobile-friendly landing page built on unbounce for Bakenight's European launch of their baking masterclass service."
+          description="A configurable, mobile-friendly landing page built on unbounce for Bakenight&apos;s European launch of their baking masterclass service."
           projUrl="bakenight.com"
           imageUrl="https://di-su.com/showcase-img/bakenight-lp.jpg"
           linkUrl="https://di-su.com/client-work/bakenight"
@@ -250,8 +250,8 @@ export default function Home({ posts }: Post) {
         />
 
         <TwoBlock
-          title="Hon's restaurant"
-          description="The online home for a restaurant based in Rainham, Kent. With essential information and menu's in .pdf format."
+          title="Hon&apos;s restaurant"
+          description="The online home for a restaurant based in Rainham, Kent. With essential information and menu&apos;s in .pdf format."
           projUrl="honsrestaurant.co.uk"
           imageUrl="https://di-su.com/showcase-img/hons-site.jpg"
           linkUrl="https://www.honsrestaurant.co.uk/"
@@ -302,7 +302,7 @@ export default function Home({ posts }: Post) {
         <TwoBlock
           title="Chop Suey Centre"
           projUrl="chopsueycentre.co.uk"
-          description="The online home for a restaurant based in Romford, Essex. With essential information and menu's all available in text format."
+          description="The online home for a restaurant based in Romford, Essex. With essential information and menu&apos;s all available in text format."
           imageUrl="https://di-su.com/showcase-img/chop.jpg"
           linkUrl="https://www.chopsueycentre.co.uk/"
           flipPosition
@@ -373,7 +373,7 @@ export default function Home({ posts }: Post) {
           }
         />
         <div className="text-center p-12 border-b-2 border-gray-100">
-          <p className="block mb-4">In case that wasn't enough, there's <b>even more</b> to see..</p>
+          <p className="block mb-4">In case that wasn&apos;t enough, there&apos;s <b>even more</b> to see..</p>
           <div>
             <a href="" className="text-orange-600 block mb-2">
               Landing pages
