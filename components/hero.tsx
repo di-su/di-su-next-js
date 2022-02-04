@@ -1,11 +1,11 @@
 import ScrollAnimation from "react-animate-on-scroll";
 
-interface CenteredBlock1 {
+interface Hero {
   title: string;
   description: string;
   imageUrl: string;
 }
-export default function CenteredBlock1({ title, description, imageUrl }: CenteredBlock1) {
+export default function Hero({ title, description, imageUrl }: Hero) {
   return (
     <section className="relative p-12 bg-orange-400">
       <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">

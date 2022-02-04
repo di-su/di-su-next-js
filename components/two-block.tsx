@@ -10,6 +10,7 @@ interface TwoBlock {
   flipPosition?: Boolean;
   discontinued?: Boolean;
   noShadow?: Boolean;
+  linkUrl?: string;
 }
 export default function TwoBlock({
   title,
@@ -20,7 +21,8 @@ export default function TwoBlock({
   extraHtmlText,
   flipPosition,
   discontinued,
-  noShadow
+  noShadow,
+  linkUrl
 }: TwoBlock) {
   return (
     <div className={`${flipPosition ? "bg-gray-100" : "bg-white"} relative`}>
@@ -42,7 +44,7 @@ export default function TwoBlock({
               <div className="lg:mx-auto lg:max-w-full">{extraHtmlText}</div>
               <div className="mt-4">
                 <a
-                  href="#"
+                  href={linkUrl}
                   title=""
                   className={`${
                     discontinued ? "border-red-500 text-red-500" : "border-orange-400 text-orange-400"
