@@ -27,7 +27,7 @@ export default function Home({ posts }: Post) {
     <>
       <Layout>
         <Hero
-          title="Hey there 👋, I'm Di!"
+          title="Hey there 👋, I'm Di!!"
           description="Welcome! I'm Di, an experienced ecommerce marketer and web developer. Here are some things I've built. The links on this page do not work, this page is used to demonstrate NextJS."
           imageUrl="https://di-su.com/me.jpeg"
         />
