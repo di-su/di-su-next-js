@@ -27,7 +27,7 @@ export default function Home({ posts }: Post) {
     <>
       <Layout>
         <Hero
-          title="Hey there 👋, I&apos;m Di."
+          title="Hey there 👋, I&apos;m Di!"
           description="Welcome! I&apos;m Di, an experienced ecommerce marketer and web developer. Here are some things I&apos;ve built."
           imageUrl="https://di-su.com/me.jpeg"
         />
