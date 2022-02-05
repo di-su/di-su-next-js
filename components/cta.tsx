@@ -24,12 +24,12 @@ export default function Cta({ title, ctaText }: Cta) {
               {title}
             </p>
             <div className="relative inline-flex mt-6 group">
-              <a
-                href="https://di-su.com/contact-me"
-                className={`border-orange-400 bg-orange-400 text-white inline-flex items-center justify-center px-8 p-2 text-md  transition-all duration-200 border rounded-md cursor-pointer mb-5`}
+              <p
+                // href="https://di-su.com/contact-me"
+                className={`border-orange-400 bg-orange-400 text-white inline-flex items-center justify-center px-8 p-2 text-md  transition-all duration-200 border rounded-md mb-5`}
               >
                 {ctaText}
-              </a>
+              </p>
             </div>
           </div>
         </ScrollAnimation>

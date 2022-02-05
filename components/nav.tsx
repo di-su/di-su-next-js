@@ -8,12 +8,12 @@ export default function Nav() {
 
   const navLinks = [
     {
-      title: "Bio",
-      link: "/link",
+      title: "Hello",
+      link: "#",
     },
     {
-      title: "Another one",
-      link: "/link",
+      title: "You",
+      link: "#",
     },
   ];
 
@@ -34,7 +34,7 @@ export default function Nav() {
     //     <p className="ms-5 pointer lead my-auto">Bio</p>
     //   </Link> */}
     // </nav>
-    <header className="relative py-4 md:py-6 bg-orange-400">
+    <header className="relative py-4 md:py-6 bg-orange-400 mt-12" >
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
@@ -92,7 +92,7 @@ export default function Nav() {
             </button>
           </div>
           <div className="hidden lg:flex lg:ml-16 lg:items-center lg:justify-center lg:space-x-10 xl:space-x-16">
-            <a
+            {/* <a
               href="#"
               title=""
               className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
@@ -119,17 +119,16 @@ export default function Nav() {
               className=" text-base font-medium text-white transition-all duration-200 rounded focus:outline-none  hover:text-opacity-50 focus:ring-1 focus:ring-white focus:ring-offset-2 "
             >
               CV
-            </a>
+            </a> */}
           </div>
           <div className="hidden lg:flex lg:items-center lg:space-x-10">
-            <a
-              href="#"
+            <p
               title=""
               className=" inline-flex items-center justify-center px-6 py-3 text-base font-bold leading-7 text-white transition-all duration-200 border border-transparent rounded-xl  focus:outline-none focus:ring-2 focus:ring-offset-2"
-              role="button"
+              // role="button"
             >
-              Contact Me
-            </a>
+              Built with NextJS
+            </p>
           </div>
         </div>
         <nav className={state.showMobileNavBar ? "lg:hidden" : "lg:hidden hidden"}>
