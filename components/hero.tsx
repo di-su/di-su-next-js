@@ -42,7 +42,7 @@ export default function Hero({ title, description, imageUrl }: Hero) {
             >
               {description}
             </p>
-              <a target="_blank" href="https://github.com/di-su/di-su-next-js" className="mt-4 text-white p-2 px-4 border rounded-md">View github code</a>
+              <a rel="noreferrer" target="_blank" href="https://github.com/di-su/di-su-next-js" className="mt-4 text-white p-2 px-4 border rounded-md">View github code</a>
             <div className="relative inline-flex mt-10 group">
               <div
                 className="
