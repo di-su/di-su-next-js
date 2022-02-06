@@ -27,8 +27,8 @@ export default function Home({ posts }: Post) {
     <>
       <Layout>
         <Hero
-          title="Hey there 👋, I'm Di!!"
-          description="Welcome! I'm Di, an experienced ecommerce marketer and web developer. Here are some things I've built. The links on this page do not work, this page is used to demonstrate NextJS."
+          title="Hey there 👋, I'm Di!"
+          description="Welcome! I'm Di, an experienced ecommerce marketer and web developer. Here are some things I've built. Not all the links on this page work, this page is used to demonstrate NextJS."
           imageUrl="https://di-su.com/me.jpeg"
         />
         <div className="w-full fixed z-10 top-0 text-center block bg-green-700">
